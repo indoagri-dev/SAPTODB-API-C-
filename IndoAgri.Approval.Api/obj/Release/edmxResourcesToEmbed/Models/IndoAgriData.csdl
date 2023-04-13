@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INDOAGRI_DATAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="INDOAGRI_DATAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LogApprovals" EntityType="INDOAGRI_DATAModel.LogApproval" />
+    <EntitySet Name="ZTW_ASSETSTAT" EntityType="INDOAGRI_DATAModel.ZTW_ASSETSTAT" />
+    <EntitySet Name="ZTF_CDV_LASTMAIL" EntityType="INDOAGRI_DATAModel.ZTF_CDV_LASTMAIL" />
+  </EntityContainer>
+  <EntityType Name="LogApproval">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ControllerAction" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTW_ASSETSTAT">
+    <Key>
+      <PropertyRef Name="AssetStatId" />
+    </Key>
+    <Property Name="AssetStatId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Werks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Erdat" Type="DateTime" Precision="3" />
+    <Property Name="Eqart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Good" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Broken" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Ernam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Endat" Type="DateTime" Precision="3" />
+    <Property Name="Rzet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTF_CDV_LASTMAIL">
+    <Key>
+      <PropertyRef Name="CDVId" />
+    </Key>
+    <Property Name="CDVId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Cdcomp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Cdgsber" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Approver" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Nrcdv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nrbelnr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amtotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Cutotal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApprovedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

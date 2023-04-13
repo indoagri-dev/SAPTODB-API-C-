@@ -1,0 +1,9 @@
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\Indoagri.IndoagriDB217.dll.config
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\Indoagri.IndoagriDB217.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\Indoagri.IndoagriDB217.pdb
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\EntityFramework.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\EntityFramework.xml
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\obj\Debug\Indoagri.IndoagriDB217.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriDB217\obj\Debug\Indoagri.IndoagriDB217.pdb

@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_ICAT3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="POHeader_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PO_Number" Type="nvarchar" MaxLength="20" />
+          <Property Name="POItem" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductCode" Type="nvarchar" MaxLength="30" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PurchaseID" Type="int" Nullable="false" />
+          <Property Name="PurchaseDetailID" Type="int" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="20" />
+          <Property Name="CapexOpex" Type="bit" />
+          <Property Name="GoodsType" Type="nvarchar" MaxLength="20" />
+          <Property Name="PSPNR_WBS" Type="nvarchar" MaxLength="8" />
+          <Property Name="POSID_WBS" Type="nvarchar" MaxLength="25" />
+          <Property Name="BUKRS" Type="nvarchar" MaxLength="4" />
+          <Property Name="ANLN1_Asset" Type="nvarchar" MaxLength="12" />
+          <Property Name="KOKRS_CostCenter" Type="nvarchar" MaxLength="4" />
+          <Property Name="KOSTL_CostCenter" Type="nvarchar" MaxLength="10" />
+          <Property Name="KTOPL_GLAcc" Type="nvarchar" MaxLength="4" />
+          <Property Name="SAKNR_GLAcc" Type="nvarchar" MaxLength="10" />
+          <Property Name="Qty" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="OutsQty" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="4000" />
+          <Property Name="CashflowCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+          <Property Name="Price" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="SalePrice" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="DiscountQty" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="deliveryAddrWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="deliveryAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="emailDeliveryAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="invoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="invoiceAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="invoiceAddrLGORT" Type="nvarchar" MaxLength="10" />
+          <Property Name="UOM" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOStatusId" Type="int" />
+          <Property Name="DOStatus" Type="nvarchar" MaxLength="100" />
+          <Property Name="isClose" Type="nvarchar" MaxLength="10" />
+          <Property Name="isReject" Type="nvarchar" MaxLength="10" />
+          <Property Name="isDO" Type="nvarchar" MaxLength="10" />
+          <Property Name="isGR" Type="nvarchar" MaxLength="10" />
+          <Property Name="isINV" Type="nvarchar" MaxLength="10" />
+          <Property Name="Reject_Comment" Type="nvarchar(max)" />
+          <Property Name="Closed_Comment" Type="nvarchar(max)" />
+          <Property Name="BANFN" Type="nvarchar" MaxLength="10" />
+          <Property Name="BNFPO" Type="nvarchar" MaxLength="5" />
+          <Property Name="PRNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="PRItem" Type="nvarchar" MaxLength="5" />
+          <Property Name="OrderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="RejectDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderHeader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PO_Number" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PO_Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="PurchaseID" Type="int" />
+          <Property Name="VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ActionWERKS" Type="nvarchar" MaxLength="20" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Area_ID" Type="nvarchar" MaxLength="4" />
+          <Property Name="DeliveryAddWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeliveryAddrNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="InvoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="InvoiceAddrNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDeliveryAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="IsPKP" Type="bit" />
+          <Property Name="UserOrderId" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PurchaseRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="20" />
+          <Property Name="VendorCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="Approval" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stage" Type="int" Nullable="false" />
+          <Property Name="Token" Type="nvarchar" MaxLength="5" />
+          <Property Name="TokenCreatedOn" Type="datetime" />
+          <Property Name="ClosedComment" Type="nvarchar" MaxLength="2000" />
+          <Property Name="SiteManagerComment" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="ClosedBy" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PurchaseRequestDetail">
+          <Key>
+            <PropertyRef Name="prd_ID" />
+          </Key>
+          <Property Name="prd_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="prd_crID" Type="uniqueidentifier" />
+          <Property Name="prd_PO_Number" Type="nvarchar" MaxLength="20" />
+          <Property Name="prd_Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="prd_ProductCode" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="prd_ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="prd_VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="prd_CityID" Type="int" Nullable="false" />
+          <Property Name="prd_PurchaseID" Type="int" Nullable="false" />
+          <Property Name="prd_WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="prd_CapexOpex" Type="bit" />
+          <Property Name="prd_GoodsType" Type="nvarchar" MaxLength="20" />
+          <Property Name="prd_PSPNR_WBS" Type="nvarchar" MaxLength="8" />
+          <Property Name="prd_POSID_WBS" Type="nvarchar" MaxLength="25" />
+          <Property Name="prd_BUKRS" Type="nvarchar" MaxLength="4" />
+          <Property Name="prd_ANLN1_Asset" Type="nvarchar" MaxLength="12" />
+          <Property Name="prd_KOKRS_CostCenter" Type="nvarchar" MaxLength="4" />
+          <Property Name="prd_KOSTL_CostCenter" Type="nvarchar" MaxLength="10" />
+          <Property Name="prd_KTOPL_GLAcc" Type="nvarchar" MaxLength="4" />
+          <Property Name="prd_SAKNR_GLAcc" Type="nvarchar" MaxLength="10" />
+          <Property Name="prd_UOM" Type="nvarchar" MaxLength="5" />
+          <Property Name="prd_Qty" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="prd_DeliveryDate" Type="datetime" />
+          <Property Name="prd_Remark" Type="nvarchar" MaxLength="4000" />
+          <Property Name="prd_CashflowCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="prd_Currency" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="prd_Price" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="prd_SalePrice" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="prd_DiscountQty" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="prd_UserId" Type="int" />
+          <Property Name="deliveryAddrWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="deliveryAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="prd_emailDeliveryAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="invoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+          <Property Name="invoiceAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="invoiceAddrLGORT" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThirdPartyTransporter" Type="bit" />
+          <Property Name="Transporter" Type="nvarchar" MaxLength="50" />
+          <Property Name="Freight" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="prd_BANFN" Type="nvarchar" MaxLength="10" />
+          <Property Name="prd_BNFPO" Type="nvarchar" MaxLength="5" />
+          <Property Name="prd_PRNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="prd_PRItem" Type="nvarchar" MaxLength="5" />
+          <Property Name="prd_OrderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="RejectCommentAMAAME" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseRequisition">
+          <Key>
+            <PropertyRef Name="BANFN" />
+            <PropertyRef Name="BNFPO" />
+          </Key>
+          <Property Name="BANFN" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BNFPO" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="MATNR" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TXZ01" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MATKL" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="MEINS" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="MENGE" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BADAT" Type="date" Nullable="false" />
+          <Property Name="LFDAT" Type="date" Nullable="false" />
+          <Property Name="FRGZU" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="PREIS" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="WAERS" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="DISPO" Type="nvarchar" MaxLength="3" />
+          <Property Name="ESTKZ" Type="nvarchar" MaxLength="2" />
+          <Property Name="FRGKZ" Type="nvarchar" MaxLength="3" />
+          <Property Name="EKGRP" Type="nvarchar" MaxLength="3" />
+          <Property Name="HDRTXT" Type="nvarchar" MaxLength="300" />
+          <Property Name="EXTWG" Type="nvarchar" MaxLength="50" />
+          <Property Name="NORMT" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsUsed" Type="bit" Nullable="false" />
+          <Property Name="SAKTO" Type="varchar" MaxLength="20" />
+          <Property Name="KOSTL" Type="varchar" MaxLength="20" />
+          <Property Name="ANLN1" Type="varchar" MaxLength="22" />
+          <Property Name="ANLN2" Type="varchar" MaxLength="10" />
+          <Property Name="AUFNR" Type="varchar" MaxLength="12" />
+          <Property Name="PS_PSP_PNR" Type="varchar" MaxLength="50" />
+          <Property Name="Pspnr" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_ICAT3ModelStoreContainer">
+          <EntitySet Name="PurchaseOrderDetail" EntityType="Self.PurchaseOrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseOrderHeader" EntityType="Self.PurchaseOrderHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseRequestDetail" EntityType="Self.PurchaseRequestDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseRequisition" EntityType="Self.PurchaseRequisition" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_ICAT3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="POHeader_ID" Type="Guid" Nullable="false" />
+          <Property Name="PO_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="POItem" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VendorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PurchaseID" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseDetailID" Type="Int32" />
+          <Property Name="WERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CapexOpex" Type="Boolean" />
+          <Property Name="GoodsType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PSPNR_WBS" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="POSID_WBS" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="BUKRS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ANLN1_Asset" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="KOKRS_CostCenter" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="KOSTL_CostCenter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="KTOPL_GLAcc" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="SAKNR_GLAcc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="OutsQty" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="Remark" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="CashflowCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="SalePrice" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="DiscountQty" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="deliveryAddrWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="deliveryAddrADDRNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="emailDeliveryAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrADDRNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrLGORT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOStatusId" Type="Int32" />
+          <Property Name="DOStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isClose" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="isReject" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="isDO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="isGR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="isINV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Reject_Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Closed_Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BANFN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PRNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PRItem" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="OrderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="RejectDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderHeader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PO_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PO_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PurchaseID" Type="Int32" />
+          <Property Name="VendorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActionWERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Area_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryAddWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryAddrNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceAddrWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceAddrNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDeliveryAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Incoterm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="IsPKP" Type="Boolean" />
+          <Property Name="UserOrderId" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PurchaseRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VendorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="Approval" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Stage" Type="Int32" Nullable="false" />
+          <Property Name="Token" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="TokenCreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ClosedComment" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="SiteManagerComment" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ClosedDate" Type="DateTime" Precision="3" />
+          <Property Name="ClosedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PurchaseRequestDetail">
+          <Key>
+            <PropertyRef Name="prd_ID" />
+          </Key>
+          <Property Name="prd_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="prd_crID" Type="Guid" />
+          <Property Name="prd_PO_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="prd_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="prd_ProductCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="prd_ProductName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="prd_VendorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="prd_CityID" Type="Int32" Nullable="false" />
+          <Property Name="prd_PurchaseID" Type="Int32" Nullable="false" />
+          <Property Name="prd_WERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="prd_CapexOpex" Type="Boolean" />
+          <Property Name="prd_GoodsType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="prd_PSPNR_WBS" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="prd_POSID_WBS" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="prd_BUKRS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="prd_ANLN1_Asset" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="prd_KOKRS_CostCenter" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="prd_KOSTL_CostCenter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="prd_KTOPL_GLAcc" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="prd_SAKNR_GLAcc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="prd_UOM" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="prd_Qty" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="prd_DeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="prd_Remark" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="prd_CashflowCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="prd_Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="prd_Price" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="prd_SalePrice" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="prd_DiscountQty" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="prd_UserId" Type="Int32" />
+          <Property Name="deliveryAddrWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="deliveryAddrADDRNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="prd_emailDeliveryAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrWERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrADDRNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="invoiceAddrLGORT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ThirdPartyTransporter" Type="Boolean" />
+          <Property Name="Transporter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Freight" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="prd_BANFN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="prd_BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="prd_PRNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="prd_PRItem" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="prd_OrderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RejectCommentAMAAME" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseRequisition">
+          <Key>
+            <PropertyRef Name="BANFN" />
+            <PropertyRef Name="BNFPO" />
+          </Key>
+          <Property Name="BANFN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MATNR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TXZ01" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MATKL" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MENGE" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="WERKS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BADAT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LFDAT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FRGZU" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PREIS" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DISPO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ESTKZ" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="FRGKZ" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="EKGRP" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="HDRTXT" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="EXTWG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NORMT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsUsed" Type="Boolean" Nullable="false" />
+          <Property Name="SAKTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="KOSTL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ANLN1" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="ANLN2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PS_PSP_PNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pspnr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_ICAT3_217Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PurchaseOrderDetails" EntityType="Self.PurchaseOrderDetail" />
+          <EntitySet Name="PurchaseOrderHeaders" EntityType="Self.PurchaseOrderHeader" />
+          <EntitySet Name="PurchaseRequests" EntityType="Self.PurchaseRequest" />
+          <EntitySet Name="PurchaseRequestDetails" EntityType="Self.PurchaseRequestDetail" />
+          <EntitySet Name="PurchaseRequisitions" EntityType="Self.PurchaseRequisition" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_ICAT3ModelStoreContainer" CdmEntityContainer="DB_ICAT3_217Entities">
+          <EntitySetMapping Name="PurchaseOrderDetails">
+            <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseOrderDetail">
+              <MappingFragment StoreEntitySet="PurchaseOrderDetail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="POHeader_ID" ColumnName="POHeader_ID" />
+                <ScalarProperty Name="PO_Number" ColumnName="PO_Number" />
+                <ScalarProperty Name="POItem" ColumnName="POItem" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+                <ScalarProperty Name="PurchaseDetailID" ColumnName="PurchaseDetailID" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="CapexOpex" ColumnName="CapexOpex" />
+                <ScalarProperty Name="GoodsType" ColumnName="GoodsType" />
+                <ScalarProperty Name="PSPNR_WBS" ColumnName="PSPNR_WBS" />
+                <ScalarProperty Name="POSID_WBS" ColumnName="POSID_WBS" />
+                <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+                <ScalarProperty Name="ANLN1_Asset" ColumnName="ANLN1_Asset" />
+                <ScalarProperty Name="KOKRS_CostCenter" ColumnName="KOKRS_CostCenter" />
+                <ScalarProperty Name="KOSTL_CostCenter" ColumnName="KOSTL_CostCenter" />
+                <ScalarProperty Name="KTOPL_GLAcc" ColumnName="KTOPL_GLAcc" />
+                <ScalarProperty Name="SAKNR_GLAcc" ColumnName="SAKNR_GLAcc" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="OutsQty" ColumnName="OutsQty" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CashflowCode" ColumnName="CashflowCode" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="DiscountQty" ColumnName="DiscountQty" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="deliveryAddrWERKS" ColumnName="deliveryAddrWERKS" />
+                <ScalarProperty Name="deliveryAddrADDRNUMBER" ColumnName="deliveryAddrADDRNUMBER" />
+                <ScalarProperty Name="emailDeliveryAddress" ColumnName="emailDeliveryAddress" />
+                <ScalarProperty Name="invoiceAddrWERKS" ColumnName="invoiceAddrWERKS" />
+                <ScalarProperty Name="invoiceAddrADDRNUMBER" ColumnName="invoiceAddrADDRNUMBER" />
+                <ScalarProperty Name="invoiceAddrLGORT" ColumnName="invoiceAddrLGORT" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DOStatusId" ColumnName="DOStatusId" />
+                <ScalarProperty Name="DOStatus" ColumnName="DOStatus" />
+                <ScalarProperty Name="isClose" ColumnName="isClose" />
+                <ScalarProperty Name="isReject" ColumnName="isReject" />
+                <ScalarProperty Name="isDO" ColumnName="isDO" />
+                <ScalarProperty Name="isGR" ColumnName="isGR" />
+                <ScalarProperty Name="isINV" ColumnName="isINV" />
+                <ScalarProperty Name="Reject_Comment" ColumnName="Reject_Comment" />
+                <ScalarProperty Name="Closed_Comment" ColumnName="Closed_Comment" />
+                <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+                <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+                <ScalarProperty Name="PRNo" ColumnName="PRNo" />
+                <ScalarProperty Name="PRItem" ColumnName="PRItem" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="RejectDate" ColumnName="RejectDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrderHeaders">
+            <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseOrderHeader">
+              <MappingFragment StoreEntitySet="PurchaseOrderHeader">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PO_Number" ColumnName="PO_Number" />
+                <ScalarProperty Name="PO_Type" ColumnName="PO_Type" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+                <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+                <ScalarProperty Name="ActionWERKS" ColumnName="ActionWERKS" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+                <ScalarProperty Name="DeliveryAddWERKS" ColumnName="DeliveryAddWERKS" />
+                <ScalarProperty Name="DeliveryAddrNUMBER" ColumnName="DeliveryAddrNUMBER" />
+                <ScalarProperty Name="InvoiceAddrWERKS" ColumnName="InvoiceAddrWERKS" />
+                <ScalarProperty Name="InvoiceAddrNUMBER" ColumnName="InvoiceAddrNUMBER" />
+                <ScalarProperty Name="UPDeliveryAddress" ColumnName="UPDeliveryAddress" />
+                <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="IsPKP" ColumnName="IsPKP" />
+                <ScalarProperty Name="UserOrderId" ColumnName="UserOrderId" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseRequests">
+            <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequest">
+              <MappingFragment StoreEntitySet="PurchaseRequest">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Approval" ColumnName="Approval" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Stage" ColumnName="Stage" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="TokenCreatedOn" ColumnName="TokenCreatedOn" />
+                <ScalarProperty Name="ClosedComment" ColumnName="ClosedComment" />
+                <ScalarProperty Name="SiteManagerComment" ColumnName="SiteManagerComment" />
+                <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+                <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseRequestDetails">
+            <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequestDetail">
+              <MappingFragment StoreEntitySet="PurchaseRequestDetail">
+                <ScalarProperty Name="prd_ID" ColumnName="prd_ID" />
+                <ScalarProperty Name="prd_crID" ColumnName="prd_crID" />
+                <ScalarProperty Name="prd_PO_Number" ColumnName="prd_PO_Number" />
+                <ScalarProperty Name="prd_Status" ColumnName="prd_Status" />
+                <ScalarProperty Name="prd_ProductCode" ColumnName="prd_ProductCode" />
+                <ScalarProperty Name="prd_ProductName" ColumnName="prd_ProductName" />
+                <ScalarProperty Name="prd_VendorCode" ColumnName="prd_VendorCode" />
+                <ScalarProperty Name="prd_CityID" ColumnName="prd_CityID" />
+                <ScalarProperty Name="prd_PurchaseID" ColumnName="prd_PurchaseID" />
+                <ScalarProperty Name="prd_WERKS" ColumnName="prd_WERKS" />
+                <ScalarProperty Name="prd_CapexOpex" ColumnName="prd_CapexOpex" />
+                <ScalarProperty Name="prd_GoodsType" ColumnName="prd_GoodsType" />
+                <ScalarProperty Name="prd_PSPNR_WBS" ColumnName="prd_PSPNR_WBS" />
+                <ScalarProperty Name="prd_POSID_WBS" ColumnName="prd_POSID_WBS" />
+                <ScalarProperty Name="prd_BUKRS" ColumnName="prd_BUKRS" />
+                <ScalarProperty Name="prd_ANLN1_Asset" ColumnName="prd_ANLN1_Asset" />
+                <ScalarProperty Name="prd_KOKRS_CostCenter" ColumnName="prd_KOKRS_CostCenter" />
+                <ScalarProperty Name="prd_KOSTL_CostCenter" ColumnName="prd_KOSTL_CostCenter" />
+                <ScalarProperty Name="prd_KTOPL_GLAcc" ColumnName="prd_KTOPL_GLAcc" />
+                <ScalarProperty Name="prd_SAKNR_GLAcc" ColumnName="prd_SAKNR_GLAcc" />
+                <ScalarProperty Name="prd_UOM" ColumnName="prd_UOM" />
+                <ScalarProperty Name="prd_Qty" ColumnName="prd_Qty" />
+                <ScalarProperty Name="prd_DeliveryDate" ColumnName="prd_DeliveryDate" />
+                <ScalarProperty Name="prd_Remark" ColumnName="prd_Remark" />
+                <ScalarProperty Name="prd_CashflowCode" ColumnName="prd_CashflowCode" />
+                <ScalarProperty Name="prd_Currency" ColumnName="prd_Currency" />
+                <ScalarProperty Name="prd_Price" ColumnName="prd_Price" />
+                <ScalarProperty Name="prd_SalePrice" ColumnName="prd_SalePrice" />
+                <ScalarProperty Name="prd_DiscountQty" ColumnName="prd_DiscountQty" />
+                <ScalarProperty Name="prd_UserId" ColumnName="prd_UserId" />
+                <ScalarProperty Name="deliveryAddrWERKS" ColumnName="deliveryAddrWERKS" />
+                <ScalarProperty Name="deliveryAddrADDRNUMBER" ColumnName="deliveryAddrADDRNUMBER" />
+                <ScalarProperty Name="prd_emailDeliveryAddress" ColumnName="prd_emailDeliveryAddress" />
+                <ScalarProperty Name="invoiceAddrWERKS" ColumnName="invoiceAddrWERKS" />
+                <ScalarProperty Name="invoiceAddrADDRNUMBER" ColumnName="invoiceAddrADDRNUMBER" />
+                <ScalarProperty Name="invoiceAddrLGORT" ColumnName="invoiceAddrLGORT" />
+                <ScalarProperty Name="ThirdPartyTransporter" ColumnName="ThirdPartyTransporter" />
+                <ScalarProperty Name="Transporter" ColumnName="Transporter" />
+                <ScalarProperty Name="Freight" ColumnName="Freight" />
+                <ScalarProperty Name="prd_BANFN" ColumnName="prd_BANFN" />
+                <ScalarProperty Name="prd_BNFPO" ColumnName="prd_BNFPO" />
+                <ScalarProperty Name="prd_PRNo" ColumnName="prd_PRNo" />
+                <ScalarProperty Name="prd_PRItem" ColumnName="prd_PRItem" />
+                <ScalarProperty Name="prd_OrderNo" ColumnName="prd_OrderNo" />
+                <ScalarProperty Name="RejectCommentAMAAME" ColumnName="RejectCommentAMAAME" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseRequisitions">
+            <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequisition">
+              <MappingFragment StoreEntitySet="PurchaseRequisition">
+                <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+                <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+                <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+                <ScalarProperty Name="TXZ01" ColumnName="TXZ01" />
+                <ScalarProperty Name="MATKL" ColumnName="MATKL" />
+                <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+                <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="BADAT" ColumnName="BADAT" />
+                <ScalarProperty Name="LFDAT" ColumnName="LFDAT" />
+                <ScalarProperty Name="FRGZU" ColumnName="FRGZU" />
+                <ScalarProperty Name="PREIS" ColumnName="PREIS" />
+                <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+                <ScalarProperty Name="DISPO" ColumnName="DISPO" />
+                <ScalarProperty Name="ESTKZ" ColumnName="ESTKZ" />
+                <ScalarProperty Name="FRGKZ" ColumnName="FRGKZ" />
+                <ScalarProperty Name="EKGRP" ColumnName="EKGRP" />
+                <ScalarProperty Name="HDRTXT" ColumnName="HDRTXT" />
+                <ScalarProperty Name="EXTWG" ColumnName="EXTWG" />
+                <ScalarProperty Name="NORMT" ColumnName="NORMT" />
+                <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+                <ScalarProperty Name="SAKTO" ColumnName="SAKTO" />
+                <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+                <ScalarProperty Name="ANLN1" ColumnName="ANLN1" />
+                <ScalarProperty Name="ANLN2" ColumnName="ANLN2" />
+                <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+                <ScalarProperty Name="PS_PSP_PNR" ColumnName="PS_PSP_PNR" />
+                <ScalarProperty Name="Pspnr" ColumnName="Pspnr" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

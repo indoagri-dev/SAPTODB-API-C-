@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IAC_AGRIDATAModelStoreContainer" CdmEntityContainer="IAC_AGRIDATAEntities">
+    <EntitySetMapping Name="ZTUAGRI_HK">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_HK">
+        <MappingFragment StoreEntitySet="ZTUAGRI_HK">
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+          <ScalarProperty Name="HK" ColumnName="HK" />
+          <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+          <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+          <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+          <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_HK_TESTAPI">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_HK_TESTAPI">
+        <MappingFragment StoreEntitySet="ZTUAGRI_HK_TESTAPI">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+          <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+          <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+          <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+          <ScalarProperty Name="HK" ColumnName="HK" />
+          <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTU_PRCALCHV_TESTAPI">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTU_PRCALCHV_TESTAPI">
+        <MappingFragment StoreEntitySet="ZTU_PRCALCHV_TESTAPI">
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TOTALPREMI" ColumnName="TOTALPREMI" />
+          <ScalarProperty Name="ALOCPREMI" ColumnName="ALOCPREMI" />
+          <ScalarProperty Name="OVERBASICPREMI" ColumnName="OVERBASICPREMI" />
+          <ScalarProperty Name="OVERBASICRATE" ColumnName="OVERBASICRATE" />
+          <ScalarProperty Name="OVERBASIC" ColumnName="OVERBASIC" />
+          <ScalarProperty Name="BASICPREMI" ColumnName="BASICPREMI" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="PREST" ColumnName="PREST" />
+          <ScalarProperty Name="BLOCKBASISAVG" ColumnName="BLOCKBASISAVG" />
+          <ScalarProperty Name="BLOCKBASIS" ColumnName="BLOCKBASIS" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="PREMITYP" ColumnName="PREMITYP" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_BP_TESTAPI">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_BP_TESTAPI">
+        <MappingFragment StoreEntitySet="ZTUAGRI_BP_TESTAPI">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+          <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="LB" ColumnName="LB" />
+          <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+          <ScalarProperty Name="TPH" ColumnName="TPH" />
+          <ScalarProperty Name="DRC" ColumnName="DRC" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_PBS2_TESTAPI">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_PBS2_TESTAPI">
+        <MappingFragment StoreEntitySet="ZTUAGRI_PBS2_TESTAPI">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+          <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+          <ScalarProperty Name="kernet" ColumnName="kernet" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+          <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+          <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+          <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+          <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+          <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+          <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+          <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+          <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+          <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+          <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+          <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+          <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+          <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+          <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+          <ScalarProperty Name="INEX" ColumnName="INEX" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="NET" ColumnName="NET" />
+          <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+          <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+          <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+          <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+          <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+          <ScalarProperty Name="MILL" ColumnName="MILL" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+          <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+          <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_BP">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_BP">
+        <MappingFragment StoreEntitySet="ZTUAGRI_BP">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+          <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="LB" ColumnName="LB" />
+          <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+          <ScalarProperty Name="TPH" ColumnName="TPH" />
+          <ScalarProperty Name="DRC" ColumnName="DRC" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTU_PRCALCHV">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTU_PRCALCHV">
+        <MappingFragment StoreEntitySet="ZTU_PRCALCHV">
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TOTALPREMI" ColumnName="TOTALPREMI" />
+          <ScalarProperty Name="ALOCPREMI" ColumnName="ALOCPREMI" />
+          <ScalarProperty Name="OVERBASICPREMI" ColumnName="OVERBASICPREMI" />
+          <ScalarProperty Name="OVERBASICRATE" ColumnName="OVERBASICRATE" />
+          <ScalarProperty Name="OVERBASIC" ColumnName="OVERBASIC" />
+          <ScalarProperty Name="BASICPREMI" ColumnName="BASICPREMI" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="PREST" ColumnName="PREST" />
+          <ScalarProperty Name="BLOCKBASISAVG" ColumnName="BLOCKBASISAVG" />
+          <ScalarProperty Name="BLOCKBASIS" ColumnName="BLOCKBASIS" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="PREMITYP" ColumnName="PREMITYP" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_PBS2">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_PBS2">
+        <MappingFragment StoreEntitySet="ZTUAGRI_PBS2">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+          <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+          <ScalarProperty Name="kernet" ColumnName="kernet" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+          <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+          <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+          <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+          <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+          <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+          <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+          <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+          <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+          <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+          <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+          <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+          <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+          <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+          <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+          <ScalarProperty Name="INEX" ColumnName="INEX" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="NET" ColumnName="NET" />
+          <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+          <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+          <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+          <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+          <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+          <ScalarProperty Name="MILL" ColumnName="MILL" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+          <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+          <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_LB">
+      <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_LB">
+        <MappingFragment StoreEntitySet="ZTUAGRI_LB">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="DONUM" ColumnName="DONUM" />
+          <ScalarProperty Name="CONTRACTNUM" ColumnName="CONTRACTNUM" />
+          <ScalarProperty Name="EBELN" ColumnName="EBELN" />
+          <ScalarProperty Name="DOCLINE" ColumnName="DOCLINE" />
+          <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+          <ScalarProperty Name="FTRIP" ColumnName="FTRIP" />
+          <ScalarProperty Name="DEST" ColumnName="DEST" />
+          <ScalarProperty Name="TRIPC" ColumnName="TRIPC" />
+          <ScalarProperty Name="PCIO" ColumnName="PCIO" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="HEND" ColumnName="HEND" />
+          <ScalarProperty Name="HSTART" ColumnName="HSTART" />
+          <ScalarProperty Name="LASTUPDATEDBY_I" ColumnName="LASTUPDATEDBY_I" />
+          <ScalarProperty Name="LASTUPDATEDDATEI" ColumnName="LASTUPDATEDDATEI" />
+          <ScalarProperty Name="CREATEDBY_I" ColumnName="CREATEDBY_I" />
+          <ScalarProperty Name="CREATEDDATE_I" ColumnName="CREATEDDATE_I" />
+          <ScalarProperty Name="KERNET" ColumnName="KERNET" />
+          <ScalarProperty Name="UOMQTY" ColumnName="UOMQTY" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="TYPEANGK" ColumnName="TYPEANGK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+          <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="RUNACC" ColumnName="RUNACC" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+          <ScalarProperty Name="HISTORY" ColumnName="HISTORY" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="LBKDATE" ColumnName="LBKDATE" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IAC_AGRIDATAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ZTUAGRI_HK">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ESTATE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="HK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="OT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="HASIL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="PREMI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PENALTI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ABSTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="JOBPOS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUMREF" Type="Int32" />
+    <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Exec_Date" Type="DateTime" Precision="3" />
+    <Property Name="Exec_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogId" Type="Int32" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="IAC_AGRIDATAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ZTUAGRI_HK" EntityType="Self.ZTUAGRI_HK" />
+  </EntityContainer>
+</Schema>

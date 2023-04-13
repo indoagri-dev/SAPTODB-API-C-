@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1925E8AD-5BEF-463E-BF45-ACF43595B4F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Indoagri.IndoagriDB217</RootNamespace>
+    <AssemblyName>Indoagri.IndoagriDB217</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\IndoagriICAT217.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoagriICAT217.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndoagriICAT217.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndoagriICAT217.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoagriICAT217.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseOrderDetail.cs">
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseOrderHeader.cs">
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseRequest.cs">
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseRequestDetail.cs">
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseRequisition.cs">
+      <DependentUpon>IndoagriICAT217.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PURCHASEREQUISITION_MAPING.cs" />
+    <Compile Include="Models\PURCHASEORDER_DETAIL_MAPING.cs" />
+    <Compile Include="Models\PURCHASEORDER_HEADER_MAPING.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PurchaseOrderHeaderRepositories.cs" />
+    <Compile Include="Repositories\PurchaseOrderHeaderDetailRepositories.cs" />
+    <Compile Include="Repositories\PurchaseRequestRepositories.cs" />
+    <Compile Include="Repositories\PurchaseRequestDetailRepositories.cs" />
+    <Compile Include="Repositories\PurchaseRequisitionRepositories.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Models\IndoagriICAT217.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IndoagriICAT217.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\IndoagriICAT217.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IndoagriICAT217.edmx</DependentUpon>
+      <LastGenOutput>IndoagriICAT217.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\IndoagriICAT217.edmx.diagram">
+      <DependentUpon>IndoagriICAT217.edmx</DependentUpon>
+    </None>
+    <None Include="Models\IndoagriICAT217.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IndoagriICAT217.edmx</DependentUpon>
+      <LastGenOutput>IndoagriICAT217.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

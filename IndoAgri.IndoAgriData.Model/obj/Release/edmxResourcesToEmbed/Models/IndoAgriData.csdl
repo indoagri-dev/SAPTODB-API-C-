@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INDOAGRI_DATAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="INDOAGRI_DATAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LogPostDatas" EntityType="INDOAGRI_DATAModel.LogPostData" />
+    <EntitySet Name="ZTW_ASSETSTAT" EntityType="INDOAGRI_DATAModel.ZTW_ASSETSTAT" />
+    <EntitySet Name="ZTUAGRI_PBS2_RPT_TEMP" EntityType="INDOAGRI_DATAModel.ZTUAGRI_PBS2_RPT_TEMP" />
+    <EntitySet Name="ZTUAGRI_HK_Temp" EntityType="INDOAGRI_DATAModel.ZTUAGRI_HK_Temp" />
+    <FunctionImport Name="SP_ZTUAGRI_HK_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="LASTUPDATEDDATE" Mode="In" Type="DateTime" />
+      <Parameter Name="Estate" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ZTUAGRI_PBS2_RPT_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="LOADDATEFROM" Mode="In" Type="String" />
+      <Parameter Name="LOADDATETO" Mode="In" Type="String" />
+      <Parameter Name="Estate" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ZTUAGRI_BP_RPT_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="BPDATEFROM" Mode="In" Type="String" />
+      <Parameter Name="BPDATETO" Mode="In" Type="String" />
+      <Parameter Name="Estate" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ZTUAGRI_BP_RPT_Temp" EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT_Temp" />
+    <EntitySet Name="ZTUAGRI_BP_RPT" EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT" />
+    <FunctionImport Name="SP_COMSATIC_STOCK_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="MATERIAL" Mode="In" Type="String" />
+      <Parameter Name="ASOFDATE" Mode="In" Type="String" />
+      <Parameter Name="AREA" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SALES_MOBILE_STOCK_TEMP" EntityType="INDOAGRI_DATAModel.SALES_MOBILE_STOCK_TEMP" />
+    <FunctionImport Name="SP_RUNACC_RASIO" ReturnType="Collection(Int32)">
+      <Parameter Name="COMPANYCODE" Mode="In" Type="String" />
+      <Parameter Name="ESTATE" Mode="In" Type="String" />
+      <Parameter Name="PERIOD" Mode="In" Type="String" />
+      <Parameter Name="YEAR" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="RUNACC_RASIO_TEMP" EntityType="INDOAGRI_DATAModel.RUNACC_RASIO_TEMP" />
+    <EntitySet Name="ZTM_YTDTPURC_MIP_TEMP" EntityType="INDOAGRI_DATAModel.ZTM_YTDTPURC_MIP_TEMP" />
+    <FunctionImport Name="SP_ZTM_MATPRC_MIP_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="MATGRP" Mode="In" Type="String" />
+      <Parameter Name="AREA" Mode="In" Type="String" />
+      <Parameter Name="MATNR" Mode="In" Type="String" />
+      <Parameter Name="MANDT" Mode="In" Type="String" />
+      <Parameter Name="LSTPRD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ZTM_YTDTPURC_MIP_MOVE" ReturnType="Collection(Int32)">
+      <Parameter Name="COMP_GROUP" Mode="In" Type="String" />
+      <Parameter Name="MATGRP" Mode="In" Type="String" />
+      <Parameter Name="MANDT" Mode="In" Type="String" />
+      <Parameter Name="LSTPRD" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ZTPAGRI_MILLDATA" EntityType="INDOAGRI_DATAModel.ZTPAGRI_MILLDATA" />
+    <EntitySet Name="ZTPAGRI_MILLPROD" EntityType="INDOAGRI_DATAModel.ZTPAGRI_MILLPROD" />
+    <EntitySet Name="ZTMAGRI_STOCKPRD" EntityType="INDOAGRI_DATAModel.ZTMAGRI_STOCKPRD" />
+    <EntitySet Name="ZTM_PR_LIST" EntityType="INDOAGRI_DATAModel.ZTM_PR_LIST" />
+    <EntitySet Name="ZTF_CDV_LASTMAIL" EntityType="INDOAGRI_DATAModel.ZTF_CDV_LASTMAIL" />
+    <EntitySet Name="ZTM_ORDER_PO" EntityType="INDOAGRI_DATAModel.ZTM_ORDER_PO" />
+    <EntitySet Name="LogSAPToDBs" EntityType="INDOAGRI_DATAModel.LogSAPToDB" />
+    <EntitySet Name="ZTM_MATPRC_MIP_TEMP" EntityType="INDOAGRI_DATAModel.ZTM_MATPRC_MIP_TEMP" />
+    <EntitySet Name="ZTU_PRCALCHV" EntityType="INDOAGRI_DATAModel.ZTU_PRCALCHV" />
+    <EntitySet Name="ZTUAGRI_BP" EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP" />
+    <EntitySet Name="ZTUAGRI_HK" EntityType="INDOAGRI_DATAModel.ZTUAGRI_HK" />
+    <EntitySet Name="ZTUAGRI_PBS2" EntityType="INDOAGRI_DATAModel.ZTUAGRI_PBS2" />
+    <EntitySet Name="ZC0032" EntityType="INDOAGRI_DATAModel.ZC0032" />
+  </EntityContainer>
+  <EntityType Name="LogPostData">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ControllerAction" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTW_ASSETSTAT">
+    <Key>
+      <PropertyRef Name="AssetStatId" />
+    </Key>
+    <Property Name="AssetStatId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Werks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Erdat" Type="DateTime" Precision="3" />
+    <Property Name="Eqart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Good" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Broken" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Ernam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Endat" Type="DateTime" Precision="3" />
+    <Property Name="Rzet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_PBS2_RPT_TEMP">
+    <Key>
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="WEEK" />
+    </Key>
+    <Property Name="ZYEAR" Type="Int32" />
+    <Property Name="SPBSNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="ESTATE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="SPBSDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PLASMAID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ASSTID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MILL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MILLEX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SOPIR" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="JARAK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOPOL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="WBNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="NET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="UOMJRK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="INEX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RECALNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="LOADDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MULTI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ACTPLASMA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LBKNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="RUNNING_ACCOUNT" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ZDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JANJANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JJGUOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="TAKJANJANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAKBROND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAKTOTAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACTUAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LBKNUM_ITEM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="SHIPTYPE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="SHIPDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPTRIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEEK" Type="Int32" Nullable="false" />
+    <Property Name="PERIODE" Type="Int32" />
+    <Property Name="kernet" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WBNUMEST" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="NETEST" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_HK_Temp">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANYCODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="BKMDATE" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="COMPANYCODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="HK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="OT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="HASIL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="PREMI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PENALTI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ABSTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="JOBPOS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUMREF" Type="Int32" />
+    <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Exec_Date" Type="DateTime" Precision="3" />
+    <Property Name="Exec_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogId" Type="Int32" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_BP_RPT_Temp">
+    <Key>
+      <PropertyRef Name="LINENUMI" />
+    </Key>
+    <Property Name="ZYEAR" Type="Int32" />
+    <Property Name="PANENNUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="BKMNUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" />
+    <Property Name="BPDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUMI" Type="Int32" Nullable="false" />
+    <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ACTL" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DRC" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="TPH" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="UOMDRC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LB" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MNDR_HK" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="KARY_HK" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_BP_RPT">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="PANENNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BPDATE" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="LINENUM_I" />
+    </Key>
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="PANENNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="BPDATE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUM_I" Type="Int32" Nullable="false" />
+    <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ACTL" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DRC" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="TPH" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="UOMDRC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LB" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MNDR_HK" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="KARY_HK" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SALES_MOBILE_STOCK_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUKRS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MATNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ASOFDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUTXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NAME1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZBEGSTOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZRECSTOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZDEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZINSTOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZOTHSTOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZENDSTOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CF05" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OUTSKONTRAK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RUNACC_RASIO_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EQUNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EQKTX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RUNNINGACCOUNT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONSSOLAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONSSOLARHSD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALKM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALHOUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALFUELCONS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RASIOKML" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALFUELHOUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NETWEIGHT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EFISIENSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KGTRIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COSTACTUAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RPTOTALKM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RPTOTALHOUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RPKG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALHARIKERJA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COSTLABOUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COSTTRANSPORT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OTHEREXPENSE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COSTMATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PERIOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZYEAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTM_YTDTPURC_MIP_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANDT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="COMPGRP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRPDESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPRD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPRDTOT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="YTDTOT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTPAGRI_MILLDATA">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="PRD_DATE" />
+    </Key>
+    <Property Name="MANDT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="BUKRS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="GJAHR" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MONAT" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PRD_DATE" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CAPACITY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBOPN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBRTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBRTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBPTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBPTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFBCLS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPEN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OER" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OERTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFAPTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFAPTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLOSE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPNBS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPNOT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPEN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKPROD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDFN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKEXTRT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKEXTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKDISTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKDISTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHTFN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHRFN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHGL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLSBS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLSOT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLOSE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MILLSTR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="MILLSTP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="PERHRTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PERHRTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BREAKDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UTYHRTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UTYHRTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MILUTTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MILUTTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MILTHTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MILTHTD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="REMARK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ERSDA" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CPUTM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ERNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="LAEDA" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="UPDDT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="AENAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CPOPRD5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN6" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTPAGRI_MILLPROD">
+    <Key>
+      <PropertyRef Name="MANDT" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="AUFNR" />
+    </Key>
+    <Property Name="MANDT" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="WERKS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="GJAHR" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MONAT" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AUFNR" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ERSDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CPUTM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ERNAM" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="LAEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UPDDT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="AENAM" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTMAGRI_STOCKPRD">
+    <Key>
+      <PropertyRef Name="BDATJ" />
+      <PropertyRef Name="POPER" />
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="MATNR" />
+      <PropertyRef Name="BWTAR" />
+    </Key>
+    <Property Name="BDATJ" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="POPER" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BUKRS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATNR" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="BWTAR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MTART" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BKLAS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATKL" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="KTEXT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PVPRS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PEINH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LBKUM" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="SALK3" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SPART" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PSPNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MLAST" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="VPRSV" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="STATUSTEXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLIENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTM_PR_LIST">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="BANFN" />
+      <PropertyRef Name="BNFPO" />
+      <PropertyRef Name="EBELN" />
+      <PropertyRef Name="EBELP" />
+      <PropertyRef Name="EKGRP" />
+      <PropertyRef Name="EKGRP_PO" />
+    </Key>
+    <Property Name="BUKRS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BANFN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BNFPO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="EBELN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EBELP" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="EKGRP" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EKGRP_PO" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MATNR" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NOMOR" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NAME1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ELIKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AREA1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CMGRP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="KNTTP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXZ01" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CAPITAL" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CAPDESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WGBEZ2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="SUBGRP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SDESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MATKL" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="WGBEZ" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MENGE" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BSMNG" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OQTY" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="EBAKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LFDAT" Type="DateTime" Precision="0" />
+    <Property Name="FRGDT" Type="DateTime" Precision="0" />
+    <Property Name="BADAT" Type="DateTime" Precision="0" />
+    <Property Name="RELDT" Type="DateTime" Precision="0" />
+    <Property Name="AFNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="IDNLF" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="HDRTXT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="STRTXT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EKNAM" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LOEKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="STATU" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FRGKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ERDAT" Type="DateTime" Precision="0" />
+    <Property Name="FRGZU" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ANLN1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="TXT502" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LTEXT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SAKTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TXT50" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="POSID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="POST1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ERNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="BEDAT" Type="DateTime" Precision="0" />
+    <Property Name="POQTY" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="FRGGR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="FRGST" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PREIS" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="PEINH" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AMTPR" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="STRSTATUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SBTTL" Type="Int32" />
+    <Property Name="GRPCHG" Type="DateTime" Precision="0" />
+    <Property Name="ESTKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PORELDT" Type="DateTime" Precision="0" />
+    <Property Name="RFQDT" Type="DateTime" Precision="0" />
+    <Property Name="OUTDAYS" Type="Int32" />
+    <Property Name="COTYP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BLCKD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BLCKT" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="OVERPOSTO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SWERK" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="REMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="JOBDAT" Type="DateTime" Precision="0" />
+    <Property Name="JOBNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLIENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTF_CDV_LASTMAIL">
+    <Key>
+      <PropertyRef Name="CDVId" />
+    </Key>
+    <Property Name="CDVId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Cdcomp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Cdgsber" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Approver" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Nrcdv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nrbelnr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amtotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Cutotal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Txberita2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Docnum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApprovedDate" Type="DateTime" Precision="3" />
+    <Property Name="NMPAYEE" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="NMGSBER" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isSuccessPostToSAP" Type="Boolean" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTM_ORDER_PO">
+    <Key>
+      <PropertyRef Name="EBELN" />
+      <PropertyRef Name="EBELP" />
+      <PropertyRef Name="MBLNR" />
+    </Key>
+    <Property Name="EBELN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EBELP" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MBLNR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MATNR" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="OBJEK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ERNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="BUKRS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BUTXT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EKGRP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EKNAM" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="PLTNM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BSART" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TRANS_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TRANS_NAME" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="PR_TEXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PO_HTEXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PO_ITEXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LIFNR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ANRED" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NAME1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="LIFRE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LIFNM" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="STRAS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ORT01" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PSTLZ" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TELF1" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="TELFX" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VERKF" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BEDAT" Type="DateTime" Precision="0" />
+    <Property Name="PORELDT" Type="DateTime" Precision="0" />
+    <Property Name="KPOSN" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="KNTTP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PSTYP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXZ01" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CAPITAL" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CAPDESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WGBEZ2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="SUBGRP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="SDESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MATKL" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="WGBEZ" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="EXTWG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GRULNM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MENGE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PEINH" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="P001" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RA00" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PCTRA" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FRA1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZOTH" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZINS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZCLR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZPPN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZDEL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZTA1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZCS1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZCSTOT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="XZPPN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="XZDEL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="XZTA1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="XZCS1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PRCORG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VALORG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WKURS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PRCIDR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VALIDR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WAERS2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INCO1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INCO2" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Name="LGORT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ZTERM" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TEXT1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FRGGR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="FRGSX" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="FRGKE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FRGZU" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="EINDT" Type="DateTime" Precision="0" />
+    <Property Name="WEMNG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LOEKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UEBTK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BUDAT" Type="DateTime" Precision="0" />
+    <Property Name="GRQTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GRUOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="GRLOC" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="GRPRC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GRVAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OUTPO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OUTPOV" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ELIKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ACHPCT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="XBLNR" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="BANFN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="BADAT" Type="DateTime" Precision="0" />
+    <Property Name="RELDT2" Type="DateTime" Precision="0" />
+    <Property Name="FRGDT" Type="DateTime" Precision="0" />
+    <Property Name="FRGKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LFDAT" Type="DateTime" Precision="0" />
+    <Property Name="MENGE2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MEINS2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BSMNG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DISPO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AFNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="BEDNR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ERNAM2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="SUBMI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ANFNR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SAKTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TXT50" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LTEXT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ANLN1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="TXT502" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OBJNR" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="PS_PSP_PNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POST1" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="POSID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PRART" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PRATX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="COTYP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AUART" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TXT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BELNR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="INVAMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BUDAT2" Type="DateTime" Precision="0" />
+    <Property Name="DUEDAT" Type="DateTime" Precision="0" />
+    <Property Name="ZFBDT" Type="DateTime" Precision="0" />
+    <Property Name="ZBD1T" Type="Int32" />
+    <Property Name="MWSKZ" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EBAKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="KNUMV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OBJECTID" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="KEYPO" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="WEBRE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LD01" Type="Int32" />
+    <Property Name="LD02" Type="Int32" />
+    <Property Name="LD03" Type="Int32" />
+    <Property Name="LD04" Type="Int32" />
+    <Property Name="KALSK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EKORG" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="POCTR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="HTCHG" Type="DateTime" Precision="0" />
+    <Property Name="ITCHG" Type="DateTime" Precision="0" />
+    <Property Name="EAN11" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ATWTB1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATWTB2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATWTB3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATWTB4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATWTB5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="JOBDAT" Type="DateTime" Precision="0" />
+    <Property Name="JOBNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AEDAT" Type="DateTime" Precision="0" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLIENT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LogSAPToDB">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ControllerAction" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JsonMessageError" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <Property Name="Count" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTM_MATPRC_MIP_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANDT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="AREA1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATNR" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="MATGRPDESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPRD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TXZ01" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPOITEM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TOTVAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LSTPRC" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LSTUOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ZTU_PRCALCHV">
+    <Key>
+      <PropertyRef Name="COMPANY" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="BKMDATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="MDRAN" />
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BLOCKID" />
+      <PropertyRef Name="PREMITYP" />
+    </Key>
+    <Property Name="COMPANY" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ZYEAR" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MDRAN" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="EMPID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="BLOCKID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PREMITYP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="BLOCKBASIS" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="BLOCKBASISAVG" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="PREST" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="BASIC" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="BASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASIC" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASICRATE" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="ALOCPREMI" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="TOTALPREMI" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATEDTIME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PERIOD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="WEEK" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="EXEC_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_BP">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="PANENNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BPDATE" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="LINENUM_I" />
+    </Key>
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="PANENNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="BPDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STATUS" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LINENUM_I" Type="Int32" Nullable="false" />
+    <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ACTL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DRC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TPH" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="UOMDRC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LB" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MNDR_HK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="KARY_HK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_HK">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIOD" Type="Int32" />
+    <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="HK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="OT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="HASIL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="PREMI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PENALTI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ABSTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="JOBPOS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUMREF" Type="Int32" />
+    <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Exec_Date" Type="DateTime" Precision="3" />
+    <Property Name="Exec_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogId" Type="Int32" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_PBS2">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="SPBSNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="SPBSDATE" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+    <Property Name="SPBSNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="SPBSDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PLASMAID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ASSTID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MILL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MILLEX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SOPIR" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="JARAK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOPOL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="WBNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="NET" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="UOMJRK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="INEX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RECALNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="LOADDATE" Type="DateTime" Precision="3" />
+    <Property Name="MULTI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ACTPLASMA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LBKNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="RUNNING_ACCOUNT" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="LINENUM" Type="Int32" Nullable="false" />
+    <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ZDATE" Type="DateTime" Precision="3" />
+    <Property Name="JANJANG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="JJGUOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="TAKJANJANG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAKBROND" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAKTOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ACTUAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LBKNUM_ITEM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="SHIPTYPE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="SHIPDATE" Type="DateTime" Precision="3" />
+    <Property Name="SHIPTRIP" Type="Int32" />
+    <Property Name="WEEK" Type="Int32" />
+    <Property Name="PERIODE" Type="Int32" />
+    <Property Name="kernet" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WBNUMEST" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="NETEST" Type="Decimal" Precision="16" Scale="3" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ZC0032">
+    <Key>
+      <PropertyRef Name="MANDT" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="TYPE" />
+      <PropertyRef Name="ITEM" />
+      <PropertyRef Name="ITEMTEXT" />
+    </Key>
+    <Property Name="MANDT" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="GJAHR" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MONAT" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMTEXT" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
+    <Property Name="AOP1YR" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="YTDAOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="YTDCOST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="YTDSISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z01AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z01COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z01SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z02AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z02COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z02SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z03AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z03COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z03SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z04AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z04COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z04SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z05AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z05COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z05SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z06AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z06COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z06SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z07AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z07COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z07SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z08AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z08COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z08SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z09AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z09COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z09SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z10AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z10COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z10SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z11AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z11COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z11SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z12AOP" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z12COST" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Z12SISA" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="CLASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JOBDAT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JOBNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="INSERTDATE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

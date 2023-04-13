@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_ICAT3ModelStoreContainer" CdmEntityContainer="DB_POICATEntities">
+    <EntitySetMapping Name="PurchaseRequests">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequest">
+        <MappingFragment StoreEntitySet="PurchaseRequest">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="Approval" ColumnName="Approval" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenCreatedOn" ColumnName="TokenCreatedOn" />
+          <ScalarProperty Name="ClosedComment" ColumnName="ClosedComment" />
+          <ScalarProperty Name="SiteManagerComment" ColumnName="SiteManagerComment" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseRequisitions">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequisition">
+        <MappingFragment StoreEntitySet="PurchaseRequisition">
+          <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+          <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="TXZ01" ColumnName="TXZ01" />
+          <ScalarProperty Name="MATKL" ColumnName="MATKL" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="BADAT" ColumnName="BADAT" />
+          <ScalarProperty Name="LFDAT" ColumnName="LFDAT" />
+          <ScalarProperty Name="FRGZU" ColumnName="FRGZU" />
+          <ScalarProperty Name="PREIS" ColumnName="PREIS" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="DISPO" ColumnName="DISPO" />
+          <ScalarProperty Name="ESTKZ" ColumnName="ESTKZ" />
+          <ScalarProperty Name="FRGKZ" ColumnName="FRGKZ" />
+          <ScalarProperty Name="EKGRP" ColumnName="EKGRP" />
+          <ScalarProperty Name="HDRTXT" ColumnName="HDRTXT" />
+          <ScalarProperty Name="EXTWG" ColumnName="EXTWG" />
+          <ScalarProperty Name="NORMT" ColumnName="NORMT" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="SAKTO" ColumnName="SAKTO" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="ANLN1" ColumnName="ANLN1" />
+          <ScalarProperty Name="ANLN2" ColumnName="ANLN2" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="PS_PSP_PNR" ColumnName="PS_PSP_PNR" />
+          <ScalarProperty Name="Pspnr" ColumnName="Pspnr" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RunningNumbers">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.RunningNumber">
+        <MappingFragment StoreEntitySet="RunningNumber">
+          <ScalarProperty Name="rn_Date" ColumnName="rn_Date" />
+          <ScalarProperty Name="rn_Month" ColumnName="rn_Month" />
+          <ScalarProperty Name="rn_Year" ColumnName="rn_Year" />
+          <ScalarProperty Name="rn_number" ColumnName="rn_number" />
+          <ScalarProperty Name="rn_FormCode" ColumnName="rn_FormCode" />
+          <ScalarProperty Name="rn_ID" ColumnName="rn_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderDetails">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseOrderDetail">
+        <MappingFragment StoreEntitySet="PurchaseOrderDetail">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RejectDate" ColumnName="RejectDate" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="PRItem" ColumnName="PRItem" />
+          <ScalarProperty Name="PRNo" ColumnName="PRNo" />
+          <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+          <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+          <ScalarProperty Name="Closed_Comment" ColumnName="Closed_Comment" />
+          <ScalarProperty Name="Reject_Comment" ColumnName="Reject_Comment" />
+          <ScalarProperty Name="isINV" ColumnName="isINV" />
+          <ScalarProperty Name="isGR" ColumnName="isGR" />
+          <ScalarProperty Name="isDO" ColumnName="isDO" />
+          <ScalarProperty Name="isReject" ColumnName="isReject" />
+          <ScalarProperty Name="isClose" ColumnName="isClose" />
+          <ScalarProperty Name="DOStatus" ColumnName="DOStatus" />
+          <ScalarProperty Name="DOStatusId" ColumnName="DOStatusId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="invoiceAddrLGORT" ColumnName="invoiceAddrLGORT" />
+          <ScalarProperty Name="invoiceAddrADDRNUMBER" ColumnName="invoiceAddrADDRNUMBER" />
+          <ScalarProperty Name="invoiceAddrWERKS" ColumnName="invoiceAddrWERKS" />
+          <ScalarProperty Name="emailDeliveryAddress" ColumnName="emailDeliveryAddress" />
+          <ScalarProperty Name="deliveryAddrADDRNUMBER" ColumnName="deliveryAddrADDRNUMBER" />
+          <ScalarProperty Name="deliveryAddrWERKS" ColumnName="deliveryAddrWERKS" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DiscountQty" ColumnName="DiscountQty" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CashflowCode" ColumnName="CashflowCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="OutsQty" ColumnName="OutsQty" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="SAKNR_GLAcc" ColumnName="SAKNR_GLAcc" />
+          <ScalarProperty Name="KTOPL_GLAcc" ColumnName="KTOPL_GLAcc" />
+          <ScalarProperty Name="KOSTL_CostCenter" ColumnName="KOSTL_CostCenter" />
+          <ScalarProperty Name="KOKRS_CostCenter" ColumnName="KOKRS_CostCenter" />
+          <ScalarProperty Name="ANLN1_Asset" ColumnName="ANLN1_Asset" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="POSID_WBS" ColumnName="POSID_WBS" />
+          <ScalarProperty Name="PSPNR_WBS" ColumnName="PSPNR_WBS" />
+          <ScalarProperty Name="GoodsType" ColumnName="GoodsType" />
+          <ScalarProperty Name="CapexOpex" ColumnName="CapexOpex" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="PurchaseDetailID" ColumnName="PurchaseDetailID" />
+          <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+          <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="POItem" ColumnName="POItem" />
+          <ScalarProperty Name="PO_Number" ColumnName="PO_Number" />
+          <ScalarProperty Name="POHeader_ID" ColumnName="POHeader_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseRequestDetails">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseRequestDetail">
+        <MappingFragment StoreEntitySet="PurchaseRequestDetail">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="RejectCommentAMAAME" ColumnName="RejectCommentAMAAME" />
+          <ScalarProperty Name="prd_OrderNo" ColumnName="prd_OrderNo" />
+          <ScalarProperty Name="prd_PRItem" ColumnName="prd_PRItem" />
+          <ScalarProperty Name="prd_PRNo" ColumnName="prd_PRNo" />
+          <ScalarProperty Name="prd_BNFPO" ColumnName="prd_BNFPO" />
+          <ScalarProperty Name="prd_BANFN" ColumnName="prd_BANFN" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="Transporter" ColumnName="Transporter" />
+          <ScalarProperty Name="ThirdPartyTransporter" ColumnName="ThirdPartyTransporter" />
+          <ScalarProperty Name="invoiceAddrLGORT" ColumnName="invoiceAddrLGORT" />
+          <ScalarProperty Name="invoiceAddrADDRNUMBER" ColumnName="invoiceAddrADDRNUMBER" />
+          <ScalarProperty Name="invoiceAddrWERKS" ColumnName="invoiceAddrWERKS" />
+          <ScalarProperty Name="prd_emailDeliveryAddress" ColumnName="prd_emailDeliveryAddress" />
+          <ScalarProperty Name="deliveryAddrADDRNUMBER" ColumnName="deliveryAddrADDRNUMBER" />
+          <ScalarProperty Name="deliveryAddrWERKS" ColumnName="deliveryAddrWERKS" />
+          <ScalarProperty Name="prd_UserId" ColumnName="prd_UserId" />
+          <ScalarProperty Name="prd_DiscountQty" ColumnName="prd_DiscountQty" />
+          <ScalarProperty Name="prd_SalePrice" ColumnName="prd_SalePrice" />
+          <ScalarProperty Name="prd_Price" ColumnName="prd_Price" />
+          <ScalarProperty Name="prd_Currency" ColumnName="prd_Currency" />
+          <ScalarProperty Name="prd_CashflowCode" ColumnName="prd_CashflowCode" />
+          <ScalarProperty Name="prd_Remark" ColumnName="prd_Remark" />
+          <ScalarProperty Name="prd_DeliveryDate" ColumnName="prd_DeliveryDate" />
+          <ScalarProperty Name="prd_Qty" ColumnName="prd_Qty" />
+          <ScalarProperty Name="prd_UOM" ColumnName="prd_UOM" />
+          <ScalarProperty Name="prd_SAKNR_GLAcc" ColumnName="prd_SAKNR_GLAcc" />
+          <ScalarProperty Name="prd_KTOPL_GLAcc" ColumnName="prd_KTOPL_GLAcc" />
+          <ScalarProperty Name="prd_KOSTL_CostCenter" ColumnName="prd_KOSTL_CostCenter" />
+          <ScalarProperty Name="prd_KOKRS_CostCenter" ColumnName="prd_KOKRS_CostCenter" />
+          <ScalarProperty Name="prd_ANLN1_Asset" ColumnName="prd_ANLN1_Asset" />
+          <ScalarProperty Name="prd_BUKRS" ColumnName="prd_BUKRS" />
+          <ScalarProperty Name="prd_POSID_WBS" ColumnName="prd_POSID_WBS" />
+          <ScalarProperty Name="prd_PSPNR_WBS" ColumnName="prd_PSPNR_WBS" />
+          <ScalarProperty Name="prd_GoodsType" ColumnName="prd_GoodsType" />
+          <ScalarProperty Name="prd_CapexOpex" ColumnName="prd_CapexOpex" />
+          <ScalarProperty Name="prd_WERKS" ColumnName="prd_WERKS" />
+          <ScalarProperty Name="prd_PurchaseID" ColumnName="prd_PurchaseID" />
+          <ScalarProperty Name="prd_CityID" ColumnName="prd_CityID" />
+          <ScalarProperty Name="prd_VendorCode" ColumnName="prd_VendorCode" />
+          <ScalarProperty Name="prd_ProductName" ColumnName="prd_ProductName" />
+          <ScalarProperty Name="prd_ProductCode" ColumnName="prd_ProductCode" />
+          <ScalarProperty Name="prd_Status" ColumnName="prd_Status" />
+          <ScalarProperty Name="prd_PO_Number" ColumnName="prd_PO_Number" />
+          <ScalarProperty Name="prd_crID" ColumnName="prd_crID" />
+          <ScalarProperty Name="prd_ID" ColumnName="prd_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VendorDatas">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.VendorData">
+        <MappingFragment StoreEntitySet="VendorData">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsPKP" ColumnName="IsPKP" />
+          <ScalarProperty Name="TermOfPayment" ColumnName="TermOfPayment" />
+          <ScalarProperty Name="EmailCC2" ColumnName="EmailCC2" />
+          <ScalarProperty Name="EmailCC" ColumnName="EmailCC" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+          <ScalarProperty Name="IDBasicData" ColumnName="IDBasicData" />
+          <ScalarProperty Name="SAPVendorCode" ColumnName="SAPVendorCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterCompanies">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.MasterCompany">
+        <MappingFragment StoreEntitySet="MasterCompany">
+          <ScalarProperty Name="POReminder" ColumnName="POReminder" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="POExpired" ColumnName="POExpired" />
+          <ScalarProperty Name="POMax" ColumnName="POMax" />
+          <ScalarProperty Name="BUTXT" ColumnName="BUTXT" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterPlantAreas">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.MasterPlantArea">
+        <MappingFragment StoreEntitySet="MasterPlantArea">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EMHO" ColumnName="EMHO" />
+          <ScalarProperty Name="EMRO" ColumnName="EMRO" />
+          <ScalarProperty Name="EMSITE" ColumnName="EMSITE" />
+          <ScalarProperty Name="EMCEOS" ColumnName="EMCEOS" />
+          <ScalarProperty Name="EMCEO" ColumnName="EMCEO" />
+          <ScalarProperty Name="RELCEO2" ColumnName="RELCEO2" />
+          <ScalarProperty Name="RELCEO" ColumnName="RELCEO" />
+          <ScalarProperty Name="SUPPORT_TEAM" ColumnName="SUPPORT_TEAM" />
+          <ScalarProperty Name="EMCFOS" ColumnName="EMCFOS" />
+          <ScalarProperty Name="EMCFO" ColumnName="EMCFO" />
+          <ScalarProperty Name="RELCFO2" ColumnName="RELCFO2" />
+          <ScalarProperty Name="RELCFO" ColumnName="RELCFO" />
+          <ScalarProperty Name="EMCOOS" ColumnName="EMCOOS" />
+          <ScalarProperty Name="EMCOO" ColumnName="EMCOO" />
+          <ScalarProperty Name="RELCOO2" ColumnName="RELCOO2" />
+          <ScalarProperty Name="RELCOO" ColumnName="RELCOO" />
+          <ScalarProperty Name="EMVPAS" ColumnName="EMVPAS" />
+          <ScalarProperty Name="EMVPA" ColumnName="EMVPA" />
+          <ScalarProperty Name="RELVPA2" ColumnName="RELVPA2" />
+          <ScalarProperty Name="RELVPA" ColumnName="RELVPA" />
+          <ScalarProperty Name="USVPA" ColumnName="USVPA" />
+          <ScalarProperty Name="EMAMAS" ColumnName="EMAMAS" />
+          <ScalarProperty Name="EMAMA" ColumnName="EMAMA" />
+          <ScalarProperty Name="RELAMA2" ColumnName="RELAMA2" />
+          <ScalarProperty Name="RELAMA" ColumnName="RELAMA" />
+          <ScalarProperty Name="USAMA" ColumnName="USAMA" />
+          <ScalarProperty Name="EMMGR" ColumnName="EMMGR" />
+          <ScalarProperty Name="RELMGR2" ColumnName="RELMGR2" />
+          <ScalarProperty Name="RELMGR" ColumnName="RELMGR" />
+          <ScalarProperty Name="USMGR" ColumnName="USMGR" />
+          <ScalarProperty Name="EMKTU" ColumnName="EMKTU" />
+          <ScalarProperty Name="FRGCO2" ColumnName="FRGCO2" />
+          <ScalarProperty Name="FRGCO1" ColumnName="FRGCO1" />
+          <ScalarProperty Name="EKNAM2" ColumnName="EKNAM2" />
+          <ScalarProperty Name="EKNAM1" ColumnName="EKNAM1" />
+          <ScalarProperty Name="EKGRP2" ColumnName="EKGRP2" />
+          <ScalarProperty Name="EKGRP1" ColumnName="EKGRP1" />
+          <ScalarProperty Name="USKTU2" ColumnName="USKTU2" />
+          <ScalarProperty Name="USKTU1" ColumnName="USKTU1" />
+          <ScalarProperty Name="EMTRK" ColumnName="EMTRK" />
+          <ScalarProperty Name="EMOPR" ColumnName="EMOPR" />
+          <ScalarProperty Name="PLTTYP" ColumnName="PLTTYP" />
+          <ScalarProperty Name="CMGRP" ColumnName="CMGRP" />
+          <ScalarProperty Name="ZSEQ2" ColumnName="ZSEQ2" />
+          <ScalarProperty Name="ZSEQ" ColumnName="ZSEQ" />
+          <ScalarProperty Name="SHORT" ColumnName="SHORT" />
+          <ScalarProperty Name="AREA1" ColumnName="AREA1" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterPlants">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.MasterPlant">
+        <MappingFragment StoreEntitySet="MasterPlant">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="POMax" ColumnName="POMax" />
+          <ScalarProperty Name="LIFNR" ColumnName="LIFNR" />
+          <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterDeliveryAddresses">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.MasterDeliveryAddress">
+        <MappingFragment StoreEntitySet="MasterDeliveryAddress">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="AREA1" ColumnName="AREA1" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="CITY1" ColumnName="CITY1" />
+          <ScalarProperty Name="TEL_NUMBER" ColumnName="TEL_NUMBER" />
+          <ScalarProperty Name="POST_CODE1" ColumnName="POST_CODE1" />
+          <ScalarProperty Name="STREET" ColumnName="STREET" />
+          <ScalarProperty Name="NAME2" ColumnName="NAME2" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+          <ScalarProperty Name="ADDRNUMBER" ColumnName="ADDRNUMBER" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateNotifEmails">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.TemplateNotifEmail">
+        <MappingFragment StoreEntitySet="TemplateNotifEmail">
+          <ScalarProperty Name="tpl_DeletedOn" ColumnName="tpl_DeletedOn" />
+          <ScalarProperty Name="tpl_UpdatedBy" ColumnName="tpl_UpdatedBy" />
+          <ScalarProperty Name="tpl_UpdatedOn" ColumnName="tpl_UpdatedOn" />
+          <ScalarProperty Name="tpl_CreatedBy" ColumnName="tpl_CreatedBy" />
+          <ScalarProperty Name="tpl_CreatedOn" ColumnName="tpl_CreatedOn" />
+          <ScalarProperty Name="tpl_IsEnabled" ColumnName="tpl_IsEnabled" />
+          <ScalarProperty Name="tpl_ModuleCode" ColumnName="tpl_ModuleCode" />
+          <ScalarProperty Name="tpl_ProcessNameCode" ColumnName="tpl_ProcessNameCode" />
+          <ScalarProperty Name="tpl_Subject" ColumnName="tpl_Subject" />
+          <ScalarProperty Name="tpl_Template" ColumnName="tpl_Template" />
+          <ScalarProperty Name="tpl_ID" ColumnName="tpl_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="AccessWeb" ColumnName="AccessWeb" />
+          <ScalarProperty Name="AccessMobile" ColumnName="AccessMobile" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="FcmKey" ColumnName="FcmKey" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ACCNT" ColumnName="ACCNT" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderHeaders">
+      <EntityTypeMapping TypeName="DB_ICAT3Model.PurchaseOrderHeader">
+        <MappingFragment StoreEntitySet="PurchaseOrderHeader">
+          <ScalarProperty Name="EmailCounter" ColumnName="EmailCounter" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EKGRP" ColumnName="EKGRP" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UserOrderId" ColumnName="UserOrderId" />
+          <ScalarProperty Name="IsPKP" ColumnName="IsPKP" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+          <ScalarProperty Name="UPDeliveryAddress" ColumnName="UPDeliveryAddress" />
+          <ScalarProperty Name="InvoiceAddrNUMBER" ColumnName="InvoiceAddrNUMBER" />
+          <ScalarProperty Name="InvoiceAddrWERKS" ColumnName="InvoiceAddrWERKS" />
+          <ScalarProperty Name="DeliveryAddrNUMBER" ColumnName="DeliveryAddrNUMBER" />
+          <ScalarProperty Name="DeliveryAddWERKS" ColumnName="DeliveryAddWERKS" />
+          <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="ActionWERKS" ColumnName="ActionWERKS" />
+          <ScalarProperty Name="VendorCode" ColumnName="VendorCode" />
+          <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+          <ScalarProperty Name="PO_Type" ColumnName="PO_Type" />
+          <ScalarProperty Name="PO_Number" ColumnName="PO_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

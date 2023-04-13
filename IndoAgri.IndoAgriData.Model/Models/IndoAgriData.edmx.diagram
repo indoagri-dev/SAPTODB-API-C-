@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f5e3a30984a4167a49a69f377dd8b6c" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.LogPostData" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTW_ASSETSTAT" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_PBS2_RPT_TEMP" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_HK_Temp" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT_Temp" Width="1.5" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT" Width="1.5" PointX="13.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.SALES_MOBILE_STOCK_TEMP" Width="1.5" PointX="13.375" PointY="9.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.RUNACC_RASIO_TEMP" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTM_YTDTPURC_MIP_TEMP" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTPAGRI_MILLDATA" Width="1.5" PointX="15.375" PointY="8.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTPAGRI_MILLPROD" Width="1.5" PointX="11.375" PointY="15.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTMAGRI_STOCKPRD" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTM_PR_LIST" Width="1.5" PointX="17.375" PointY="7.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTF_CDV_LASTMAIL" Width="1.5" PointX="3.375" PointY="15.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTM_ORDER_PO" Width="1.5" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.LogSAPToDB" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTM_MATPRC_MIP_TEMP" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTU_PRCALCHV" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_BP" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_HK" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZTUAGRI_PBS2" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="INDOAGRI_DATAModel.ZC0032" Width="1.5" PointX="9.375" PointY="20.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

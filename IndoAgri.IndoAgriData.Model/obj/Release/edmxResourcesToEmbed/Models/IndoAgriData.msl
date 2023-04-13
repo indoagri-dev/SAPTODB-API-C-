@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="INDOAGRI_DATAModelStoreContainer" CdmEntityContainer="INDOAGRI_DATAEntities">
+    <EntitySetMapping Name="LogPostDatas">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.LogPostData">
+        <MappingFragment StoreEntitySet="LogPostData">
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ControllerAction" ColumnName="ControllerAction" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Json" ColumnName="Json" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTW_ASSETSTAT">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTW_ASSETSTAT">
+        <MappingFragment StoreEntitySet="ZTW_ASSETSTAT">
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Rzet" ColumnName="Rzet" />
+          <ScalarProperty Name="Endat" ColumnName="Endat" />
+          <ScalarProperty Name="Ernam" ColumnName="Ernam" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Broken" ColumnName="Broken" />
+          <ScalarProperty Name="Good" ColumnName="Good" />
+          <ScalarProperty Name="Eqart" ColumnName="Eqart" />
+          <ScalarProperty Name="Erdat" ColumnName="Erdat" />
+          <ScalarProperty Name="Werks" ColumnName="Werks" />
+          <ScalarProperty Name="AssetStatId" ColumnName="AssetStatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_PBS2_RPT_TEMP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_PBS2_RPT_TEMP">
+        <MappingFragment StoreEntitySet="ZTUAGRI_PBS2_RPT_TEMP">
+          <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+          <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+          <ScalarProperty Name="kernet" ColumnName="kernet" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+          <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+          <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+          <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+          <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+          <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+          <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+          <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+          <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+          <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+          <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+          <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+          <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+          <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+          <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+          <ScalarProperty Name="INEX" ColumnName="INEX" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="NET" ColumnName="NET" />
+          <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+          <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+          <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+          <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+          <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+          <ScalarProperty Name="MILL" ColumnName="MILL" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+          <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+          <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_HK_Temp">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_HK_Temp">
+        <MappingFragment StoreEntitySet="ZTUAGRI_HK_Temp">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+          <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+          <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+          <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+          <ScalarProperty Name="HK" ColumnName="HK" />
+          <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_ZTUAGRI_HK_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_ZTUAGRI_HK_MOVE" />
+    <FunctionImportMapping FunctionImportName="SP_ZTUAGRI_PBS2_RPT_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_ZTUAGRI_PBS2_RPT_MOVE" />
+    <FunctionImportMapping FunctionImportName="SP_ZTUAGRI_BP_RPT_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_ZTUAGRI_BP_RPT_MOVE" />
+    <EntitySetMapping Name="ZTUAGRI_BP_RPT_Temp">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT_Temp">
+        <MappingFragment StoreEntitySet="ZTUAGRI_BP_RPT_Temp">
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+          <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="LB" ColumnName="LB" />
+          <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+          <ScalarProperty Name="TPH" ColumnName="TPH" />
+          <ScalarProperty Name="DRC" ColumnName="DRC" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="LINENUMI" ColumnName="LINENUMI" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_BP_RPT">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_BP_RPT">
+        <MappingFragment StoreEntitySet="ZTUAGRI_BP_RPT">
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+          <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="LB" ColumnName="LB" />
+          <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+          <ScalarProperty Name="TPH" ColumnName="TPH" />
+          <ScalarProperty Name="DRC" ColumnName="DRC" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_COMSATIC_STOCK_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_COMSATIC_STOCK_MOVE" />
+    <EntitySetMapping Name="SALES_MOBILE_STOCK_TEMP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.SALES_MOBILE_STOCK_TEMP">
+        <MappingFragment StoreEntitySet="SALES_MOBILE_STOCK_TEMP">
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="OUTSKONTRAK" ColumnName="OUTSKONTRAK" />
+          <ScalarProperty Name="CF05" ColumnName="CF05" />
+          <ScalarProperty Name="ZENDSTOCK" ColumnName="ZENDSTOCK" />
+          <ScalarProperty Name="ZOTHSTOCK" ColumnName="ZOTHSTOCK" />
+          <ScalarProperty Name="ZINSTOCK" ColumnName="ZINSTOCK" />
+          <ScalarProperty Name="ZDEL" ColumnName="ZDEL" />
+          <ScalarProperty Name="ZRECSTOCK" ColumnName="ZRECSTOCK" />
+          <ScalarProperty Name="ZBEGSTOCK" ColumnName="ZBEGSTOCK" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="BUTXT" ColumnName="BUTXT" />
+          <ScalarProperty Name="ASOFDATE" ColumnName="ASOFDATE" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_RUNACC_RASIO" FunctionName="INDOAGRI_DATAModel.Store.SP_RUNACC_RASIO" />
+    <EntitySetMapping Name="RUNACC_RASIO_TEMP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.RUNACC_RASIO_TEMP">
+        <MappingFragment StoreEntitySet="RUNACC_RASIO_TEMP">
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="COSTMATERIAL" ColumnName="COSTMATERIAL" />
+          <ScalarProperty Name="OTHEREXPENSE" ColumnName="OTHEREXPENSE" />
+          <ScalarProperty Name="COSTTRANSPORT" ColumnName="COSTTRANSPORT" />
+          <ScalarProperty Name="COSTLABOUR" ColumnName="COSTLABOUR" />
+          <ScalarProperty Name="TOTALHARIKERJA" ColumnName="TOTALHARIKERJA" />
+          <ScalarProperty Name="RPKG" ColumnName="RPKG" />
+          <ScalarProperty Name="RPTOTALHOUR" ColumnName="RPTOTALHOUR" />
+          <ScalarProperty Name="RPTOTALKM" ColumnName="RPTOTALKM" />
+          <ScalarProperty Name="COSTACTUAL" ColumnName="COSTACTUAL" />
+          <ScalarProperty Name="KGTRIP" ColumnName="KGTRIP" />
+          <ScalarProperty Name="EFISIENSI" ColumnName="EFISIENSI" />
+          <ScalarProperty Name="NETWEIGHT" ColumnName="NETWEIGHT" />
+          <ScalarProperty Name="TRIP" ColumnName="TRIP" />
+          <ScalarProperty Name="TOTALFUELHOUR" ColumnName="TOTALFUELHOUR" />
+          <ScalarProperty Name="RASIOKML" ColumnName="RASIOKML" />
+          <ScalarProperty Name="TOTALFUELCONS" ColumnName="TOTALFUELCONS" />
+          <ScalarProperty Name="TOTALHOUR" ColumnName="TOTALHOUR" />
+          <ScalarProperty Name="TOTALKM" ColumnName="TOTALKM" />
+          <ScalarProperty Name="CONSSOLARHSD" ColumnName="CONSSOLARHSD" />
+          <ScalarProperty Name="CONSSOLAR" ColumnName="CONSSOLAR" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="RUNNINGACCOUNT" ColumnName="RUNNINGACCOUNT" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="EQKTX" ColumnName="EQKTX" />
+          <ScalarProperty Name="EQUNR" ColumnName="EQUNR" />
+          <ScalarProperty Name="SEL" ColumnName="SEL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTM_YTDTPURC_MIP_TEMP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTM_YTDTPURC_MIP_TEMP">
+        <MappingFragment StoreEntitySet="ZTM_YTDTPURC_MIP_TEMP">
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="YTDTOT" ColumnName="YTDTOT" />
+          <ScalarProperty Name="LSTPRDTOT" ColumnName="LSTPRDTOT" />
+          <ScalarProperty Name="LSTPRD" ColumnName="LSTPRD" />
+          <ScalarProperty Name="MATGRPDESC" ColumnName="MATGRPDESC" />
+          <ScalarProperty Name="MATGRP" ColumnName="MATGRP" />
+          <ScalarProperty Name="COMPGRP" ColumnName="COMPGRP" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_ZTM_MATPRC_MIP_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_ZTM_MATPRC_MIP_MOVE" />
+    <FunctionImportMapping FunctionImportName="SP_ZTM_YTDTPURC_MIP_MOVE" FunctionName="INDOAGRI_DATAModel.Store.SP_ZTM_YTDTPURC_MIP_MOVE" />
+    <EntitySetMapping Name="ZTPAGRI_MILLDATA">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTPAGRI_MILLDATA">
+        <MappingFragment StoreEntitySet="ZTPAGRI_MILLDATA">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="CPOOPN6" ColumnName="CPOOPN6" />
+          <ScalarProperty Name="CPOOPN5" ColumnName="CPOOPN5" />
+          <ScalarProperty Name="CPOOTR6" ColumnName="CPOOTR6" />
+          <ScalarProperty Name="CPOOTR5" ColumnName="CPOOTR5" />
+          <ScalarProperty Name="FFACPO6" ColumnName="FFACPO6" />
+          <ScalarProperty Name="FFACPO5" ColumnName="FFACPO5" />
+          <ScalarProperty Name="CPOCLS6" ColumnName="CPOCLS6" />
+          <ScalarProperty Name="CPOCLS5" ColumnName="CPOCLS5" />
+          <ScalarProperty Name="CPOOGL6" ColumnName="CPOOGL6" />
+          <ScalarProperty Name="CPOOGL5" ColumnName="CPOOGL5" />
+          <ScalarProperty Name="CPODIS6" ColumnName="CPODIS6" />
+          <ScalarProperty Name="CPODIS5" ColumnName="CPODIS5" />
+          <ScalarProperty Name="CPOPRD6" ColumnName="CPOPRD6" />
+          <ScalarProperty Name="CPOPRD5" ColumnName="CPOPRD5" />
+          <ScalarProperty Name="AENAM" ColumnName="AENAM" />
+          <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+          <ScalarProperty Name="LAEDA" ColumnName="LAEDA" />
+          <ScalarProperty Name="ERNAM" ColumnName="ERNAM" />
+          <ScalarProperty Name="CPUTM" ColumnName="CPUTM" />
+          <ScalarProperty Name="ERSDA" ColumnName="ERSDA" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="MILTHTD" ColumnName="MILTHTD" />
+          <ScalarProperty Name="MILTHTY" ColumnName="MILTHTY" />
+          <ScalarProperty Name="MILUTTD" ColumnName="MILUTTD" />
+          <ScalarProperty Name="MILUTTY" ColumnName="MILUTTY" />
+          <ScalarProperty Name="UTYHRTD" ColumnName="UTYHRTD" />
+          <ScalarProperty Name="UTYHRTY" ColumnName="UTYHRTY" />
+          <ScalarProperty Name="BREAKDO" ColumnName="BREAKDO" />
+          <ScalarProperty Name="PERHRTD" ColumnName="PERHRTD" />
+          <ScalarProperty Name="PERHRTY" ColumnName="PERHRTY" />
+          <ScalarProperty Name="MILLSTP" ColumnName="MILLSTP" />
+          <ScalarProperty Name="MILLSTR" ColumnName="MILLSTR" />
+          <ScalarProperty Name="PKCLOSE" ColumnName="PKCLOSE" />
+          <ScalarProperty Name="PKCLSOT" ColumnName="PKCLSOT" />
+          <ScalarProperty Name="PKCLSBS" ColumnName="PKCLSBS" />
+          <ScalarProperty Name="PKOTHTD" ColumnName="PKOTHTD" />
+          <ScalarProperty Name="PKOTHGL" ColumnName="PKOTHGL" />
+          <ScalarProperty Name="PKOTHRFN" ColumnName="PKOTHRFN" />
+          <ScalarProperty Name="PKOTHTFN" ColumnName="PKOTHTFN" />
+          <ScalarProperty Name="PKDISTD" ColumnName="PKDISTD" />
+          <ScalarProperty Name="PKDISTY" ColumnName="PKDISTY" />
+          <ScalarProperty Name="PKEXTD" ColumnName="PKEXTD" />
+          <ScalarProperty Name="PKEXTRT" ColumnName="PKEXTRT" />
+          <ScalarProperty Name="PKPRDTD" ColumnName="PKPRDTD" />
+          <ScalarProperty Name="PKPRDTY" ColumnName="PKPRDTY" />
+          <ScalarProperty Name="PKPRDFN" ColumnName="PKPRDFN" />
+          <ScalarProperty Name="PKPROD" ColumnName="PKPROD" />
+          <ScalarProperty Name="PKOPEN" ColumnName="PKOPEN" />
+          <ScalarProperty Name="PKOPNOT" ColumnName="PKOPNOT" />
+          <ScalarProperty Name="PKOPNBS" ColumnName="PKOPNBS" />
+          <ScalarProperty Name="CPOCLOSE" ColumnName="CPOCLOSE" />
+          <ScalarProperty Name="FFACPO4" ColumnName="FFACPO4" />
+          <ScalarProperty Name="CPOCLS4" ColumnName="CPOCLS4" />
+          <ScalarProperty Name="FFACPO3" ColumnName="FFACPO3" />
+          <ScalarProperty Name="CPOCLS3" ColumnName="CPOCLS3" />
+          <ScalarProperty Name="FFACPO2" ColumnName="FFACPO2" />
+          <ScalarProperty Name="CPOCLS2" ColumnName="CPOCLS2" />
+          <ScalarProperty Name="FFACPO1" ColumnName="FFACPO1" />
+          <ScalarProperty Name="CPOCLS1" ColumnName="CPOCLS1" />
+          <ScalarProperty Name="CPOOGL4" ColumnName="CPOOGL4" />
+          <ScalarProperty Name="CPOOGL3" ColumnName="CPOOGL3" />
+          <ScalarProperty Name="CPOOGL2" ColumnName="CPOOGL2" />
+          <ScalarProperty Name="CPOOGL1" ColumnName="CPOOGL1" />
+          <ScalarProperty Name="CPOOTR4" ColumnName="CPOOTR4" />
+          <ScalarProperty Name="CPOOTR3" ColumnName="CPOOTR3" />
+          <ScalarProperty Name="CPOOTR2" ColumnName="CPOOTR2" />
+          <ScalarProperty Name="CPOOTR1" ColumnName="CPOOTR1" />
+          <ScalarProperty Name="CPODTD" ColumnName="CPODTD" />
+          <ScalarProperty Name="CPODTY" ColumnName="CPODTY" />
+          <ScalarProperty Name="CPODIS4" ColumnName="CPODIS4" />
+          <ScalarProperty Name="CPODIS3" ColumnName="CPODIS3" />
+          <ScalarProperty Name="CPODIS2" ColumnName="CPODIS2" />
+          <ScalarProperty Name="CPODIS1" ColumnName="CPODIS1" />
+          <ScalarProperty Name="FFAPTD" ColumnName="FFAPTD" />
+          <ScalarProperty Name="FFAPTY" ColumnName="FFAPTY" />
+          <ScalarProperty Name="OERTD" ColumnName="OERTD" />
+          <ScalarProperty Name="OER" ColumnName="OER" />
+          <ScalarProperty Name="CPOPTD" ColumnName="CPOPTD" />
+          <ScalarProperty Name="CPOPTY" ColumnName="CPOPTY" />
+          <ScalarProperty Name="CPOPRD4" ColumnName="CPOPRD4" />
+          <ScalarProperty Name="CPOPRD3" ColumnName="CPOPRD3" />
+          <ScalarProperty Name="CPOPRD2" ColumnName="CPOPRD2" />
+          <ScalarProperty Name="CPOPRD1" ColumnName="CPOPRD1" />
+          <ScalarProperty Name="CPOOPEN" ColumnName="CPOOPEN" />
+          <ScalarProperty Name="CPOOPN4" ColumnName="CPOOPN4" />
+          <ScalarProperty Name="CPOOPN3" ColumnName="CPOOPN3" />
+          <ScalarProperty Name="CPOOPN2" ColumnName="CPOOPN2" />
+          <ScalarProperty Name="CPOOPN1" ColumnName="CPOOPN1" />
+          <ScalarProperty Name="FFBCLS" ColumnName="FFBCLS" />
+          <ScalarProperty Name="FFBPTD" ColumnName="FFBPTD" />
+          <ScalarProperty Name="FFBPTY" ColumnName="FFBPTY" />
+          <ScalarProperty Name="FFBRTD" ColumnName="FFBRTD" />
+          <ScalarProperty Name="FFBRTY" ColumnName="FFBRTY" />
+          <ScalarProperty Name="FFBOPN" ColumnName="FFBOPN" />
+          <ScalarProperty Name="CAPACITY" ColumnName="CAPACITY" />
+          <ScalarProperty Name="PRD_DATE" ColumnName="PRD_DATE" />
+          <ScalarProperty Name="MONAT" ColumnName="MONAT" />
+          <ScalarProperty Name="GJAHR" ColumnName="GJAHR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTPAGRI_MILLPROD">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTPAGRI_MILLPROD">
+        <MappingFragment StoreEntitySet="ZTPAGRI_MILLPROD">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="AENAM" ColumnName="AENAM" />
+          <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+          <ScalarProperty Name="LAEDA" ColumnName="LAEDA" />
+          <ScalarProperty Name="ERNAM" ColumnName="ERNAM" />
+          <ScalarProperty Name="CPUTM" ColumnName="CPUTM" />
+          <ScalarProperty Name="ERSDA" ColumnName="ERSDA" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="MONAT" ColumnName="MONAT" />
+          <ScalarProperty Name="GJAHR" ColumnName="GJAHR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTMAGRI_STOCKPRD">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTMAGRI_STOCKPRD">
+        <MappingFragment StoreEntitySet="ZTMAGRI_STOCKPRD">
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="CREATEDNAME" ColumnName="CREATEDNAME" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUSTEXT" ColumnName="STATUSTEXT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="VPRSV" ColumnName="VPRSV" />
+          <ScalarProperty Name="MLAST" ColumnName="MLAST" />
+          <ScalarProperty Name="PSPNR" ColumnName="PSPNR" />
+          <ScalarProperty Name="SPART" ColumnName="SPART" />
+          <ScalarProperty Name="SALK3" ColumnName="SALK3" />
+          <ScalarProperty Name="LBKUM" ColumnName="LBKUM" />
+          <ScalarProperty Name="PEINH" ColumnName="PEINH" />
+          <ScalarProperty Name="PVPRS" ColumnName="PVPRS" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="KTEXT" ColumnName="KTEXT" />
+          <ScalarProperty Name="MATKL" ColumnName="MATKL" />
+          <ScalarProperty Name="BKLAS" ColumnName="BKLAS" />
+          <ScalarProperty Name="MTART" ColumnName="MTART" />
+          <ScalarProperty Name="BWTAR" ColumnName="BWTAR" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="POPER" ColumnName="POPER" />
+          <ScalarProperty Name="BDATJ" ColumnName="BDATJ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTM_PR_LIST">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTM_PR_LIST">
+        <MappingFragment StoreEntitySet="ZTM_PR_LIST">
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="JOBNAM" ColumnName="JOBNAM" />
+          <ScalarProperty Name="JOBDAT" ColumnName="JOBDAT" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="SWERK" ColumnName="SWERK" />
+          <ScalarProperty Name="OVERPOSTO" ColumnName="OVERPOSTO" />
+          <ScalarProperty Name="BLCKT" ColumnName="BLCKT" />
+          <ScalarProperty Name="BLCKD" ColumnName="BLCKD" />
+          <ScalarProperty Name="COTYP" ColumnName="COTYP" />
+          <ScalarProperty Name="OUTDAYS" ColumnName="OUTDAYS" />
+          <ScalarProperty Name="RFQDT" ColumnName="RFQDT" />
+          <ScalarProperty Name="PORELDT" ColumnName="PORELDT" />
+          <ScalarProperty Name="ESTKZ" ColumnName="ESTKZ" />
+          <ScalarProperty Name="GRPCHG" ColumnName="GRPCHG" />
+          <ScalarProperty Name="SBTTL" ColumnName="SBTTL" />
+          <ScalarProperty Name="STRSTATUS" ColumnName="STRSTATUS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="AMTPR" ColumnName="AMTPR" />
+          <ScalarProperty Name="PEINH" ColumnName="PEINH" />
+          <ScalarProperty Name="PREIS" ColumnName="PREIS" />
+          <ScalarProperty Name="FRGST" ColumnName="FRGST" />
+          <ScalarProperty Name="FRGGR" ColumnName="FRGGR" />
+          <ScalarProperty Name="POQTY" ColumnName="POQTY" />
+          <ScalarProperty Name="BEDAT" ColumnName="BEDAT" />
+          <ScalarProperty Name="ERNAM" ColumnName="ERNAM" />
+          <ScalarProperty Name="POST1" ColumnName="POST1" />
+          <ScalarProperty Name="POSID" ColumnName="POSID" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="TXT50" ColumnName="TXT50" />
+          <ScalarProperty Name="SAKTO" ColumnName="SAKTO" />
+          <ScalarProperty Name="LTEXT" ColumnName="LTEXT" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="TXT502" ColumnName="TXT502" />
+          <ScalarProperty Name="ANLN1" ColumnName="ANLN1" />
+          <ScalarProperty Name="FRGZU" ColumnName="FRGZU" />
+          <ScalarProperty Name="ERDAT" ColumnName="ERDAT" />
+          <ScalarProperty Name="FRGKZ" ColumnName="FRGKZ" />
+          <ScalarProperty Name="STATU" ColumnName="STATU" />
+          <ScalarProperty Name="LOEKZ" ColumnName="LOEKZ" />
+          <ScalarProperty Name="EKNAM" ColumnName="EKNAM" />
+          <ScalarProperty Name="STRTXT" ColumnName="STRTXT" />
+          <ScalarProperty Name="HDRTXT" ColumnName="HDRTXT" />
+          <ScalarProperty Name="IDNLF" ColumnName="IDNLF" />
+          <ScalarProperty Name="AFNAM" ColumnName="AFNAM" />
+          <ScalarProperty Name="RELDT" ColumnName="RELDT" />
+          <ScalarProperty Name="BADAT" ColumnName="BADAT" />
+          <ScalarProperty Name="FRGDT" ColumnName="FRGDT" />
+          <ScalarProperty Name="LFDAT" ColumnName="LFDAT" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="EBAKZ" ColumnName="EBAKZ" />
+          <ScalarProperty Name="OQTY" ColumnName="OQTY" />
+          <ScalarProperty Name="BSMNG" ColumnName="BSMNG" />
+          <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+          <ScalarProperty Name="WGBEZ" ColumnName="WGBEZ" />
+          <ScalarProperty Name="MATKL" ColumnName="MATKL" />
+          <ScalarProperty Name="SDESC" ColumnName="SDESC" />
+          <ScalarProperty Name="SUBGRP" ColumnName="SUBGRP" />
+          <ScalarProperty Name="WGBEZ2" ColumnName="WGBEZ2" />
+          <ScalarProperty Name="MATGRP" ColumnName="MATGRP" />
+          <ScalarProperty Name="CAPDESC" ColumnName="CAPDESC" />
+          <ScalarProperty Name="CAPITAL" ColumnName="CAPITAL" />
+          <ScalarProperty Name="TXZ01" ColumnName="TXZ01" />
+          <ScalarProperty Name="KNTTP" ColumnName="KNTTP" />
+          <ScalarProperty Name="SHORT" ColumnName="SHORT" />
+          <ScalarProperty Name="CMGRP" ColumnName="CMGRP" />
+          <ScalarProperty Name="AREA1" ColumnName="AREA1" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="ELIKZ" ColumnName="ELIKZ" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="NOMOR" ColumnName="NOMOR" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="EKGRP_PO" ColumnName="EKGRP_PO" />
+          <ScalarProperty Name="EKGRP" ColumnName="EKGRP" />
+          <ScalarProperty Name="EBELP" ColumnName="EBELP" />
+          <ScalarProperty Name="EBELN" ColumnName="EBELN" />
+          <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+          <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTF_CDV_LASTMAIL">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTF_CDV_LASTMAIL">
+        <MappingFragment StoreEntitySet="ZTF_CDV_LASTMAIL">
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="isSuccessPostToSAP" ColumnName="isSuccessPostToSAP" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NMGSBER" ColumnName="NMGSBER" />
+          <ScalarProperty Name="NMPAYEE" ColumnName="NMPAYEE" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Docnum" ColumnName="Docnum" />
+          <ScalarProperty Name="Txberita2" ColumnName="Txberita2" />
+          <ScalarProperty Name="Txberita1" ColumnName="Txberita1" />
+          <ScalarProperty Name="Txberita" ColumnName="Txberita" />
+          <ScalarProperty Name="Cutotal" ColumnName="Cutotal" />
+          <ScalarProperty Name="Amtotal" ColumnName="Amtotal" />
+          <ScalarProperty Name="Nrbelnr" ColumnName="Nrbelnr" />
+          <ScalarProperty Name="Nrcdv" ColumnName="Nrcdv" />
+          <ScalarProperty Name="Approver" ColumnName="Approver" />
+          <ScalarProperty Name="Cdgsber" ColumnName="Cdgsber" />
+          <ScalarProperty Name="Cdcomp" ColumnName="Cdcomp" />
+          <ScalarProperty Name="CDVId" ColumnName="CDVId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTM_ORDER_PO">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTM_ORDER_PO">
+        <MappingFragment StoreEntitySet="ZTM_ORDER_PO">
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="AEDAT" ColumnName="AEDAT" />
+          <ScalarProperty Name="JOBNAM" ColumnName="JOBNAM" />
+          <ScalarProperty Name="JOBDAT" ColumnName="JOBDAT" />
+          <ScalarProperty Name="ATWTB5" ColumnName="ATWTB5" />
+          <ScalarProperty Name="ATWTB4" ColumnName="ATWTB4" />
+          <ScalarProperty Name="ATWTB3" ColumnName="ATWTB3" />
+          <ScalarProperty Name="ATWTB2" ColumnName="ATWTB2" />
+          <ScalarProperty Name="ATWTB1" ColumnName="ATWTB1" />
+          <ScalarProperty Name="EAN11" ColumnName="EAN11" />
+          <ScalarProperty Name="ITCHG" ColumnName="ITCHG" />
+          <ScalarProperty Name="HTCHG" ColumnName="HTCHG" />
+          <ScalarProperty Name="POCTR" ColumnName="POCTR" />
+          <ScalarProperty Name="EKORG" ColumnName="EKORG" />
+          <ScalarProperty Name="KALSK" ColumnName="KALSK" />
+          <ScalarProperty Name="LD04" ColumnName="LD04" />
+          <ScalarProperty Name="LD03" ColumnName="LD03" />
+          <ScalarProperty Name="LD02" ColumnName="LD02" />
+          <ScalarProperty Name="LD01" ColumnName="LD01" />
+          <ScalarProperty Name="WEBRE" ColumnName="WEBRE" />
+          <ScalarProperty Name="KEYPO" ColumnName="KEYPO" />
+          <ScalarProperty Name="OBJECTID" ColumnName="OBJECTID" />
+          <ScalarProperty Name="KNUMV" ColumnName="KNUMV" />
+          <ScalarProperty Name="EBAKZ" ColumnName="EBAKZ" />
+          <ScalarProperty Name="MWSKZ" ColumnName="MWSKZ" />
+          <ScalarProperty Name="ZBD1T" ColumnName="ZBD1T" />
+          <ScalarProperty Name="ZFBDT" ColumnName="ZFBDT" />
+          <ScalarProperty Name="DUEDAT" ColumnName="DUEDAT" />
+          <ScalarProperty Name="BUDAT2" ColumnName="BUDAT2" />
+          <ScalarProperty Name="INVAMT" ColumnName="INVAMT" />
+          <ScalarProperty Name="BELNR" ColumnName="BELNR" />
+          <ScalarProperty Name="TXT" ColumnName="TXT" />
+          <ScalarProperty Name="AUART" ColumnName="AUART" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="COTYP" ColumnName="COTYP" />
+          <ScalarProperty Name="PRATX" ColumnName="PRATX" />
+          <ScalarProperty Name="PRART" ColumnName="PRART" />
+          <ScalarProperty Name="POSID" ColumnName="POSID" />
+          <ScalarProperty Name="POST1" ColumnName="POST1" />
+          <ScalarProperty Name="PS_PSP_PNR" ColumnName="PS_PSP_PNR" />
+          <ScalarProperty Name="OBJNR" ColumnName="OBJNR" />
+          <ScalarProperty Name="TXT502" ColumnName="TXT502" />
+          <ScalarProperty Name="ANLN1" ColumnName="ANLN1" />
+          <ScalarProperty Name="LTEXT" ColumnName="LTEXT" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="TXT50" ColumnName="TXT50" />
+          <ScalarProperty Name="SAKTO" ColumnName="SAKTO" />
+          <ScalarProperty Name="ANFNR" ColumnName="ANFNR" />
+          <ScalarProperty Name="SUBMI" ColumnName="SUBMI" />
+          <ScalarProperty Name="ERNAM2" ColumnName="ERNAM2" />
+          <ScalarProperty Name="BEDNR" ColumnName="BEDNR" />
+          <ScalarProperty Name="AFNAM" ColumnName="AFNAM" />
+          <ScalarProperty Name="DISPO" ColumnName="DISPO" />
+          <ScalarProperty Name="BSMNG" ColumnName="BSMNG" />
+          <ScalarProperty Name="MEINS2" ColumnName="MEINS2" />
+          <ScalarProperty Name="MENGE2" ColumnName="MENGE2" />
+          <ScalarProperty Name="LFDAT" ColumnName="LFDAT" />
+          <ScalarProperty Name="FRGKZ" ColumnName="FRGKZ" />
+          <ScalarProperty Name="FRGDT" ColumnName="FRGDT" />
+          <ScalarProperty Name="RELDT2" ColumnName="RELDT2" />
+          <ScalarProperty Name="BADAT" ColumnName="BADAT" />
+          <ScalarProperty Name="BNFPO" ColumnName="BNFPO" />
+          <ScalarProperty Name="BANFN" ColumnName="BANFN" />
+          <ScalarProperty Name="XBLNR" ColumnName="XBLNR" />
+          <ScalarProperty Name="ACHPCT" ColumnName="ACHPCT" />
+          <ScalarProperty Name="ELIKZ" ColumnName="ELIKZ" />
+          <ScalarProperty Name="OUTPOV" ColumnName="OUTPOV" />
+          <ScalarProperty Name="OUTPO" ColumnName="OUTPO" />
+          <ScalarProperty Name="GRVAL" ColumnName="GRVAL" />
+          <ScalarProperty Name="GRPRC" ColumnName="GRPRC" />
+          <ScalarProperty Name="GRLOC" ColumnName="GRLOC" />
+          <ScalarProperty Name="GRUOM" ColumnName="GRUOM" />
+          <ScalarProperty Name="GRQTY" ColumnName="GRQTY" />
+          <ScalarProperty Name="BUDAT" ColumnName="BUDAT" />
+          <ScalarProperty Name="UEBTK" ColumnName="UEBTK" />
+          <ScalarProperty Name="LOEKZ" ColumnName="LOEKZ" />
+          <ScalarProperty Name="WEMNG" ColumnName="WEMNG" />
+          <ScalarProperty Name="EINDT" ColumnName="EINDT" />
+          <ScalarProperty Name="FRGZU" ColumnName="FRGZU" />
+          <ScalarProperty Name="FRGKE" ColumnName="FRGKE" />
+          <ScalarProperty Name="FRGSX" ColumnName="FRGSX" />
+          <ScalarProperty Name="FRGGR" ColumnName="FRGGR" />
+          <ScalarProperty Name="TEXT1" ColumnName="TEXT1" />
+          <ScalarProperty Name="ZTERM" ColumnName="ZTERM" />
+          <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+          <ScalarProperty Name="INCO2" ColumnName="INCO2" />
+          <ScalarProperty Name="INCO1" ColumnName="INCO1" />
+          <ScalarProperty Name="WAERS2" ColumnName="WAERS2" />
+          <ScalarProperty Name="VALIDR" ColumnName="VALIDR" />
+          <ScalarProperty Name="PRCIDR" ColumnName="PRCIDR" />
+          <ScalarProperty Name="WKURS" ColumnName="WKURS" />
+          <ScalarProperty Name="VALORG" ColumnName="VALORG" />
+          <ScalarProperty Name="PRCORG" ColumnName="PRCORG" />
+          <ScalarProperty Name="XZCS1" ColumnName="XZCS1" />
+          <ScalarProperty Name="XZTA1" ColumnName="XZTA1" />
+          <ScalarProperty Name="XZDEL" ColumnName="XZDEL" />
+          <ScalarProperty Name="XZPPN" ColumnName="XZPPN" />
+          <ScalarProperty Name="ZCSTOT" ColumnName="ZCSTOT" />
+          <ScalarProperty Name="ZCS1" ColumnName="ZCS1" />
+          <ScalarProperty Name="ZTA1" ColumnName="ZTA1" />
+          <ScalarProperty Name="ZDEL" ColumnName="ZDEL" />
+          <ScalarProperty Name="ZPPN" ColumnName="ZPPN" />
+          <ScalarProperty Name="ZCLR" ColumnName="ZCLR" />
+          <ScalarProperty Name="ZINS" ColumnName="ZINS" />
+          <ScalarProperty Name="ZOTH" ColumnName="ZOTH" />
+          <ScalarProperty Name="FRA1" ColumnName="FRA1" />
+          <ScalarProperty Name="PCTRA" ColumnName="PCTRA" />
+          <ScalarProperty Name="RA00" ColumnName="RA00" />
+          <ScalarProperty Name="P001" ColumnName="P001" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="PEINH" ColumnName="PEINH" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+          <ScalarProperty Name="GRULNM" ColumnName="GRULNM" />
+          <ScalarProperty Name="EXTWG" ColumnName="EXTWG" />
+          <ScalarProperty Name="WGBEZ" ColumnName="WGBEZ" />
+          <ScalarProperty Name="MATKL" ColumnName="MATKL" />
+          <ScalarProperty Name="SDESC" ColumnName="SDESC" />
+          <ScalarProperty Name="SUBGRP" ColumnName="SUBGRP" />
+          <ScalarProperty Name="WGBEZ2" ColumnName="WGBEZ2" />
+          <ScalarProperty Name="MATGRP" ColumnName="MATGRP" />
+          <ScalarProperty Name="CAPDESC" ColumnName="CAPDESC" />
+          <ScalarProperty Name="CAPITAL" ColumnName="CAPITAL" />
+          <ScalarProperty Name="TXZ01" ColumnName="TXZ01" />
+          <ScalarProperty Name="PSTYP" ColumnName="PSTYP" />
+          <ScalarProperty Name="KNTTP" ColumnName="KNTTP" />
+          <ScalarProperty Name="KPOSN" ColumnName="KPOSN" />
+          <ScalarProperty Name="PORELDT" ColumnName="PORELDT" />
+          <ScalarProperty Name="BEDAT" ColumnName="BEDAT" />
+          <ScalarProperty Name="VERKF" ColumnName="VERKF" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELFX" ColumnName="TELFX" />
+          <ScalarProperty Name="TELF1" ColumnName="TELF1" />
+          <ScalarProperty Name="PSTLZ" ColumnName="PSTLZ" />
+          <ScalarProperty Name="ORT01" ColumnName="ORT01" />
+          <ScalarProperty Name="STRAS" ColumnName="STRAS" />
+          <ScalarProperty Name="LIFNM" ColumnName="LIFNM" />
+          <ScalarProperty Name="LIFRE" ColumnName="LIFRE" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="ANRED" ColumnName="ANRED" />
+          <ScalarProperty Name="LIFNR" ColumnName="LIFNR" />
+          <ScalarProperty Name="PO_ITEXT" ColumnName="PO_ITEXT" />
+          <ScalarProperty Name="PO_HTEXT" ColumnName="PO_HTEXT" />
+          <ScalarProperty Name="PR_TEXT" ColumnName="PR_TEXT" />
+          <ScalarProperty Name="TRANS_NAME" ColumnName="TRANS_NAME" />
+          <ScalarProperty Name="TRANS_CODE" ColumnName="TRANS_CODE" />
+          <ScalarProperty Name="BSART" ColumnName="BSART" />
+          <ScalarProperty Name="PLTNM" ColumnName="PLTNM" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="EKNAM" ColumnName="EKNAM" />
+          <ScalarProperty Name="EKGRP" ColumnName="EKGRP" />
+          <ScalarProperty Name="BUTXT" ColumnName="BUTXT" />
+          <ScalarProperty Name="BUKRS" ColumnName="BUKRS" />
+          <ScalarProperty Name="ERNAM" ColumnName="ERNAM" />
+          <ScalarProperty Name="OBJEK" ColumnName="OBJEK" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="MBLNR" ColumnName="MBLNR" />
+          <ScalarProperty Name="EBELP" ColumnName="EBELP" />
+          <ScalarProperty Name="EBELN" ColumnName="EBELN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogSAPToDBs">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.LogSAPToDB">
+        <MappingFragment StoreEntitySet="LogSAPToDB">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="JsonMessageError" ColumnName="JsonMessageError" />
+          <ScalarProperty Name="ControllerAction" ColumnName="ControllerAction" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Json" ColumnName="Json" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTM_MATPRC_MIP_TEMP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTM_MATPRC_MIP_TEMP">
+        <MappingFragment StoreEntitySet="ZTM_MATPRC_MIP_TEMP">
+          <ScalarProperty Name="LSTUOM" ColumnName="LSTUOM" />
+          <ScalarProperty Name="LSTPRC" ColumnName="LSTPRC" />
+          <ScalarProperty Name="TOTVAL" ColumnName="TOTVAL" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="LSTPOITEM" ColumnName="LSTPOITEM" />
+          <ScalarProperty Name="LSTPO" ColumnName="LSTPO" />
+          <ScalarProperty Name="TXZ01" ColumnName="TXZ01" />
+          <ScalarProperty Name="LSTPRD" ColumnName="LSTPRD" />
+          <ScalarProperty Name="MATGRPDESC" ColumnName="MATGRPDESC" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="AREA1" ColumnName="AREA1" />
+          <ScalarProperty Name="MATGRP" ColumnName="MATGRP" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTU_PRCALCHV">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTU_PRCALCHV">
+        <MappingFragment StoreEntitySet="ZTU_PRCALCHV">
+          <ScalarProperty Name="EXEC_DATE" ColumnName="EXEC_DATE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TOTALPREMI" ColumnName="TOTALPREMI" />
+          <ScalarProperty Name="ALOCPREMI" ColumnName="ALOCPREMI" />
+          <ScalarProperty Name="OVERBASICPREMI" ColumnName="OVERBASICPREMI" />
+          <ScalarProperty Name="OVERBASICRATE" ColumnName="OVERBASICRATE" />
+          <ScalarProperty Name="OVERBASIC" ColumnName="OVERBASIC" />
+          <ScalarProperty Name="BASICPREMI" ColumnName="BASICPREMI" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="PREST" ColumnName="PREST" />
+          <ScalarProperty Name="BLOCKBASISAVG" ColumnName="BLOCKBASISAVG" />
+          <ScalarProperty Name="BLOCKBASIS" ColumnName="BLOCKBASIS" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="PREMITYP" ColumnName="PREMITYP" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_BP">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_BP">
+        <MappingFragment StoreEntitySet="ZTUAGRI_BP">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+          <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+          <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+          <ScalarProperty Name="LB" ColumnName="LB" />
+          <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+          <ScalarProperty Name="TPH" ColumnName="TPH" />
+          <ScalarProperty Name="DRC" ColumnName="DRC" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+          <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_HK">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_HK">
+        <MappingFragment StoreEntitySet="ZTUAGRI_HK">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+          <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+          <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+          <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+          <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+          <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+          <ScalarProperty Name="HK" ColumnName="HK" />
+          <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+          <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+          <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+          <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+          <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTUAGRI_PBS2">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZTUAGRI_PBS2">
+        <MappingFragment StoreEntitySet="ZTUAGRI_PBS2">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+          <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+          <ScalarProperty Name="kernet" ColumnName="kernet" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+          <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+          <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+          <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+          <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+          <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+          <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+          <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+          <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+          <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+          <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+          <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+          <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+          <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+          <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+          <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+          <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+          <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+          <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+          <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+          <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+          <ScalarProperty Name="INEX" ColumnName="INEX" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+          <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+          <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+          <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="NET" ColumnName="NET" />
+          <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+          <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+          <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+          <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+          <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+          <ScalarProperty Name="MILL" ColumnName="MILL" />
+          <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+          <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+          <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+          <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+          <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+          <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+          <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZC0032">
+      <EntityTypeMapping TypeName="INDOAGRI_DATAModel.ZC0032">
+        <MappingFragment StoreEntitySet="ZC0032">
+          <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+          <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+          <ScalarProperty Name="JOBNAM" ColumnName="JOBNAM" />
+          <ScalarProperty Name="JOBDAT" ColumnName="JOBDAT" />
+          <ScalarProperty Name="CLASS" ColumnName="CLASS" />
+          <ScalarProperty Name="Z12SISA" ColumnName="Z12SISA" />
+          <ScalarProperty Name="Z12COST" ColumnName="Z12COST" />
+          <ScalarProperty Name="Z12AOP" ColumnName="Z12AOP" />
+          <ScalarProperty Name="Z11SISA" ColumnName="Z11SISA" />
+          <ScalarProperty Name="Z11COST" ColumnName="Z11COST" />
+          <ScalarProperty Name="Z11AOP" ColumnName="Z11AOP" />
+          <ScalarProperty Name="Z10SISA" ColumnName="Z10SISA" />
+          <ScalarProperty Name="Z10COST" ColumnName="Z10COST" />
+          <ScalarProperty Name="Z10AOP" ColumnName="Z10AOP" />
+          <ScalarProperty Name="Z09SISA" ColumnName="Z09SISA" />
+          <ScalarProperty Name="Z09COST" ColumnName="Z09COST" />
+          <ScalarProperty Name="Z09AOP" ColumnName="Z09AOP" />
+          <ScalarProperty Name="Z08SISA" ColumnName="Z08SISA" />
+          <ScalarProperty Name="Z08COST" ColumnName="Z08COST" />
+          <ScalarProperty Name="Z08AOP" ColumnName="Z08AOP" />
+          <ScalarProperty Name="Z07SISA" ColumnName="Z07SISA" />
+          <ScalarProperty Name="Z07COST" ColumnName="Z07COST" />
+          <ScalarProperty Name="Z07AOP" ColumnName="Z07AOP" />
+          <ScalarProperty Name="Z06SISA" ColumnName="Z06SISA" />
+          <ScalarProperty Name="Z06COST" ColumnName="Z06COST" />
+          <ScalarProperty Name="Z06AOP" ColumnName="Z06AOP" />
+          <ScalarProperty Name="Z05SISA" ColumnName="Z05SISA" />
+          <ScalarProperty Name="Z05COST" ColumnName="Z05COST" />
+          <ScalarProperty Name="Z05AOP" ColumnName="Z05AOP" />
+          <ScalarProperty Name="Z04SISA" ColumnName="Z04SISA" />
+          <ScalarProperty Name="Z04COST" ColumnName="Z04COST" />
+          <ScalarProperty Name="Z04AOP" ColumnName="Z04AOP" />
+          <ScalarProperty Name="Z03SISA" ColumnName="Z03SISA" />
+          <ScalarProperty Name="Z03COST" ColumnName="Z03COST" />
+          <ScalarProperty Name="Z03AOP" ColumnName="Z03AOP" />
+          <ScalarProperty Name="Z02SISA" ColumnName="Z02SISA" />
+          <ScalarProperty Name="Z02COST" ColumnName="Z02COST" />
+          <ScalarProperty Name="Z02AOP" ColumnName="Z02AOP" />
+          <ScalarProperty Name="Z01SISA" ColumnName="Z01SISA" />
+          <ScalarProperty Name="Z01COST" ColumnName="Z01COST" />
+          <ScalarProperty Name="Z01AOP" ColumnName="Z01AOP" />
+          <ScalarProperty Name="YTDSISA" ColumnName="YTDSISA" />
+          <ScalarProperty Name="YTDCOST" ColumnName="YTDCOST" />
+          <ScalarProperty Name="YTDAOP" ColumnName="YTDAOP" />
+          <ScalarProperty Name="AOP1YR" ColumnName="AOP1YR" />
+          <ScalarProperty Name="ITEMTEXT" ColumnName="ITEMTEXT" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="MONAT" ColumnName="MONAT" />
+          <ScalarProperty Name="GJAHR" ColumnName="GJAHR" />
+          <ScalarProperty Name="MANDT" ColumnName="MANDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

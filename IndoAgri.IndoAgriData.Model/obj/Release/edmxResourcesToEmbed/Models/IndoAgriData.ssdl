@@ -1,0 +1,1275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INDOAGRI_DATAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LogPostData">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Json" Type="varchar(max)" />
+    <Property Name="ApplicationId" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ControllerAction" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorMessage" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LogSAPToDB">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Json" Type="nvarchar(max)" />
+    <Property Name="ApplicationId" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ControllerAction" Type="varchar" MaxLength="100" />
+    <Property Name="JsonMessageError" Type="nvarchar(max)" />
+    <Property Name="ErrorMessage" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Count" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="RUNACC_RASIO_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SEL" Type="varchar" MaxLength="50" />
+    <Property Name="EQUNR" Type="varchar" MaxLength="50" />
+    <Property Name="EQKTX" Type="varchar" MaxLength="50" />
+    <Property Name="KOSTL" Type="varchar" MaxLength="50" />
+    <Property Name="RUNNINGACCOUNT" Type="varchar" MaxLength="50" />
+    <Property Name="ESTATE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANYCODE" Type="varchar" MaxLength="50" />
+    <Property Name="CONSSOLAR" Type="varchar" MaxLength="50" />
+    <Property Name="CONSSOLARHSD" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALKM" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALHOUR" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALFUELCONS" Type="varchar" MaxLength="50" />
+    <Property Name="RASIOKML" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALFUELHOUR" Type="varchar" MaxLength="50" />
+    <Property Name="TRIP" Type="varchar" MaxLength="50" />
+    <Property Name="NETWEIGHT" Type="varchar" MaxLength="50" />
+    <Property Name="EFISIENSI" Type="varchar" MaxLength="50" />
+    <Property Name="KGTRIP" Type="varchar" MaxLength="50" />
+    <Property Name="COSTACTUAL" Type="varchar" MaxLength="50" />
+    <Property Name="RPTOTALKM" Type="varchar" MaxLength="50" />
+    <Property Name="RPTOTALHOUR" Type="varchar" MaxLength="50" />
+    <Property Name="RPKG" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALHARIKERJA" Type="varchar" MaxLength="50" />
+    <Property Name="COSTLABOUR" Type="varchar" MaxLength="50" />
+    <Property Name="COSTTRANSPORT" Type="varchar" MaxLength="50" />
+    <Property Name="OTHEREXPENSE" Type="varchar" MaxLength="50" />
+    <Property Name="COSTMATERIAL" Type="varchar" MaxLength="50" />
+    <Property Name="PERIOD" Type="varchar" MaxLength="50" />
+    <Property Name="ZYEAR" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SALES_MOBILE_STOCK_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANDT" Type="varchar" MaxLength="50" />
+    <Property Name="BUKRS" Type="varchar" MaxLength="50" />
+    <Property Name="AREA" Type="varchar" MaxLength="50" />
+    <Property Name="WERKS" Type="varchar" MaxLength="50" />
+    <Property Name="MATNR" Type="varchar" MaxLength="50" />
+    <Property Name="ASOFDATE" Type="varchar" MaxLength="50" />
+    <Property Name="BUTXT" Type="varchar" MaxLength="50" />
+    <Property Name="NAME1" Type="varchar" MaxLength="50" />
+    <Property Name="ZBEGSTOCK" Type="varchar" MaxLength="50" />
+    <Property Name="ZRECSTOCK" Type="varchar" MaxLength="50" />
+    <Property Name="ZDEL" Type="varchar" MaxLength="50" />
+    <Property Name="ZINSTOCK" Type="varchar" MaxLength="50" />
+    <Property Name="ZOTHSTOCK" Type="varchar" MaxLength="50" />
+    <Property Name="ZENDSTOCK" Type="varchar" MaxLength="50" />
+    <Property Name="CF05" Type="varchar" MaxLength="50" />
+    <Property Name="OUTSKONTRAK" Type="varchar" MaxLength="50" />
+    <Property Name="CREATEDDATE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZC0032">
+    <Key>
+      <PropertyRef Name="MANDT" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="TYPE" />
+      <PropertyRef Name="ITEM" />
+      <PropertyRef Name="ITEMTEXT" />
+    </Key>
+    <Property Name="MANDT" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="GJAHR" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MONAT" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="ITEM" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="ITEMTEXT" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="AOP1YR" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="YTDAOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="YTDCOST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="YTDSISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z01AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z01COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z01SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z02AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z02COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z02SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z03AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z03COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z03SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z04AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z04COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z04SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z05AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z05COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z05SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z06AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z06COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z06SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z07AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z07COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z07SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z08AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z08COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z08SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z09AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z09COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z09SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z10AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z10COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z10SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z11AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z11COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z11SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z12AOP" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z12COST" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="Z12SISA" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="CLASS" Type="varchar" MaxLength="50" />
+    <Property Name="JOBDAT" Type="varchar" MaxLength="10" />
+    <Property Name="JOBNAM" Type="varchar" MaxLength="12" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="INSERTDATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZTF_CDV_LASTMAIL">
+    <Key>
+      <PropertyRef Name="CDVId" />
+    </Key>
+    <Property Name="CDVId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Cdcomp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Cdgsber" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Approver" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Nrcdv" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nrbelnr" Type="varchar" MaxLength="50" />
+    <Property Name="Amtotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cutotal" Type="varchar" MaxLength="50" />
+    <Property Name="Txberita" Type="varchar" MaxLength="200" />
+    <Property Name="Txberita1" Type="varchar" MaxLength="200" />
+    <Property Name="Txberita2" Type="varchar" MaxLength="200" />
+    <Property Name="Docnum" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="NMPAYEE" Type="varchar" MaxLength="64" />
+    <Property Name="NMGSBER" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="isSuccessPostToSAP" Type="bit" />
+    <Property Name="ErrorMessage" Type="text" />
+    <Property Name="Client" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZTM_MATPRC_MIP_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANDT" Type="varchar" MaxLength="3" />
+    <Property Name="MATGRP" Type="varchar" MaxLength="4" />
+    <Property Name="AREA1" Type="varchar" MaxLength="20" />
+    <Property Name="MATNR" Type="varchar" MaxLength="18" />
+    <Property Name="MATGRPDESC" Type="varchar" MaxLength="60" />
+    <Property Name="LSTPRD" Type="varchar" MaxLength="10" />
+    <Property Name="TXZ01" Type="varchar" MaxLength="40" />
+    <Property Name="LSTPO" Type="varchar" MaxLength="10" />
+    <Property Name="LSTPOITEM" Type="varchar" MaxLength="10" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="TOTVAL" Type="varchar" MaxLength="50" />
+    <Property Name="LSTPRC" Type="varchar" MaxLength="18" />
+    <Property Name="LSTUOM" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ZTM_ORDER_PO">
+    <Key>
+      <PropertyRef Name="EBELN" />
+      <PropertyRef Name="EBELP" />
+      <PropertyRef Name="MBLNR" />
+    </Key>
+    <Property Name="EBELN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EBELP" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="MBLNR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MATNR" Type="varchar" MaxLength="18" />
+    <Property Name="OBJEK" Type="varchar" MaxLength="50" />
+    <Property Name="ERNAM" Type="varchar" MaxLength="12" />
+    <Property Name="BUKRS" Type="varchar" MaxLength="4" />
+    <Property Name="BUTXT" Type="varchar" MaxLength="25" />
+    <Property Name="EKGRP" Type="varchar" MaxLength="3" />
+    <Property Name="EKNAM" Type="varchar" MaxLength="18" />
+    <Property Name="AREA" Type="varchar" MaxLength="20" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" />
+    <Property Name="PLTNM" Type="varchar" MaxLength="40" />
+    <Property Name="BSART" Type="varchar" MaxLength="4" />
+    <Property Name="TRANS_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="TRANS_NAME" Type="varchar" MaxLength="35" />
+    <Property Name="PR_TEXT" Type="varchar(max)" />
+    <Property Name="PO_HTEXT" Type="varchar(max)" />
+    <Property Name="PO_ITEXT" Type="varchar(max)" />
+    <Property Name="LIFNR" Type="varchar" MaxLength="10" />
+    <Property Name="ANRED" Type="varchar" MaxLength="15" />
+    <Property Name="NAME1" Type="varchar" MaxLength="35" />
+    <Property Name="LIFRE" Type="varchar" MaxLength="10" />
+    <Property Name="LIFNM" Type="varchar" MaxLength="35" />
+    <Property Name="STRAS" Type="varchar" MaxLength="30" />
+    <Property Name="ORT01" Type="varchar" MaxLength="25" />
+    <Property Name="PSTLZ" Type="varchar" MaxLength="10" />
+    <Property Name="TELF1" Type="varchar" MaxLength="16" />
+    <Property Name="TELFX" Type="varchar" MaxLength="31" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="VERKF" Type="varchar" MaxLength="30" />
+    <Property Name="BEDAT" Type="date" />
+    <Property Name="PORELDT" Type="date" />
+    <Property Name="KPOSN" Type="varchar" MaxLength="6" />
+    <Property Name="KNTTP" Type="varchar" MaxLength="1" />
+    <Property Name="PSTYP" Type="varchar" MaxLength="1" />
+    <Property Name="TXZ01" Type="varchar" MaxLength="40" />
+    <Property Name="CAPITAL" Type="varchar" MaxLength="2" />
+    <Property Name="CAPDESC" Type="varchar" MaxLength="60" />
+    <Property Name="MATGRP" Type="varchar" MaxLength="4" />
+    <Property Name="WGBEZ2" Type="varchar" MaxLength="60" />
+    <Property Name="SUBGRP" Type="varchar" MaxLength="6" />
+    <Property Name="SDESC" Type="varchar" MaxLength="60" />
+    <Property Name="MATKL" Type="varchar" MaxLength="9" />
+    <Property Name="WGBEZ" Type="varchar" MaxLength="60" />
+    <Property Name="EXTWG" Type="varchar" MaxLength="10" />
+    <Property Name="GRULNM" Type="varchar" MaxLength="50" />
+    <Property Name="MENGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MEINS" Type="varchar" MaxLength="3" />
+    <Property Name="PEINH" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="P001" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RA00" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PCTRA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FRA1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZOTH" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZINS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZCLR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZPPN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZDEL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZTA1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZCS1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ZCSTOT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="XZPPN" Type="varchar" MaxLength="1" />
+    <Property Name="XZDEL" Type="varchar" MaxLength="1" />
+    <Property Name="XZTA1" Type="varchar" MaxLength="1" />
+    <Property Name="XZCS1" Type="varchar" MaxLength="1" />
+    <Property Name="PRCORG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VALORG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WKURS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRCIDR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VALIDR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WAERS2" Type="varchar" MaxLength="3" />
+    <Property Name="INCO1" Type="varchar" MaxLength="3" />
+    <Property Name="INCO2" Type="varchar" MaxLength="28" />
+    <Property Name="LGORT" Type="varchar" MaxLength="4" />
+    <Property Name="ZTERM" Type="varchar" MaxLength="4" />
+    <Property Name="TEXT1" Type="varchar" MaxLength="50" />
+    <Property Name="FRGGR" Type="varchar" MaxLength="2" />
+    <Property Name="FRGSX" Type="varchar" MaxLength="2" />
+    <Property Name="FRGKE" Type="varchar" MaxLength="1" />
+    <Property Name="FRGZU" Type="varchar" MaxLength="8" />
+    <Property Name="EINDT" Type="date" />
+    <Property Name="WEMNG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LOEKZ" Type="varchar" MaxLength="1" />
+    <Property Name="UEBTK" Type="varchar" MaxLength="1" />
+    <Property Name="BUDAT" Type="date" />
+    <Property Name="GRQTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="GRUOM" Type="varchar" MaxLength="3" />
+    <Property Name="GRLOC" Type="varchar" MaxLength="4" />
+    <Property Name="GRPRC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="GRVAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OUTPO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OUTPOV" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ELIKZ" Type="varchar" MaxLength="1" />
+    <Property Name="ACHPCT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="XBLNR" Type="varchar" MaxLength="16" />
+    <Property Name="BANFN" Type="varchar" MaxLength="10" />
+    <Property Name="BNFPO" Type="varchar" MaxLength="5" />
+    <Property Name="BADAT" Type="date" />
+    <Property Name="RELDT2" Type="date" />
+    <Property Name="FRGDT" Type="date" />
+    <Property Name="FRGKZ" Type="varchar" MaxLength="1" />
+    <Property Name="LFDAT" Type="date" />
+    <Property Name="MENGE2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MEINS2" Type="varchar" MaxLength="3" />
+    <Property Name="BSMNG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DISPO" Type="varchar" MaxLength="3" />
+    <Property Name="AFNAM" Type="varchar" MaxLength="12" />
+    <Property Name="BEDNR" Type="varchar" MaxLength="10" />
+    <Property Name="ERNAM2" Type="varchar" MaxLength="12" />
+    <Property Name="SUBMI" Type="varchar" MaxLength="10" />
+    <Property Name="ANFNR" Type="varchar" MaxLength="10" />
+    <Property Name="SAKTO" Type="varchar" MaxLength="10" />
+    <Property Name="TXT50" Type="varchar" MaxLength="50" />
+    <Property Name="KOSTL" Type="varchar" MaxLength="10" />
+    <Property Name="LTEXT" Type="varchar" MaxLength="40" />
+    <Property Name="ANLN1" Type="varchar" MaxLength="12" />
+    <Property Name="TXT502" Type="varchar" MaxLength="50" />
+    <Property Name="OBJNR" Type="varchar" MaxLength="18" />
+    <Property Name="PS_PSP_PNR" Type="varchar" MaxLength="50" />
+    <Property Name="POST1" Type="varchar" MaxLength="7" />
+    <Property Name="POSID" Type="varchar" MaxLength="2" />
+    <Property Name="PRART" Type="varchar" MaxLength="2" />
+    <Property Name="PRATX" Type="varchar" MaxLength="20" />
+    <Property Name="COTYP" Type="varchar" MaxLength="4" />
+    <Property Name="AUFNR" Type="varchar" MaxLength="12" />
+    <Property Name="AUART" Type="varchar" MaxLength="4" />
+    <Property Name="TXT" Type="varchar" MaxLength="40" />
+    <Property Name="BELNR" Type="varchar" MaxLength="10" />
+    <Property Name="INVAMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BUDAT2" Type="date" />
+    <Property Name="DUEDAT" Type="date" />
+    <Property Name="ZFBDT" Type="date" />
+    <Property Name="ZBD1T" Type="int" />
+    <Property Name="MWSKZ" Type="varchar" MaxLength="2" />
+    <Property Name="EBAKZ" Type="varchar" MaxLength="1" />
+    <Property Name="KNUMV" Type="varchar" MaxLength="10" />
+    <Property Name="OBJECTID" Type="varchar" MaxLength="90" />
+    <Property Name="KEYPO" Type="varchar" MaxLength="70" />
+    <Property Name="WEBRE" Type="varchar" MaxLength="1" />
+    <Property Name="LD01" Type="int" />
+    <Property Name="LD02" Type="int" />
+    <Property Name="LD03" Type="int" />
+    <Property Name="LD04" Type="int" />
+    <Property Name="KALSK" Type="varchar" MaxLength="2" />
+    <Property Name="EKORG" Type="varchar" MaxLength="4" />
+    <Property Name="POCTR" Type="varchar" MaxLength="6" />
+    <Property Name="HTCHG" Type="date" />
+    <Property Name="ITCHG" Type="date" />
+    <Property Name="EAN11" Type="varchar" MaxLength="18" />
+    <Property Name="ATWTB1" Type="varchar" MaxLength="30" />
+    <Property Name="ATWTB2" Type="varchar" MaxLength="30" />
+    <Property Name="ATWTB3" Type="varchar" MaxLength="30" />
+    <Property Name="ATWTB4" Type="varchar" MaxLength="30" />
+    <Property Name="ATWTB5" Type="varchar" MaxLength="30" />
+    <Property Name="JOBDAT" Type="date" />
+    <Property Name="JOBNAM" Type="varchar" MaxLength="12" />
+    <Property Name="AEDAT" Type="date" />
+    <Property Name="INSERTDATE" Type="datetime" />
+    <Property Name="CLIENT" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ZTM_PR_LIST">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="BANFN" />
+      <PropertyRef Name="BNFPO" />
+      <PropertyRef Name="EBELN" />
+      <PropertyRef Name="EBELP" />
+      <PropertyRef Name="EKGRP" />
+      <PropertyRef Name="EKGRP_PO" />
+    </Key>
+    <Property Name="BUKRS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="BANFN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BNFPO" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="EBELN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EBELP" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="EKGRP" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="EKGRP_PO" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="MATNR" Type="varchar" MaxLength="18" />
+    <Property Name="NOMOR" Type="varchar" MaxLength="5" />
+    <Property Name="NAME1" Type="varchar" MaxLength="30" />
+    <Property Name="ELIKZ" Type="varchar" MaxLength="1" />
+    <Property Name="AREA" Type="varchar" MaxLength="20" />
+    <Property Name="AREA1" Type="varchar" MaxLength="20" />
+    <Property Name="CMGRP" Type="varchar" MaxLength="15" />
+    <Property Name="SHORT" Type="varchar" MaxLength="5" />
+    <Property Name="KNTTP" Type="varchar" MaxLength="1" />
+    <Property Name="TXZ01" Type="varchar" MaxLength="40" />
+    <Property Name="CAPITAL" Type="varchar" MaxLength="2" />
+    <Property Name="CAPDESC" Type="varchar" MaxLength="60" />
+    <Property Name="MATGRP" Type="varchar" MaxLength="4" />
+    <Property Name="WGBEZ2" Type="varchar" MaxLength="60" />
+    <Property Name="SUBGRP" Type="varchar" MaxLength="2" />
+    <Property Name="SDESC" Type="varchar" MaxLength="60" />
+    <Property Name="MATKL" Type="varchar" MaxLength="9" />
+    <Property Name="WGBEZ" Type="varchar" MaxLength="20" />
+    <Property Name="MENGE" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="BSMNG" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="OQTY" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="EBAKZ" Type="varchar" MaxLength="1" />
+    <Property Name="MEINS" Type="varchar" MaxLength="3" />
+    <Property Name="LFDAT" Type="date" />
+    <Property Name="FRGDT" Type="date" />
+    <Property Name="BADAT" Type="date" />
+    <Property Name="RELDT" Type="date" />
+    <Property Name="AFNAM" Type="varchar" MaxLength="12" />
+    <Property Name="IDNLF" Type="varchar" MaxLength="35" />
+    <Property Name="HDRTXT" Type="varchar" MaxLength="255" />
+    <Property Name="STRTXT" Type="varchar" MaxLength="255" />
+    <Property Name="EKNAM" Type="varchar" MaxLength="18" />
+    <Property Name="LOEKZ" Type="varchar" MaxLength="1" />
+    <Property Name="STATU" Type="varchar" MaxLength="10" />
+    <Property Name="FRGKZ" Type="varchar" MaxLength="1" />
+    <Property Name="ERDAT" Type="date" />
+    <Property Name="FRGZU" Type="varchar" MaxLength="8" />
+    <Property Name="ANLN1" Type="varchar" MaxLength="12" />
+    <Property Name="TXT502" Type="varchar" MaxLength="50" />
+    <Property Name="KOSTL" Type="varchar" MaxLength="10" />
+    <Property Name="LTEXT" Type="varchar" MaxLength="40" />
+    <Property Name="SAKTO" Type="varchar" MaxLength="10" />
+    <Property Name="TXT50" Type="varchar" MaxLength="50" />
+    <Property Name="AUFNR" Type="varchar" MaxLength="12" />
+    <Property Name="POSID" Type="varchar" MaxLength="24" />
+    <Property Name="POST1" Type="varchar" MaxLength="40" />
+    <Property Name="ERNAM" Type="varchar" MaxLength="12" />
+    <Property Name="BEDAT" Type="date" />
+    <Property Name="POQTY" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="FRGGR" Type="varchar" MaxLength="2" />
+    <Property Name="FRGST" Type="varchar" MaxLength="2" />
+    <Property Name="PREIS" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="PEINH" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AMTPR" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="STATUS" Type="varchar(max)" />
+    <Property Name="STRSTATUS" Type="varchar(max)" />
+    <Property Name="SBTTL" Type="int" />
+    <Property Name="GRPCHG" Type="date" />
+    <Property Name="ESTKZ" Type="varchar" MaxLength="1" />
+    <Property Name="PORELDT" Type="date" />
+    <Property Name="RFQDT" Type="date" />
+    <Property Name="OUTDAYS" Type="int" />
+    <Property Name="COTYP" Type="varchar" MaxLength="40" />
+    <Property Name="BLCKD" Type="varchar" MaxLength="1" />
+    <Property Name="BLCKT" Type="varchar" MaxLength="60" />
+    <Property Name="OVERPOSTO" Type="varchar" MaxLength="1" />
+    <Property Name="SWERK" Type="varchar" MaxLength="4" />
+    <Property Name="REMARK" Type="varchar" MaxLength="255" />
+    <Property Name="JOBDAT" Type="date" />
+    <Property Name="JOBNAM" Type="varchar" MaxLength="12" />
+    <Property Name="INSERTDATE" Type="datetime" />
+    <Property Name="CLIENT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZTM_YTDTPURC_MIP_TEMP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANDT" Type="varchar" MaxLength="3" />
+    <Property Name="COMPGRP" Type="varchar" MaxLength="15" />
+    <Property Name="MATGRP" Type="varchar" MaxLength="4" />
+    <Property Name="MATGRPDESC" Type="varchar" MaxLength="100" />
+    <Property Name="LSTPRD" Type="varchar" MaxLength="10" />
+    <Property Name="LSTPRDTOT" Type="varchar" MaxLength="20" />
+    <Property Name="YTDTOT" Type="varchar" MaxLength="20" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="ZTMAGRI_STOCKPRD">
+    <Key>
+      <PropertyRef Name="BDATJ" />
+      <PropertyRef Name="POPER" />
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="MATNR" />
+      <PropertyRef Name="BWTAR" />
+    </Key>
+    <Property Name="BDATJ" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="POPER" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="BUKRS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MATNR" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="BWTAR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MTART" Type="varchar" MaxLength="4" />
+    <Property Name="BKLAS" Type="varchar" MaxLength="4" />
+    <Property Name="MATKL" Type="varchar" MaxLength="9" />
+    <Property Name="KTEXT" Type="varchar" MaxLength="40" />
+    <Property Name="MEINS" Type="varchar" MaxLength="3" />
+    <Property Name="PVPRS" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PEINH" Type="varchar" MaxLength="50" />
+    <Property Name="LBKUM" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="SALK3" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SPART" Type="varchar" MaxLength="2" />
+    <Property Name="PSPNR" Type="varchar" MaxLength="50" />
+    <Property Name="MLAST" Type="varchar" MaxLength="1" />
+    <Property Name="VPRSV" Type="varchar" MaxLength="1" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="STATUS" Type="varchar" MaxLength="2" />
+    <Property Name="STATUSTEXT" Type="varchar(max)" />
+    <Property Name="CREATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="CREATEDNAME" Type="varchar" MaxLength="20" />
+    <Property Name="INSERTDATE" Type="datetime" />
+    <Property Name="CLIENT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZTPAGRI_MILLDATA">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="PRD_DATE" />
+    </Key>
+    <Property Name="MANDT" Type="char" MaxLength="3" />
+    <Property Name="BUKRS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="GJAHR" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MONAT" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="PRD_DATE" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CAPACITY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBOPN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBRTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBRTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBPTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBPTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFBCLS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPEN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OER" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OERTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFAPTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFAPTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLOSE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPNBS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPNOT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOPEN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKPROD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDFN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKPRDTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKEXTRT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKEXTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKDISTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKDISTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHTFN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHRFN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHGL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKOTHTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLSBS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLSOT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PKCLOSE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MILLSTR" Type="varchar" MaxLength="6" />
+    <Property Name="MILLSTP" Type="varchar" MaxLength="6" />
+    <Property Name="PERHRTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PERHRTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BREAKDO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UTYHRTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UTYHRTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MILUTTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MILUTTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MILTHTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MILTHTD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="REMARK" Type="varchar" MaxLength="100" />
+    <Property Name="ERSDA" Type="varchar" MaxLength="8" />
+    <Property Name="CPUTM" Type="varchar" MaxLength="6" />
+    <Property Name="ERNAM" Type="varchar" MaxLength="12" />
+    <Property Name="LAEDA" Type="varchar" MaxLength="8" />
+    <Property Name="UPDDT" Type="varchar" MaxLength="6" />
+    <Property Name="AENAM" Type="varchar" MaxLength="12" />
+    <Property Name="CPOPRD5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOPRD6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPODIS6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOGL6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOCLS6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FFACPO6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOTR6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CPOOPN6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Client" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTPAGRI_MILLPROD">
+    <Key>
+      <PropertyRef Name="MANDT" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="MONAT" />
+      <PropertyRef Name="AUFNR" />
+    </Key>
+    <Property Name="MANDT" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="GJAHR" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MONAT" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="AUFNR" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="ERSDA" Type="varchar" MaxLength="50" />
+    <Property Name="CPUTM" Type="varchar" MaxLength="6" />
+    <Property Name="ERNAM" Type="char" MaxLength="12" />
+    <Property Name="LAEDA" Type="varchar" MaxLength="50" />
+    <Property Name="UPDDT" Type="varchar" MaxLength="6" />
+    <Property Name="AENAM" Type="char" MaxLength="12" />
+    <Property Name="Client" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTU_PRCALCHV">
+    <Key>
+      <PropertyRef Name="COMPANY" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="BKMDATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="MDRAN" />
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BLOCKID" />
+      <PropertyRef Name="PREMITYP" />
+    </Key>
+    <Property Name="COMPANY" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ESTATE" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ZYEAR" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="BKMDATE" Type="date" Nullable="false" />
+    <Property Name="DIVISI" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MDRAN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="EMPID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="LINENUM" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="BLOCKID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="PREMITYP" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="PRODTYPE" Type="char" MaxLength="10" />
+    <Property Name="BLOCKBASIS" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="BLOCKBASISAVG" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="PREST" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="BASIC" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="BASICPREMI" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASIC" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASICRATE" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="OVERBASICPREMI" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="ALOCPREMI" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="TOTALPREMI" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="STATUS" Type="varchar" MaxLength="10" />
+    <Property Name="CREATEDDATE" Type="date" />
+    <Property Name="CREATEDTIME" Type="char" MaxLength="10" />
+    <Property Name="CREATEDBY" Type="char" MaxLength="12" />
+    <Property Name="PERIOD" Type="char" MaxLength="10" />
+    <Property Name="WEEK" Type="char" MaxLength="50" />
+    <Property Name="EXEC_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_BP">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="PANENNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BPDATE" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="LINENUM_I" />
+    </Key>
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="PANENNUM" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+    <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="EMPID" Type="varchar" MaxLength="10" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="BPDATE" Type="datetime" Nullable="false" />
+    <Property Name="STATUS" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+    <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+    <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+    <Property Name="LOCID" Type="varchar" MaxLength="10" />
+    <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+    <Property Name="LINENUM_I" Type="int" Nullable="false" />
+    <Property Name="PRODTYPE" Type="varchar" MaxLength="10" />
+    <Property Name="BLOCKID" Type="varchar" MaxLength="8" />
+    <Property Name="ACTL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="varchar" MaxLength="3" />
+    <Property Name="DRC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TPH" Type="varchar" MaxLength="6" />
+    <Property Name="UOMDRC" Type="varchar" MaxLength="3" />
+    <Property Name="LB" Type="varchar" MaxLength="1" />
+    <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+    <Property Name="MNDR_HK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="KARY_HK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="varchar" MaxLength="50" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_BP_RPT">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="PANENNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="BPDATE" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="LINENUM_I" />
+    </Key>
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="PANENNUM" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+    <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="EMPID" Type="varchar" MaxLength="10" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="BPDATE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="STATUS" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CREATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+    <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+    <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+    <Property Name="LOCID" Type="varchar" MaxLength="10" />
+    <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+    <Property Name="LINENUM_I" Type="int" Nullable="false" />
+    <Property Name="PRODTYPE" Type="varchar" MaxLength="10" />
+    <Property Name="BLOCKID" Type="varchar" MaxLength="8" />
+    <Property Name="ACTL" Type="varchar" MaxLength="21" />
+    <Property Name="UOM" Type="varchar" MaxLength="3" />
+    <Property Name="DRC" Type="varchar" MaxLength="21" />
+    <Property Name="TPH" Type="varchar" MaxLength="6" />
+    <Property Name="UOMDRC" Type="varchar" MaxLength="3" />
+    <Property Name="LB" Type="varchar" MaxLength="1" />
+    <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+    <Property Name="MNDR_HK" Type="varchar" MaxLength="21" />
+    <Property Name="KARY_HK" Type="varchar" MaxLength="80" />
+    <Property Name="NOTE" Type="varchar" MaxLength="50" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="INSERTDATE" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'INDOAGRI_DATA.dbo.ZTUAGRI_BP_RPT_Temp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ZTUAGRI_BP_RPT_Temp">
+    <Key>
+      <PropertyRef Name="LINENUMI" />
+    </Key>
+    <Property Name="ZYEAR" Type="int" />
+    <Property Name="PANENNUM" Type="varchar" MaxLength="16" />
+    <Property Name="COMPANYCODE" Type="varchar" MaxLength="4" />
+    <Property Name="ESTATE" Type="varchar" MaxLength="4" />
+    <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+    <Property Name="BKMNUM" Type="varchar" MaxLength="16" />
+    <Property Name="EMPID" Type="varchar" MaxLength="10" />
+    <Property Name="LINENUM" Type="int" />
+    <Property Name="BPDATE" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="CREATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+    <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+    <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+    <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+    <Property Name="LOCID" Type="varchar" MaxLength="10" />
+    <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+    <Property Name="LINENUMI" Type="int" Nullable="false" />
+    <Property Name="PRODTYPE" Type="varchar" MaxLength="10" />
+    <Property Name="BLOCKID" Type="varchar" MaxLength="8" />
+    <Property Name="ACTL" Type="varchar" MaxLength="21" />
+    <Property Name="UOM" Type="varchar" MaxLength="3" />
+    <Property Name="DRC" Type="varchar" MaxLength="21" />
+    <Property Name="TPH" Type="varchar" MaxLength="6" />
+    <Property Name="UOMDRC" Type="varchar" MaxLength="3" />
+    <Property Name="LB" Type="varchar" MaxLength="1" />
+    <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+    <Property Name="MNDR_HK" Type="varchar" MaxLength="21" />
+    <Property Name="KARY_HK" Type="varchar" MaxLength="21" />
+    <Property Name="NOTE" Type="varchar" MaxLength="50" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="INSERTDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_HK">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="MDRAN" Type="char" MaxLength="10" />
+    <Property Name="BKMDATE" Type="datetime" Nullable="false" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="MANDOR" Type="char" MaxLength="10" />
+    <Property Name="KRANI" Type="char" MaxLength="10" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="REVIEW" Type="char" MaxLength="40" />
+    <Property Name="SAPNUM" Type="char" MaxLength="20" />
+    <Property Name="REFDOC" Type="char" MaxLength="16" />
+    <Property Name="UPLOAD" Type="char" MaxLength="1" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="EMPID" Type="char" MaxLength="10" />
+    <Property Name="ACTID" Type="char" MaxLength="6" />
+    <Property Name="LOCID" Type="char" MaxLength="8" />
+    <Property Name="LOCCC" Type="char" MaxLength="10" />
+    <Property Name="HK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="char" MaxLength="3" />
+    <Property Name="OT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="char" MaxLength="3" />
+    <Property Name="HASIL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="char" MaxLength="3" />
+    <Property Name="REMARK" Type="char" MaxLength="40" />
+    <Property Name="PREMI" Type="money" />
+    <Property Name="PENALTI" Type="money" />
+    <Property Name="WAERS" Type="char" MaxLength="5" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="char" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+    <Property Name="ABSTYPE" Type="char" MaxLength="2" />
+    <Property Name="KOSTL" Type="char" MaxLength="10" />
+    <Property Name="JOBPOS" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="10" />
+    <Property Name="LINENUMREF" Type="int" />
+    <Property Name="TYPEID" Type="char" MaxLength="2" />
+    <Property Name="Exec_Date" Type="datetime" />
+    <Property Name="Exec_Time" Type="varchar" MaxLength="50" />
+    <Property Name="LogId" Type="int" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'INDOAGRI_DATA.dbo.ZTUAGRI_HK_Temp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ZTUAGRI_HK_Temp">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANYCODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="BKMDATE" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="COMPANYCODE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="MDRAN" Type="char" MaxLength="10" />
+    <Property Name="BKMDATE" Type="datetime" Nullable="false" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="MANDOR" Type="char" MaxLength="10" />
+    <Property Name="KRANI" Type="char" MaxLength="10" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="REVIEW" Type="char" MaxLength="40" />
+    <Property Name="SAPNUM" Type="char" MaxLength="20" />
+    <Property Name="REFDOC" Type="char" MaxLength="16" />
+    <Property Name="UPLOAD" Type="char" MaxLength="1" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="EMPID" Type="char" MaxLength="10" />
+    <Property Name="ACTID" Type="char" MaxLength="6" />
+    <Property Name="LOCID" Type="char" MaxLength="8" />
+    <Property Name="LOCCC" Type="char" MaxLength="10" />
+    <Property Name="HK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="char" MaxLength="3" />
+    <Property Name="OT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="char" MaxLength="3" />
+    <Property Name="HASIL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="char" MaxLength="3" />
+    <Property Name="REMARK" Type="char" MaxLength="40" />
+    <Property Name="PREMI" Type="money" />
+    <Property Name="PENALTI" Type="money" />
+    <Property Name="WAERS" Type="char" MaxLength="5" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="char" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+    <Property Name="ABSTYPE" Type="char" MaxLength="2" />
+    <Property Name="KOSTL" Type="char" MaxLength="10" />
+    <Property Name="JOBPOS" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="10" />
+    <Property Name="LINENUMREF" Type="int" />
+    <Property Name="TYPEID" Type="char" MaxLength="2" />
+    <Property Name="Exec_Date" Type="datetime" />
+    <Property Name="Exec_Time" Type="varchar" MaxLength="50" />
+    <Property Name="LogId" Type="int" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTUAGRI_PBS2">
+    <Key>
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="SPBSNUM" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="SPBSDATE" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="SPBSNUM" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="char" MaxLength="2" />
+    <Property Name="SPBSDATE" Type="datetime" Nullable="false" />
+    <Property Name="PLASMAID" Type="char" MaxLength="10" />
+    <Property Name="ASSTID" Type="char" MaxLength="10" />
+    <Property Name="KRANI" Type="char" MaxLength="10" />
+    <Property Name="MILL" Type="char" MaxLength="4" />
+    <Property Name="MILLEX" Type="char" MaxLength="10" />
+    <Property Name="SOPIR" Type="char" MaxLength="50" />
+    <Property Name="JARAK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOPOL" Type="char" MaxLength="15" />
+    <Property Name="WBNUM" Type="char" MaxLength="16" />
+    <Property Name="NET" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+    <Property Name="UOM" Type="char" MaxLength="3" />
+    <Property Name="UOMJRK" Type="char" MaxLength="3" />
+    <Property Name="REVIEW" Type="char" MaxLength="40" />
+    <Property Name="SAPNUM" Type="char" MaxLength="20" />
+    <Property Name="REFDOC" Type="char" MaxLength="16" />
+    <Property Name="STATUS" Type="char" MaxLength="10" />
+    <Property Name="INEX" Type="char" MaxLength="1" />
+    <Property Name="RECALNUM" Type="char" MaxLength="20" />
+    <Property Name="LOADDATE" Type="datetime" />
+    <Property Name="MULTI" Type="char" MaxLength="1" />
+    <Property Name="ACTPLASMA" Type="char" MaxLength="1" />
+    <Property Name="UPLOAD" Type="char" MaxLength="1" />
+    <Property Name="LBKNUM" Type="char" MaxLength="16" />
+    <Property Name="RUNNING_ACCOUNT" Type="char" MaxLength="8" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="BLOCKID" Type="char" MaxLength="8" />
+    <Property Name="ZDATE" Type="datetime" />
+    <Property Name="JANJANG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="JJGUOM" Type="char" MaxLength="3" />
+    <Property Name="TAKJANJANG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAKBROND" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAKTOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACTUAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LBKNUM_ITEM" Type="char" MaxLength="16" />
+    <Property Name="SHIPTYPE" Type="char" MaxLength="3" />
+    <Property Name="SHIPDATE" Type="datetime" />
+    <Property Name="SHIPTRIP" Type="int" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIODE" Type="int" />
+    <Property Name="kernet" Type="varchar" MaxLength="200" />
+    <Property Name="WBNUMEST" Type="char" MaxLength="16" />
+    <Property Name="NETEST" Type="decimal" Precision="16" Scale="3" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'INDOAGRI_DATA.dbo.ZTUAGRI_PBS2_RPT_TEMP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ZTUAGRI_PBS2_RPT_TEMP">
+    <Key>
+      <PropertyRef Name="LINENUM" />
+      <PropertyRef Name="WEEK" />
+    </Key>
+    <Property Name="ZYEAR" Type="int" />
+    <Property Name="SPBSNUM" Type="char" MaxLength="16" />
+    <Property Name="COMPANYCODE" Type="char" MaxLength="4" />
+    <Property Name="ESTATE" Type="char" MaxLength="4" />
+    <Property Name="DIVISI" Type="char" MaxLength="2" />
+    <Property Name="SPBSDATE" Type="varchar" MaxLength="50" />
+    <Property Name="PLASMAID" Type="char" MaxLength="10" />
+    <Property Name="ASSTID" Type="char" MaxLength="10" />
+    <Property Name="KRANI" Type="char" MaxLength="10" />
+    <Property Name="MILL" Type="char" MaxLength="4" />
+    <Property Name="MILLEX" Type="char" MaxLength="10" />
+    <Property Name="SOPIR" Type="char" MaxLength="50" />
+    <Property Name="JARAK" Type="varchar" MaxLength="50" />
+    <Property Name="NOPOL" Type="char" MaxLength="15" />
+    <Property Name="WBNUM" Type="char" MaxLength="16" />
+    <Property Name="NET" Type="varchar" MaxLength="50" />
+    <Property Name="CREATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="LASTUPDATEDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+    <Property Name="UOM" Type="char" MaxLength="3" />
+    <Property Name="UOMJRK" Type="char" MaxLength="3" />
+    <Property Name="REVIEW" Type="char" MaxLength="40" />
+    <Property Name="SAPNUM" Type="char" MaxLength="20" />
+    <Property Name="REFDOC" Type="char" MaxLength="16" />
+    <Property Name="STATUS" Type="char" MaxLength="10" />
+    <Property Name="INEX" Type="char" MaxLength="1" />
+    <Property Name="RECALNUM" Type="char" MaxLength="20" />
+    <Property Name="LOADDATE" Type="varchar" MaxLength="50" />
+    <Property Name="MULTI" Type="char" MaxLength="1" />
+    <Property Name="ACTPLASMA" Type="char" MaxLength="1" />
+    <Property Name="UPLOAD" Type="char" MaxLength="1" />
+    <Property Name="LBKNUM" Type="char" MaxLength="16" />
+    <Property Name="RUNNING_ACCOUNT" Type="char" MaxLength="8" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="BLOCKID" Type="char" MaxLength="8" />
+    <Property Name="ZDATE" Type="varchar" MaxLength="50" />
+    <Property Name="JANJANG" Type="varchar" MaxLength="50" />
+    <Property Name="JJGUOM" Type="char" MaxLength="3" />
+    <Property Name="TAKJANJANG" Type="varchar" MaxLength="50" />
+    <Property Name="TAKBROND" Type="varchar" MaxLength="50" />
+    <Property Name="TAKTOTAL" Type="varchar" MaxLength="50" />
+    <Property Name="ACTUAL" Type="varchar" MaxLength="50" />
+    <Property Name="LBKNUM_ITEM" Type="char" MaxLength="16" />
+    <Property Name="SHIPTYPE" Type="char" MaxLength="3" />
+    <Property Name="SHIPDATE" Type="varchar" MaxLength="50" />
+    <Property Name="SHIPTRIP" Type="varchar" MaxLength="50" />
+    <Property Name="WEEK" Type="int" Nullable="false" />
+    <Property Name="PERIODE" Type="int" />
+    <Property Name="kernet" Type="varchar" MaxLength="200" />
+    <Property Name="WBNUMEST" Type="char" MaxLength="16" />
+    <Property Name="NETEST" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZTW_ASSETSTAT">
+    <Key>
+      <PropertyRef Name="AssetStatId" />
+    </Key>
+    <Property Name="AssetStatId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Werks" Type="varchar" MaxLength="10" />
+    <Property Name="Erdat" Type="datetime" />
+    <Property Name="Eqart" Type="varchar" MaxLength="50" />
+    <Property Name="Good" Type="varchar" MaxLength="50" />
+    <Property Name="Broken" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Ernam" Type="varchar" MaxLength="100" />
+    <Property Name="Endat" Type="datetime" />
+    <Property Name="Rzet" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="SP_COMSATIC_STOCK_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MATERIAL" Type="varchar" Mode="In" />
+    <Parameter Name="ASOFDATE" Type="varchar" Mode="In" />
+    <Parameter Name="AREA" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_RUNACC_RASIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COMPANYCODE" Type="varchar" Mode="In" />
+    <Parameter Name="ESTATE" Type="varchar" Mode="In" />
+    <Parameter Name="PERIOD" Type="varchar" Mode="In" />
+    <Parameter Name="YEAR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_ZTM_MATPRC_MIP_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MATGRP" Type="varchar" Mode="In" />
+    <Parameter Name="AREA" Type="varchar" Mode="In" />
+    <Parameter Name="MATNR" Type="varchar" Mode="In" />
+    <Parameter Name="MANDT" Type="varchar" Mode="In" />
+    <Parameter Name="LSTPRD" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_ZTM_YTDTPURC_MIP_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COMP_GROUP" Type="varchar" Mode="In" />
+    <Parameter Name="MATGRP" Type="varchar" Mode="In" />
+    <Parameter Name="MANDT" Type="varchar" Mode="In" />
+    <Parameter Name="LSTPRD" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_ZTUAGRI_BP_RPT_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BPDATEFROM" Type="varchar" Mode="In" />
+    <Parameter Name="BPDATETO" Type="varchar" Mode="In" />
+    <Parameter Name="Estate" Type="char" Mode="In" />
+  </Function>
+  <Function Name="SP_ZTUAGRI_HK_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LASTUPDATEDDATE" Type="datetime" Mode="In" />
+    <Parameter Name="Estate" Type="char" Mode="In" />
+  </Function>
+  <Function Name="SP_ZTUAGRI_PBS2_RPT_MOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LOADDATEFROM" Type="varchar" Mode="In" />
+    <Parameter Name="LOADDATETO" Type="varchar" Mode="In" />
+    <Parameter Name="Estate" Type="char" Mode="In" />
+  </Function>
+  <EntityContainer Name="INDOAGRI_DATAModelStoreContainer">
+    <EntitySet Name="LogPostData" EntityType="Self.LogPostData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogSAPToDB" EntityType="Self.LogSAPToDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RUNACC_RASIO_TEMP" EntityType="Self.RUNACC_RASIO_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALES_MOBILE_STOCK_TEMP" EntityType="Self.SALES_MOBILE_STOCK_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZC0032" EntityType="Self.ZC0032" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTF_CDV_LASTMAIL" EntityType="Self.ZTF_CDV_LASTMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTM_MATPRC_MIP_TEMP" EntityType="Self.ZTM_MATPRC_MIP_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTM_ORDER_PO" EntityType="Self.ZTM_ORDER_PO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTM_PR_LIST" EntityType="Self.ZTM_PR_LIST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTM_YTDTPURC_MIP_TEMP" EntityType="Self.ZTM_YTDTPURC_MIP_TEMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTMAGRI_STOCKPRD" EntityType="Self.ZTMAGRI_STOCKPRD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTPAGRI_MILLDATA" EntityType="Self.ZTPAGRI_MILLDATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTPAGRI_MILLPROD" EntityType="Self.ZTPAGRI_MILLPROD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTU_PRCALCHV" EntityType="Self.ZTU_PRCALCHV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTUAGRI_BP" EntityType="Self.ZTUAGRI_BP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTUAGRI_BP_RPT" EntityType="Self.ZTUAGRI_BP_RPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTUAGRI_HK" EntityType="Self.ZTUAGRI_HK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTUAGRI_PBS2" EntityType="Self.ZTUAGRI_PBS2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTW_ASSETSTAT" EntityType="Self.ZTW_ASSETSTAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTUAGRI_BP_RPT_Temp" EntityType="Self.ZTUAGRI_BP_RPT_Temp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ZTUAGRI_BP_RPT_Temp].[ZYEAR] AS [ZYEAR], 
+    [ZTUAGRI_BP_RPT_Temp].[PANENNUM] AS [PANENNUM], 
+    [ZTUAGRI_BP_RPT_Temp].[COMPANYCODE] AS [COMPANYCODE], 
+    [ZTUAGRI_BP_RPT_Temp].[ESTATE] AS [ESTATE], 
+    [ZTUAGRI_BP_RPT_Temp].[DIVISI] AS [DIVISI], 
+    [ZTUAGRI_BP_RPT_Temp].[BKMNUM] AS [BKMNUM], 
+    [ZTUAGRI_BP_RPT_Temp].[EMPID] AS [EMPID], 
+    [ZTUAGRI_BP_RPT_Temp].[LINENUM] AS [LINENUM], 
+    [ZTUAGRI_BP_RPT_Temp].[BPDATE] AS [BPDATE], 
+    [ZTUAGRI_BP_RPT_Temp].[STATUS] AS [STATUS], 
+    [ZTUAGRI_BP_RPT_Temp].[CREATEDDATE] AS [CREATEDDATE], 
+    [ZTUAGRI_BP_RPT_Temp].[CREATEDBY] AS [CREATEDBY], 
+    [ZTUAGRI_BP_RPT_Temp].[LASTUPDATEDDATE] AS [LASTUPDATEDDATE], 
+    [ZTUAGRI_BP_RPT_Temp].[LASTUPDATEDBY] AS [LASTUPDATEDBY], 
+    [ZTUAGRI_BP_RPT_Temp].[REVIEW] AS [REVIEW], 
+    [ZTUAGRI_BP_RPT_Temp].[SAPNUM] AS [SAPNUM], 
+    [ZTUAGRI_BP_RPT_Temp].[REFDOC] AS [REFDOC], 
+    [ZTUAGRI_BP_RPT_Temp].[LOCID] AS [LOCID], 
+    [ZTUAGRI_BP_RPT_Temp].[UPLOAD] AS [UPLOAD], 
+    [ZTUAGRI_BP_RPT_Temp].[LINENUMI] AS [LINENUMI], 
+    [ZTUAGRI_BP_RPT_Temp].[PRODTYPE] AS [PRODTYPE], 
+    [ZTUAGRI_BP_RPT_Temp].[BLOCKID] AS [BLOCKID], 
+    [ZTUAGRI_BP_RPT_Temp].[ACTL] AS [ACTL], 
+    [ZTUAGRI_BP_RPT_Temp].[UOM] AS [UOM], 
+    [ZTUAGRI_BP_RPT_Temp].[DRC] AS [DRC], 
+    [ZTUAGRI_BP_RPT_Temp].[TPH] AS [TPH], 
+    [ZTUAGRI_BP_RPT_Temp].[UOMDRC] AS [UOMDRC], 
+    [ZTUAGRI_BP_RPT_Temp].[LB] AS [LB], 
+    [ZTUAGRI_BP_RPT_Temp].[REVIEW_I] AS [REVIEW_I], 
+    [ZTUAGRI_BP_RPT_Temp].[MNDR_HK] AS [MNDR_HK], 
+    [ZTUAGRI_BP_RPT_Temp].[KARY_HK] AS [KARY_HK], 
+    [ZTUAGRI_BP_RPT_Temp].[NOTE] AS [NOTE], 
+    [ZTUAGRI_BP_RPT_Temp].[WEEK] AS [WEEK], 
+    [ZTUAGRI_BP_RPT_Temp].[PERIOD] AS [PERIOD], 
+    [ZTUAGRI_BP_RPT_Temp].[INSERTDATE] AS [INSERTDATE]
+    FROM [dbo].[ZTUAGRI_BP_RPT_Temp] AS [ZTUAGRI_BP_RPT_Temp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ZTUAGRI_HK_Temp" EntityType="Self.ZTUAGRI_HK_Temp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ZTUAGRI_HK_Temp].[BKMNUM] AS [BKMNUM], 
+    [ZTUAGRI_HK_Temp].[ZYEAR] AS [ZYEAR], 
+    [ZTUAGRI_HK_Temp].[COMPANYCODE] AS [COMPANYCODE], 
+    [ZTUAGRI_HK_Temp].[ESTATE] AS [ESTATE], 
+    [ZTUAGRI_HK_Temp].[DIVISI] AS [DIVISI], 
+    [ZTUAGRI_HK_Temp].[MDRAN] AS [MDRAN], 
+    [ZTUAGRI_HK_Temp].[BKMDATE] AS [BKMDATE], 
+    [ZTUAGRI_HK_Temp].[WEEK] AS [WEEK], 
+    [ZTUAGRI_HK_Temp].[PERIOD] AS [PERIOD], 
+    [ZTUAGRI_HK_Temp].[MANDOR] AS [MANDOR], 
+    [ZTUAGRI_HK_Temp].[KRANI] AS [KRANI], 
+    [ZTUAGRI_HK_Temp].[STATUS] AS [STATUS], 
+    [ZTUAGRI_HK_Temp].[REVIEW] AS [REVIEW], 
+    [ZTUAGRI_HK_Temp].[SAPNUM] AS [SAPNUM], 
+    [ZTUAGRI_HK_Temp].[REFDOC] AS [REFDOC], 
+    [ZTUAGRI_HK_Temp].[UPLOAD] AS [UPLOAD], 
+    [ZTUAGRI_HK_Temp].[LINENUM] AS [LINENUM], 
+    [ZTUAGRI_HK_Temp].[EMPID] AS [EMPID], 
+    [ZTUAGRI_HK_Temp].[ACTID] AS [ACTID], 
+    [ZTUAGRI_HK_Temp].[LOCID] AS [LOCID], 
+    [ZTUAGRI_HK_Temp].[LOCCC] AS [LOCCC], 
+    [ZTUAGRI_HK_Temp].[HK] AS [HK], 
+    [ZTUAGRI_HK_Temp].[UOM_HK] AS [UOM_HK], 
+    [ZTUAGRI_HK_Temp].[OT] AS [OT], 
+    [ZTUAGRI_HK_Temp].[UOM_OT] AS [UOM_OT], 
+    [ZTUAGRI_HK_Temp].[HASIL] AS [HASIL], 
+    [ZTUAGRI_HK_Temp].[UOM] AS [UOM], 
+    [ZTUAGRI_HK_Temp].[REMARK] AS [REMARK], 
+    [ZTUAGRI_HK_Temp].[PREMI] AS [PREMI], 
+    [ZTUAGRI_HK_Temp].[PENALTI] AS [PENALTI], 
+    [ZTUAGRI_HK_Temp].[WAERS] AS [WAERS], 
+    [ZTUAGRI_HK_Temp].[CREATEDDATE] AS [CREATEDDATE], 
+    [ZTUAGRI_HK_Temp].[CREATEDBY] AS [CREATEDBY], 
+    [ZTUAGRI_HK_Temp].[LASTUPDATEDDATE] AS [LASTUPDATEDDATE], 
+    [ZTUAGRI_HK_Temp].[LASTUPDATEDBY] AS [LASTUPDATEDBY], 
+    [ZTUAGRI_HK_Temp].[ABSTYPE] AS [ABSTYPE], 
+    [ZTUAGRI_HK_Temp].[KOSTL] AS [KOSTL], 
+    [ZTUAGRI_HK_Temp].[JOBPOS] AS [JOBPOS], 
+    [ZTUAGRI_HK_Temp].[TYPE] AS [TYPE], 
+    [ZTUAGRI_HK_Temp].[LINENUMREF] AS [LINENUMREF], 
+    [ZTUAGRI_HK_Temp].[TYPEID] AS [TYPEID], 
+    [ZTUAGRI_HK_Temp].[Exec_Date] AS [Exec_Date], 
+    [ZTUAGRI_HK_Temp].[Exec_Time] AS [Exec_Time], 
+    [ZTUAGRI_HK_Temp].[LogId] AS [LogId], 
+    [ZTUAGRI_HK_Temp].[InsertDate] AS [InsertDate]
+    FROM [dbo].[ZTUAGRI_HK_Temp] AS [ZTUAGRI_HK_Temp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ZTUAGRI_PBS2_RPT_TEMP" EntityType="Self.ZTUAGRI_PBS2_RPT_TEMP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ZYEAR] AS [ZYEAR], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SPBSNUM] AS [SPBSNUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[COMPANYCODE] AS [COMPANYCODE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ESTATE] AS [ESTATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[DIVISI] AS [DIVISI], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SPBSDATE] AS [SPBSDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[PLASMAID] AS [PLASMAID], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ASSTID] AS [ASSTID], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[KRANI] AS [KRANI], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[MILL] AS [MILL], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[MILLEX] AS [MILLEX], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SOPIR] AS [SOPIR], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[JARAK] AS [JARAK], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[NOPOL] AS [NOPOL], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[WBNUM] AS [WBNUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[NET] AS [NET], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[CREATEDDATE] AS [CREATEDDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LASTUPDATEDDATE] AS [LASTUPDATEDDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LASTUPDATEDBY] AS [LASTUPDATEDBY], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[UOM] AS [UOM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[UOMJRK] AS [UOMJRK], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[REVIEW] AS [REVIEW], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SAPNUM] AS [SAPNUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[REFDOC] AS [REFDOC], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[STATUS] AS [STATUS], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[INEX] AS [INEX], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[RECALNUM] AS [RECALNUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LOADDATE] AS [LOADDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[MULTI] AS [MULTI], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ACTPLASMA] AS [ACTPLASMA], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[UPLOAD] AS [UPLOAD], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LBKNUM] AS [LBKNUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[RUNNING_ACCOUNT] AS [RUNNING_ACCOUNT], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LINENUM] AS [LINENUM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[BLOCKID] AS [BLOCKID], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ZDATE] AS [ZDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[JANJANG] AS [JANJANG], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[JJGUOM] AS [JJGUOM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[TAKJANJANG] AS [TAKJANJANG], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[TAKBROND] AS [TAKBROND], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[TAKTOTAL] AS [TAKTOTAL], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[ACTUAL] AS [ACTUAL], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[LBKNUM_ITEM] AS [LBKNUM_ITEM], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SHIPTYPE] AS [SHIPTYPE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SHIPDATE] AS [SHIPDATE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[SHIPTRIP] AS [SHIPTRIP], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[WEEK] AS [WEEK], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[PERIODE] AS [PERIODE], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[kernet] AS [kernet], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[WBNUMEST] AS [WBNUMEST], 
+    [ZTUAGRI_PBS2_RPT_TEMP].[NETEST] AS [NETEST]
+    FROM [dbo].[ZTUAGRI_PBS2_RPT_TEMP] AS [ZTUAGRI_PBS2_RPT_TEMP]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

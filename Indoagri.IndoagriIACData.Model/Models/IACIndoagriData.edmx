@@ -1,0 +1,1435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IAC_AGRIDATAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ZTU_PRCALCHV">
+          <Key>
+            <PropertyRef Name="COMPANY" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="BKMDATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="MDRAN" />
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BLOCKID" />
+            <PropertyRef Name="PREMITYP" />
+            <PropertyRef Name="PRODTYPE" />
+          </Key>
+          <Property Name="COMPANY" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="BKMDATE" Type="date" Nullable="false" />
+          <Property Name="DIVISI" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="MDRAN" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="EMPID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LINENUM" Type="smallint" Nullable="false" />
+          <Property Name="BLOCKID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PREMITYP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PRODTYPE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BLOCKBASIS" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BLOCKBASISAVG" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="PREST" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BASIC" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BASICPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASIC" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICRATE" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="ALOCPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="TOTALPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="STATUS" Type="varchar" MaxLength="2" />
+          <Property Name="CREATEDDATE" Type="date" />
+          <Property Name="CREATEDTIME" Type="varchar" MaxLength="10" />
+          <Property Name="CREATEDBY" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTU_PRCALCHV_TESTAPI">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="BKMDATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="MDRAN" />
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BLOCKID" />
+            <PropertyRef Name="PREMITYP" />
+            <PropertyRef Name="PRODTYPE" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="BKMDATE" Type="date" Nullable="false" />
+          <Property Name="DIVISI" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="MDRAN" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="EMPID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LINENUM" Type="smallint" Nullable="false" />
+          <Property Name="BLOCKID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PREMITYP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PRODTYPE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BLOCKBASIS" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BLOCKBASISAVG" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="PREST" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BASIC" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="BASICPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASIC" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICRATE" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="ALOCPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="TOTALPREMI" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="STATUS" Type="varchar" MaxLength="2" />
+          <Property Name="CREATEDDATE" Type="date" />
+          <Property Name="CREATEDTIME" Type="varchar" MaxLength="10" />
+          <Property Name="CREATEDBY" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_BP">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="PANENNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BPDATE" />
+            <PropertyRef Name="LINENUM_I" />
+          </Key>
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="PANENNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+          <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="EMPID" Type="varchar" MaxLength="10" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="BPDATE" Type="datetime" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="1" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+          <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+          <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+          <Property Name="LOCID" Type="varchar" MaxLength="10" />
+          <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+          <Property Name="LINENUM_I" Type="int" Nullable="false" />
+          <Property Name="PRODTYPE" Type="varchar" MaxLength="10" />
+          <Property Name="BLOCKID" Type="varchar" MaxLength="8" />
+          <Property Name="ACTL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="varchar" MaxLength="3" />
+          <Property Name="DRC" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TPH" Type="varchar" MaxLength="6" />
+          <Property Name="UOMDRC" Type="varchar" MaxLength="3" />
+          <Property Name="LB" Type="varchar" MaxLength="1" />
+          <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+          <Property Name="MNDR_HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KARY_HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NOTE" Type="varchar" MaxLength="50" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIOD" Type="int" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_BP_TESTAPI">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="PANENNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BPDATE" />
+            <PropertyRef Name="LINENUM_I" />
+          </Key>
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="PANENNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+          <Property Name="BKMNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="EMPID" Type="varchar" MaxLength="10" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="BPDATE" Type="datetime" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="1" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+          <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+          <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+          <Property Name="LOCID" Type="varchar" MaxLength="10" />
+          <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+          <Property Name="LINENUM_I" Type="int" Nullable="false" />
+          <Property Name="PRODTYPE" Type="varchar" MaxLength="10" />
+          <Property Name="BLOCKID" Type="varchar" MaxLength="8" />
+          <Property Name="ACTL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="varchar" MaxLength="3" />
+          <Property Name="DRC" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TPH" Type="varchar" MaxLength="6" />
+          <Property Name="UOMDRC" Type="varchar" MaxLength="3" />
+          <Property Name="LB" Type="varchar" MaxLength="1" />
+          <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+          <Property Name="MNDR_HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KARY_HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NOTE" Type="varchar" MaxLength="50" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIOD" Type="int" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_HK">
+          <Key>
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="MDRAN" Type="char" MaxLength="10" />
+          <Property Name="BKMDATE" Type="datetime" Nullable="false" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIOD" Type="int" />
+          <Property Name="MANDOR" Type="char" MaxLength="10" />
+          <Property Name="KRANI" Type="char" MaxLength="10" />
+          <Property Name="STATUS" Type="char" MaxLength="1" />
+          <Property Name="REVIEW" Type="char" MaxLength="40" />
+          <Property Name="SAPNUM" Type="char" MaxLength="20" />
+          <Property Name="REFDOC" Type="char" MaxLength="16" />
+          <Property Name="UPLOAD" Type="char" MaxLength="1" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="EMPID" Type="char" MaxLength="10" />
+          <Property Name="ACTID" Type="char" MaxLength="6" />
+          <Property Name="LOCID" Type="char" MaxLength="8" />
+          <Property Name="LOCCC" Type="char" MaxLength="10" />
+          <Property Name="HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_HK" Type="char" MaxLength="3" />
+          <Property Name="OT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_OT" Type="char" MaxLength="3" />
+          <Property Name="HASIL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="char" MaxLength="3" />
+          <Property Name="REMARK" Type="char" MaxLength="40" />
+          <Property Name="PREMI" Type="money" />
+          <Property Name="PENALTI" Type="money" />
+          <Property Name="WAERS" Type="char" MaxLength="5" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="CREATEDBY" Type="char" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+          <Property Name="ABSTYPE" Type="char" MaxLength="2" />
+          <Property Name="KOSTL" Type="char" MaxLength="10" />
+          <Property Name="JOBPOS" Type="char" MaxLength="10" />
+          <Property Name="TYPE" Type="char" MaxLength="10" />
+          <Property Name="LINENUMREF" Type="int" />
+          <Property Name="TYPEID" Type="char" MaxLength="2" />
+          <Property Name="Exec_Date" Type="datetime" />
+          <Property Name="Exec_Time" Type="varchar" MaxLength="50" />
+          <Property Name="LogId" Type="int" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_HK_TESTAPI">
+          <Key>
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="MDRAN" Type="char" MaxLength="10" />
+          <Property Name="BKMDATE" Type="datetime" Nullable="false" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIOD" Type="int" />
+          <Property Name="MANDOR" Type="char" MaxLength="10" />
+          <Property Name="KRANI" Type="char" MaxLength="10" />
+          <Property Name="STATUS" Type="char" MaxLength="1" />
+          <Property Name="REVIEW" Type="char" MaxLength="40" />
+          <Property Name="SAPNUM" Type="char" MaxLength="20" />
+          <Property Name="REFDOC" Type="char" MaxLength="16" />
+          <Property Name="UPLOAD" Type="char" MaxLength="1" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="EMPID" Type="char" MaxLength="10" />
+          <Property Name="ACTID" Type="char" MaxLength="6" />
+          <Property Name="LOCID" Type="char" MaxLength="8" />
+          <Property Name="LOCCC" Type="char" MaxLength="10" />
+          <Property Name="HK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_HK" Type="char" MaxLength="3" />
+          <Property Name="OT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_OT" Type="char" MaxLength="3" />
+          <Property Name="HASIL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="char" MaxLength="3" />
+          <Property Name="REMARK" Type="char" MaxLength="40" />
+          <Property Name="PREMI" Type="money" />
+          <Property Name="PENALTI" Type="money" />
+          <Property Name="WAERS" Type="char" MaxLength="5" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="CREATEDBY" Type="char" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+          <Property Name="ABSTYPE" Type="char" MaxLength="2" />
+          <Property Name="KOSTL" Type="char" MaxLength="10" />
+          <Property Name="JOBPOS" Type="char" MaxLength="10" />
+          <Property Name="TYPE" Type="char" MaxLength="10" />
+          <Property Name="LINENUMREF" Type="int" />
+          <Property Name="TYPEID" Type="char" MaxLength="2" />
+          <Property Name="Exec_Date" Type="datetime" />
+          <Property Name="Exec_Time" Type="varchar" MaxLength="50" />
+          <Property Name="LogId" Type="int" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_LB">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="LBKNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LBKDATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="LBKNUM" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="ESTATE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="varchar" MaxLength="2" />
+          <Property Name="MDRAN" Type="varchar" MaxLength="10" />
+          <Property Name="LBKDATE" Type="datetime" Nullable="false" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIOD" Type="int" />
+          <Property Name="MANDOR" Type="varchar" MaxLength="10" />
+          <Property Name="KRANI" Type="varchar" MaxLength="10" />
+          <Property Name="STATUS" Type="char" MaxLength="1" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="CREATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="varchar" MaxLength="10" />
+          <Property Name="REVIEW" Type="varchar" MaxLength="40" />
+          <Property Name="SAPNUM" Type="varchar" MaxLength="20" />
+          <Property Name="REFDOC" Type="varchar" MaxLength="16" />
+          <Property Name="UPLOAD" Type="varchar" MaxLength="1" />
+          <Property Name="HISTORY" Type="varchar" MaxLength="1" />
+          <Property Name="SPBSNUM" Type="varchar" MaxLength="16" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="RUNACC" Type="varchar" MaxLength="8" />
+          <Property Name="EMPID" Type="varchar" MaxLength="10" />
+          <Property Name="ACTID" Type="varchar" MaxLength="6" />
+          <Property Name="TYPEID" Type="varchar" MaxLength="2" />
+          <Property Name="LOCID" Type="varchar" MaxLength="8" />
+          <Property Name="LOCCC" Type="varchar" MaxLength="10" />
+          <Property Name="JARAK" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="UOM" Type="varchar" MaxLength="3" />
+          <Property Name="TYPEANGK" Type="varchar" MaxLength="10" />
+          <Property Name="QTY" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="UOMQTY" Type="varchar" MaxLength="3" />
+          <Property Name="KERNET" Type="varchar" MaxLength="10" />
+          <Property Name="CREATEDDATE_I" Type="datetime" />
+          <Property Name="CREATEDBY_I" Type="varchar" MaxLength="10" />
+          <Property Name="LASTUPDATEDDATEI" Type="datetime" />
+          <Property Name="LASTUPDATEDBY_I" Type="varchar" MaxLength="10" />
+          <Property Name="HSTART" Type="varchar" MaxLength="6" />
+          <Property Name="HEND" Type="varchar" MaxLength="6" />
+          <Property Name="REMARK" Type="varchar" MaxLength="40" />
+          <Property Name="REVIEW_I" Type="varchar" MaxLength="40" />
+          <Property Name="PCIO" Type="char" MaxLength="1" />
+          <Property Name="TRIPC" Type="int" />
+          <Property Name="DEST" Type="varchar" MaxLength="20" />
+          <Property Name="FTRIP" Type="varchar" MaxLength="1" />
+          <Property Name="DOCNUM" Type="varchar" MaxLength="16" />
+          <Property Name="DOCLINE" Type="int" />
+          <Property Name="EBELN" Type="char" MaxLength="10" />
+          <Property Name="CONTRACTNUM" Type="char" MaxLength="30" />
+          <Property Name="DONUM" Type="char" MaxLength="50" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_PBS2">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="SPBSNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="SPBSNUM" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="char" MaxLength="2" />
+          <Property Name="SPBSDATE" Type="datetime" />
+          <Property Name="PLASMAID" Type="char" MaxLength="10" />
+          <Property Name="ASSTID" Type="char" MaxLength="10" />
+          <Property Name="KRANI" Type="char" MaxLength="10" />
+          <Property Name="MILL" Type="char" MaxLength="4" />
+          <Property Name="MILLEX" Type="char" MaxLength="10" />
+          <Property Name="SOPIR" Type="char" MaxLength="50" />
+          <Property Name="JARAK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NOPOL" Type="char" MaxLength="15" />
+          <Property Name="WBNUM" Type="char" MaxLength="16" />
+          <Property Name="NET" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+          <Property Name="UOM" Type="char" MaxLength="3" />
+          <Property Name="UOMJRK" Type="char" MaxLength="3" />
+          <Property Name="REVIEW" Type="char" MaxLength="40" />
+          <Property Name="SAPNUM" Type="char" MaxLength="20" />
+          <Property Name="REFDOC" Type="char" MaxLength="16" />
+          <Property Name="STATUS" Type="char" MaxLength="10" />
+          <Property Name="INEX" Type="char" MaxLength="1" />
+          <Property Name="RECALNUM" Type="char" MaxLength="20" />
+          <Property Name="LOADDATE" Type="datetime" />
+          <Property Name="MULTI" Type="char" MaxLength="1" />
+          <Property Name="ACTPLASMA" Type="char" MaxLength="1" />
+          <Property Name="UPLOAD" Type="char" MaxLength="1" />
+          <Property Name="LBKNUM" Type="char" MaxLength="16" />
+          <Property Name="RUNNING_ACCOUNT" Type="char" MaxLength="8" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="BLOCKID" Type="char" MaxLength="8" />
+          <Property Name="ZDATE" Type="datetime" />
+          <Property Name="JANJANG" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="JJGUOM" Type="char" MaxLength="3" />
+          <Property Name="TAKJANJANG" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TAKBROND" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TAKTOTAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ACTUAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LBKNUM_ITEM" Type="char" MaxLength="16" />
+          <Property Name="SHIPTYPE" Type="char" MaxLength="3" />
+          <Property Name="SHIPDATE" Type="datetime" />
+          <Property Name="SHIPTRIP" Type="int" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIODE" Type="int" />
+          <Property Name="kernet" Type="varchar" MaxLength="200" />
+          <Property Name="WBNUMEST" Type="char" MaxLength="16" />
+          <Property Name="NETEST" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_PBS2_TESTAPI">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="SPBSNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="ZYEAR" Type="int" Nullable="false" />
+          <Property Name="SPBSNUM" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="DIVISI" Type="char" MaxLength="2" />
+          <Property Name="SPBSDATE" Type="datetime" />
+          <Property Name="PLASMAID" Type="char" MaxLength="10" />
+          <Property Name="ASSTID" Type="char" MaxLength="10" />
+          <Property Name="KRANI" Type="char" MaxLength="10" />
+          <Property Name="MILL" Type="char" MaxLength="4" />
+          <Property Name="MILLEX" Type="char" MaxLength="10" />
+          <Property Name="SOPIR" Type="char" MaxLength="50" />
+          <Property Name="JARAK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NOPOL" Type="char" MaxLength="15" />
+          <Property Name="WBNUM" Type="char" MaxLength="16" />
+          <Property Name="NET" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CREATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDDATE" Type="datetime" />
+          <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+          <Property Name="UOM" Type="char" MaxLength="3" />
+          <Property Name="UOMJRK" Type="char" MaxLength="3" />
+          <Property Name="REVIEW" Type="char" MaxLength="40" />
+          <Property Name="SAPNUM" Type="char" MaxLength="20" />
+          <Property Name="REFDOC" Type="char" MaxLength="16" />
+          <Property Name="STATUS" Type="char" MaxLength="10" />
+          <Property Name="INEX" Type="char" MaxLength="1" />
+          <Property Name="RECALNUM" Type="char" MaxLength="20" />
+          <Property Name="LOADDATE" Type="datetime" />
+          <Property Name="MULTI" Type="char" MaxLength="1" />
+          <Property Name="ACTPLASMA" Type="char" MaxLength="1" />
+          <Property Name="UPLOAD" Type="char" MaxLength="1" />
+          <Property Name="LBKNUM" Type="char" MaxLength="16" />
+          <Property Name="RUNNING_ACCOUNT" Type="char" MaxLength="8" />
+          <Property Name="LINENUM" Type="int" Nullable="false" />
+          <Property Name="BLOCKID" Type="char" MaxLength="8" />
+          <Property Name="ZDATE" Type="datetime" />
+          <Property Name="JANJANG" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="JJGUOM" Type="char" MaxLength="3" />
+          <Property Name="TAKJANJANG" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TAKBROND" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TAKTOTAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ACTUAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LBKNUM_ITEM" Type="char" MaxLength="16" />
+          <Property Name="SHIPTYPE" Type="char" MaxLength="3" />
+          <Property Name="SHIPDATE" Type="datetime" />
+          <Property Name="SHIPTRIP" Type="int" />
+          <Property Name="WEEK" Type="int" />
+          <Property Name="PERIODE" Type="int" />
+          <Property Name="kernet" Type="varchar" MaxLength="200" />
+          <Property Name="WBNUMEST" Type="char" MaxLength="16" />
+          <Property Name="NETEST" Type="decimal" Precision="16" Scale="3" />
+          <Property Name="InsertDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="IAC_AGRIDATAModelStoreContainer">
+          <EntitySet Name="ZTU_PRCALCHV" EntityType="Self.ZTU_PRCALCHV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTU_PRCALCHV_TESTAPI" EntityType="Self.ZTU_PRCALCHV_TESTAPI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_BP" EntityType="Self.ZTUAGRI_BP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_BP_TESTAPI" EntityType="Self.ZTUAGRI_BP_TESTAPI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_HK" EntityType="Self.ZTUAGRI_HK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_HK_TESTAPI" EntityType="Self.ZTUAGRI_HK_TESTAPI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_LB" EntityType="Self.ZTUAGRI_LB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_PBS2" EntityType="Self.ZTUAGRI_PBS2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTUAGRI_PBS2_TESTAPI" EntityType="Self.ZTUAGRI_PBS2_TESTAPI" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IAC_AGRIDATAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ZTUAGRI_HK">
+          <Key>
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="BKMNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ESTATE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIOD" Type="Int32" />
+          <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_HK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="OT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_OT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="HASIL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="PREMI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PENALTI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ABSTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="JOBPOS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUMREF" Type="Int32" />
+          <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Exec_Date" Type="DateTime" Precision="3" />
+          <Property Name="Exec_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LogId" Type="Int32" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="IAC_AGRIDATAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ZTUAGRI_HK" EntityType="Self.ZTUAGRI_HK" />
+          <EntitySet Name="ZTUAGRI_HK_TESTAPI" EntityType="IAC_AGRIDATAModel.ZTUAGRI_HK_TESTAPI" />
+          <EntitySet Name="ZTU_PRCALCHV_TESTAPI" EntityType="IAC_AGRIDATAModel.ZTU_PRCALCHV_TESTAPI" />
+          <EntitySet Name="ZTUAGRI_BP_TESTAPI" EntityType="IAC_AGRIDATAModel.ZTUAGRI_BP_TESTAPI" />
+          <EntitySet Name="ZTUAGRI_PBS2_TESTAPI" EntityType="IAC_AGRIDATAModel.ZTUAGRI_PBS2_TESTAPI" />
+          <EntitySet Name="ZTUAGRI_BP" EntityType="IAC_AGRIDATAModel.ZTUAGRI_BP" />
+          <EntitySet Name="ZTU_PRCALCHV" EntityType="IAC_AGRIDATAModel.ZTU_PRCALCHV" />
+          <EntitySet Name="ZTUAGRI_PBS2" EntityType="IAC_AGRIDATAModel.ZTUAGRI_PBS2" />
+          <EntitySet Name="ZTUAGRI_LB" EntityType="IAC_AGRIDATAModel.ZTUAGRI_LB" />
+        </EntityContainer>
+        <EntityType Name="ZTUAGRI_HK_TESTAPI">
+          <Key>
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIOD" Type="Int32" />
+          <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_HK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="OT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM_OT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="HASIL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="PREMI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PENALTI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ABSTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="JOBPOS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TYPE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUMREF" Type="Int32" />
+          <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Exec_Date" Type="DateTime" Precision="3" />
+          <Property Name="Exec_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LogId" Type="Int32" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTU_PRCALCHV_TESTAPI">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="BKMDATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="MDRAN" />
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BLOCKID" />
+            <PropertyRef Name="PREMITYP" />
+            <PropertyRef Name="PRODTYPE" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MDRAN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EMPID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM" Type="Int16" Nullable="false" />
+          <Property Name="BLOCKID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PREMITYP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PRODTYPE" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BLOCKBASIS" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BLOCKBASISAVG" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="PREST" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BASIC" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASIC" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICRATE" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="ALOCPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="TOTALPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATEDTIME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_BP_TESTAPI">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="PANENNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BPDATE" />
+            <PropertyRef Name="LINENUM_I" />
+          </Key>
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="PANENNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="BPDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="LOCID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM_I" Type="Int32" Nullable="false" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ACTL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DRC" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TPH" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="UOMDRC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="LB" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MNDR_HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KARY_HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIOD" Type="Int32" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_PBS2_TESTAPI">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="SPBSNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="SPBSNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="SPBSDATE" Type="DateTime" Precision="3" />
+          <Property Name="PLASMAID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ASSTID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MILL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MILLEX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SOPIR" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="JARAK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOPOL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="WBNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="NET" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="UOMJRK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="INEX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RECALNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="LOADDATE" Type="DateTime" Precision="3" />
+          <Property Name="MULTI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ACTPLASMA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LBKNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="RUNNING_ACCOUNT" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ZDATE" Type="DateTime" Precision="3" />
+          <Property Name="JANJANG" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="JJGUOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TAKJANJANG" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TAKBROND" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TAKTOTAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ACTUAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LBKNUM_ITEM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="SHIPTYPE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="SHIPDATE" Type="DateTime" Precision="3" />
+          <Property Name="SHIPTRIP" Type="Int32" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIODE" Type="Int32" />
+          <Property Name="kernet" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WBNUMEST" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="NETEST" Type="Decimal" Precision="16" Scale="3" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_BP">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="PANENNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BPDATE" />
+            <PropertyRef Name="LINENUM_I" />
+          </Key>
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="PANENNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="BPDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="LOCID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM_I" Type="Int32" Nullable="false" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ACTL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DRC" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TPH" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="UOMDRC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="LB" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MNDR_HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KARY_HK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIOD" Type="Int32" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTU_PRCALCHV">
+          <Key>
+            <PropertyRef Name="COMPANY" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="BKMNUM" />
+            <PropertyRef Name="BKMDATE" />
+            <PropertyRef Name="DIVISI" />
+            <PropertyRef Name="MDRAN" />
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="LINENUM" />
+            <PropertyRef Name="BLOCKID" />
+            <PropertyRef Name="PREMITYP" />
+            <PropertyRef Name="PRODTYPE" />
+          </Key>
+          <Property Name="COMPANY" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="BKMNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="BKMDATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DIVISI" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MDRAN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EMPID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM" Type="Int16" Nullable="false" />
+          <Property Name="BLOCKID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PREMITYP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PRODTYPE" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BLOCKBASIS" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BLOCKBASISAVG" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="PREST" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BASIC" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="BASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASIC" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICRATE" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="OVERBASICPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="ALOCPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="TOTALPREMI" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATEDTIME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_PBS2">
+          <Key>
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="SPBSNUM" />
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="SPBSNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="SPBSDATE" Type="DateTime" Precision="3" />
+          <Property Name="PLASMAID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ASSTID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MILL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MILLEX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SOPIR" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="JARAK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NOPOL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="WBNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="NET" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="UOMJRK" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="INEX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RECALNUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="LOADDATE" Type="DateTime" Precision="3" />
+          <Property Name="MULTI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ACTPLASMA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LBKNUM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="RUNNING_ACCOUNT" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="BLOCKID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ZDATE" Type="DateTime" Precision="3" />
+          <Property Name="JANJANG" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="JJGUOM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TAKJANJANG" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TAKBROND" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TAKTOTAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ACTUAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LBKNUM_ITEM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="SHIPTYPE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="SHIPDATE" Type="DateTime" Precision="3" />
+          <Property Name="SHIPTRIP" Type="Int32" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIODE" Type="Int32" />
+          <Property Name="kernet" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WBNUMEST" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="NETEST" Type="Decimal" Precision="16" Scale="3" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ZTUAGRI_LB">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="LBKNUM" />
+            <PropertyRef Name="ZYEAR" />
+            <PropertyRef Name="ESTATE" />
+            <PropertyRef Name="LBKDATE" />
+            <PropertyRef Name="LINENUM" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="LBKNUM" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ZYEAR" Type="Int32" Nullable="false" />
+          <Property Name="ESTATE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DIVISI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MDRAN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LBKDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="WEEK" Type="Int32" />
+          <Property Name="PERIOD" Type="Int32" />
+          <Property Name="MANDOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KRANI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LASTUPDATEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SAPNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="REFDOC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="UPLOAD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="HISTORY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SPBSNUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="LINENUM" Type="Int32" Nullable="false" />
+          <Property Name="RUNACC" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="EMPID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ACTID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="TYPEID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOCID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="LOCCC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="JARAK" Type="Decimal" Precision="12" Scale="3" />
+          <Property Name="UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="TYPEANGK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="QTY" Type="Decimal" Precision="12" Scale="3" />
+          <Property Name="UOMQTY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KERNET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEDDATE_I" Type="DateTime" Precision="3" />
+          <Property Name="CREATEDBY_I" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LASTUPDATEDDATEI" Type="DateTime" Precision="3" />
+          <Property Name="LASTUPDATEDBY_I" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HSTART" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="HEND" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="REMARK" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEW_I" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="PCIO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TRIPC" Type="Int32" />
+          <Property Name="DEST" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FTRIP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DOCNUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="DOCLINE" Type="Int32" />
+          <Property Name="EBELN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CONTRACTNUM" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="DONUM" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IAC_AGRIDATAModelStoreContainer" CdmEntityContainer="IAC_AGRIDATAEntities">
+          <EntitySetMapping Name="ZTUAGRI_HK">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_HK">
+              <MappingFragment StoreEntitySet="ZTUAGRI_HK">
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+                <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+                <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+                <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+                <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+                <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+                <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+                <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+                <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+                <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+                <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+                <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+                <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_HK_TESTAPI">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_HK_TESTAPI">
+              <MappingFragment StoreEntitySet="ZTUAGRI_HK_TESTAPI">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
+                <ScalarProperty Name="Exec_Time" ColumnName="Exec_Time" />
+                <ScalarProperty Name="Exec_Date" ColumnName="Exec_Date" />
+                <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+                <ScalarProperty Name="LINENUMREF" ColumnName="LINENUMREF" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="JOBPOS" ColumnName="JOBPOS" />
+                <ScalarProperty Name="KOSTL" ColumnName="KOSTL" />
+                <ScalarProperty Name="ABSTYPE" ColumnName="ABSTYPE" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+                <ScalarProperty Name="PENALTI" ColumnName="PENALTI" />
+                <ScalarProperty Name="PREMI" ColumnName="PREMI" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="HASIL" ColumnName="HASIL" />
+                <ScalarProperty Name="UOM_OT" ColumnName="UOM_OT" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="UOM_HK" ColumnName="UOM_HK" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+                <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+                <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+                <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+                <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTU_PRCALCHV_TESTAPI">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTU_PRCALCHV_TESTAPI">
+              <MappingFragment StoreEntitySet="ZTU_PRCALCHV_TESTAPI">
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TOTALPREMI" ColumnName="TOTALPREMI" />
+                <ScalarProperty Name="ALOCPREMI" ColumnName="ALOCPREMI" />
+                <ScalarProperty Name="OVERBASICPREMI" ColumnName="OVERBASICPREMI" />
+                <ScalarProperty Name="OVERBASICRATE" ColumnName="OVERBASICRATE" />
+                <ScalarProperty Name="OVERBASIC" ColumnName="OVERBASIC" />
+                <ScalarProperty Name="BASICPREMI" ColumnName="BASICPREMI" />
+                <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+                <ScalarProperty Name="PREST" ColumnName="PREST" />
+                <ScalarProperty Name="BLOCKBASISAVG" ColumnName="BLOCKBASISAVG" />
+                <ScalarProperty Name="BLOCKBASIS" ColumnName="BLOCKBASIS" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="PREMITYP" ColumnName="PREMITYP" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_BP_TESTAPI">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_BP_TESTAPI">
+              <MappingFragment StoreEntitySet="ZTUAGRI_BP_TESTAPI">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+                <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+                <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+                <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+                <ScalarProperty Name="LB" ColumnName="LB" />
+                <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+                <ScalarProperty Name="TPH" ColumnName="TPH" />
+                <ScalarProperty Name="DRC" ColumnName="DRC" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_PBS2_TESTAPI">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_PBS2_TESTAPI">
+              <MappingFragment StoreEntitySet="ZTUAGRI_PBS2_TESTAPI">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+                <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+                <ScalarProperty Name="kernet" ColumnName="kernet" />
+                <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+                <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+                <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+                <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+                <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+                <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+                <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+                <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+                <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+                <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+                <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+                <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+                <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+                <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+                <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+                <ScalarProperty Name="INEX" ColumnName="INEX" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="NET" ColumnName="NET" />
+                <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+                <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+                <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+                <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+                <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+                <ScalarProperty Name="MILL" ColumnName="MILL" />
+                <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+                <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+                <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+                <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_BP">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_BP">
+              <MappingFragment StoreEntitySet="ZTUAGRI_BP">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+                <ScalarProperty Name="KARY_HK" ColumnName="KARY_HK" />
+                <ScalarProperty Name="MNDR_HK" ColumnName="MNDR_HK" />
+                <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+                <ScalarProperty Name="LB" ColumnName="LB" />
+                <ScalarProperty Name="UOMDRC" ColumnName="UOMDRC" />
+                <ScalarProperty Name="TPH" ColumnName="TPH" />
+                <ScalarProperty Name="DRC" ColumnName="DRC" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="ACTL" ColumnName="ACTL" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="LINENUM_I" ColumnName="LINENUM_I" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BPDATE" ColumnName="BPDATE" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="PANENNUM" ColumnName="PANENNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTU_PRCALCHV">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTU_PRCALCHV">
+              <MappingFragment StoreEntitySet="ZTU_PRCALCHV">
+                <ScalarProperty Name="INSERTDATE" ColumnName="INSERTDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TOTALPREMI" ColumnName="TOTALPREMI" />
+                <ScalarProperty Name="ALOCPREMI" ColumnName="ALOCPREMI" />
+                <ScalarProperty Name="OVERBASICPREMI" ColumnName="OVERBASICPREMI" />
+                <ScalarProperty Name="OVERBASICRATE" ColumnName="OVERBASICRATE" />
+                <ScalarProperty Name="OVERBASIC" ColumnName="OVERBASIC" />
+                <ScalarProperty Name="BASICPREMI" ColumnName="BASICPREMI" />
+                <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+                <ScalarProperty Name="PREST" ColumnName="PREST" />
+                <ScalarProperty Name="BLOCKBASISAVG" ColumnName="BLOCKBASISAVG" />
+                <ScalarProperty Name="BLOCKBASIS" ColumnName="BLOCKBASIS" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="PREMITYP" ColumnName="PREMITYP" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="BKMDATE" ColumnName="BKMDATE" />
+                <ScalarProperty Name="BKMNUM" ColumnName="BKMNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_PBS2">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_PBS2">
+              <MappingFragment StoreEntitySet="ZTUAGRI_PBS2">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="NETEST" ColumnName="NETEST" />
+                <ScalarProperty Name="WBNUMEST" ColumnName="WBNUMEST" />
+                <ScalarProperty Name="kernet" ColumnName="kernet" />
+                <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="SHIPTRIP" ColumnName="SHIPTRIP" />
+                <ScalarProperty Name="SHIPDATE" ColumnName="SHIPDATE" />
+                <ScalarProperty Name="SHIPTYPE" ColumnName="SHIPTYPE" />
+                <ScalarProperty Name="LBKNUM_ITEM" ColumnName="LBKNUM_ITEM" />
+                <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+                <ScalarProperty Name="TAKTOTAL" ColumnName="TAKTOTAL" />
+                <ScalarProperty Name="TAKBROND" ColumnName="TAKBROND" />
+                <ScalarProperty Name="TAKJANJANG" ColumnName="TAKJANJANG" />
+                <ScalarProperty Name="JJGUOM" ColumnName="JJGUOM" />
+                <ScalarProperty Name="JANJANG" ColumnName="JANJANG" />
+                <ScalarProperty Name="ZDATE" ColumnName="ZDATE" />
+                <ScalarProperty Name="BLOCKID" ColumnName="BLOCKID" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="RUNNING_ACCOUNT" ColumnName="RUNNING_ACCOUNT" />
+                <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="ACTPLASMA" ColumnName="ACTPLASMA" />
+                <ScalarProperty Name="MULTI" ColumnName="MULTI" />
+                <ScalarProperty Name="LOADDATE" ColumnName="LOADDATE" />
+                <ScalarProperty Name="RECALNUM" ColumnName="RECALNUM" />
+                <ScalarProperty Name="INEX" ColumnName="INEX" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="UOMJRK" ColumnName="UOMJRK" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="NET" ColumnName="NET" />
+                <ScalarProperty Name="WBNUM" ColumnName="WBNUM" />
+                <ScalarProperty Name="NOPOL" ColumnName="NOPOL" />
+                <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+                <ScalarProperty Name="SOPIR" ColumnName="SOPIR" />
+                <ScalarProperty Name="MILLEX" ColumnName="MILLEX" />
+                <ScalarProperty Name="MILL" ColumnName="MILL" />
+                <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+                <ScalarProperty Name="ASSTID" ColumnName="ASSTID" />
+                <ScalarProperty Name="PLASMAID" ColumnName="PLASMAID" />
+                <ScalarProperty Name="SPBSDATE" ColumnName="SPBSDATE" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTUAGRI_LB">
+            <EntityTypeMapping TypeName="IAC_AGRIDATAModel.ZTUAGRI_LB">
+              <MappingFragment StoreEntitySet="ZTUAGRI_LB">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="DONUM" ColumnName="DONUM" />
+                <ScalarProperty Name="CONTRACTNUM" ColumnName="CONTRACTNUM" />
+                <ScalarProperty Name="EBELN" ColumnName="EBELN" />
+                <ScalarProperty Name="DOCLINE" ColumnName="DOCLINE" />
+                <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+                <ScalarProperty Name="FTRIP" ColumnName="FTRIP" />
+                <ScalarProperty Name="DEST" ColumnName="DEST" />
+                <ScalarProperty Name="TRIPC" ColumnName="TRIPC" />
+                <ScalarProperty Name="PCIO" ColumnName="PCIO" />
+                <ScalarProperty Name="REVIEW_I" ColumnName="REVIEW_I" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="HEND" ColumnName="HEND" />
+                <ScalarProperty Name="HSTART" ColumnName="HSTART" />
+                <ScalarProperty Name="LASTUPDATEDBY_I" ColumnName="LASTUPDATEDBY_I" />
+                <ScalarProperty Name="LASTUPDATEDDATEI" ColumnName="LASTUPDATEDDATEI" />
+                <ScalarProperty Name="CREATEDBY_I" ColumnName="CREATEDBY_I" />
+                <ScalarProperty Name="CREATEDDATE_I" ColumnName="CREATEDDATE_I" />
+                <ScalarProperty Name="KERNET" ColumnName="KERNET" />
+                <ScalarProperty Name="UOMQTY" ColumnName="UOMQTY" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="TYPEANGK" ColumnName="TYPEANGK" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="JARAK" ColumnName="JARAK" />
+                <ScalarProperty Name="LOCCC" ColumnName="LOCCC" />
+                <ScalarProperty Name="LOCID" ColumnName="LOCID" />
+                <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+                <ScalarProperty Name="ACTID" ColumnName="ACTID" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="RUNACC" ColumnName="RUNACC" />
+                <ScalarProperty Name="LINENUM" ColumnName="LINENUM" />
+                <ScalarProperty Name="SPBSNUM" ColumnName="SPBSNUM" />
+                <ScalarProperty Name="HISTORY" ColumnName="HISTORY" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="REFDOC" ColumnName="REFDOC" />
+                <ScalarProperty Name="SAPNUM" ColumnName="SAPNUM" />
+                <ScalarProperty Name="REVIEW" ColumnName="REVIEW" />
+                <ScalarProperty Name="LASTUPDATEDBY" ColumnName="LASTUPDATEDBY" />
+                <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="KRANI" ColumnName="KRANI" />
+                <ScalarProperty Name="MANDOR" ColumnName="MANDOR" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="WEEK" ColumnName="WEEK" />
+                <ScalarProperty Name="LBKDATE" ColumnName="LBKDATE" />
+                <ScalarProperty Name="MDRAN" ColumnName="MDRAN" />
+                <ScalarProperty Name="DIVISI" ColumnName="DIVISI" />
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="ZYEAR" ColumnName="ZYEAR" />
+                <ScalarProperty Name="LBKNUM" ColumnName="LBKNUM" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

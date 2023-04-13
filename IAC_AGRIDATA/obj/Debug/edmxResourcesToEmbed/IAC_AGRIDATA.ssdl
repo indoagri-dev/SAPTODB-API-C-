@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IAC_AGRIDATAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ZTUAGRI_HK">
+    <Key>
+      <PropertyRef Name="BKMNUM" />
+      <PropertyRef Name="ZYEAR" />
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="ESTATE" />
+      <PropertyRef Name="DIVISI" />
+      <PropertyRef Name="LINENUM" />
+    </Key>
+    <Property Name="BKMNUM" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="ZYEAR" Type="int" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="ESTATE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DIVISI" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="MDRAN" Type="char" MaxLength="10" />
+    <Property Name="BKMDATE" Type="datetime" Nullable="false" />
+    <Property Name="WEEK" Type="int" />
+    <Property Name="PERIOD" Type="int" />
+    <Property Name="MANDOR" Type="char" MaxLength="10" />
+    <Property Name="KRANI" Type="char" MaxLength="10" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="REVIEW" Type="char" MaxLength="40" />
+    <Property Name="SAPNUM" Type="char" MaxLength="20" />
+    <Property Name="REFDOC" Type="char" MaxLength="16" />
+    <Property Name="UPLOAD" Type="char" MaxLength="1" />
+    <Property Name="LINENUM" Type="int" Nullable="false" />
+    <Property Name="EMPID" Type="char" MaxLength="10" />
+    <Property Name="ACTID" Type="char" MaxLength="6" />
+    <Property Name="LOCID" Type="char" MaxLength="8" />
+    <Property Name="LOCCC" Type="char" MaxLength="10" />
+    <Property Name="HK" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_HK" Type="char" MaxLength="3" />
+    <Property Name="OT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM_OT" Type="char" MaxLength="3" />
+    <Property Name="HASIL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UOM" Type="char" MaxLength="3" />
+    <Property Name="REMARK" Type="char" MaxLength="40" />
+    <Property Name="PREMI" Type="money" />
+    <Property Name="PENALTI" Type="money" />
+    <Property Name="WAERS" Type="char" MaxLength="5" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="char" MaxLength="10" />
+    <Property Name="LASTUPDATEDDATE" Type="datetime" />
+    <Property Name="LASTUPDATEDBY" Type="char" MaxLength="10" />
+    <Property Name="ABSTYPE" Type="char" MaxLength="2" />
+    <Property Name="KOSTL" Type="char" MaxLength="10" />
+    <Property Name="JOBPOS" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="10" />
+    <Property Name="LINENUMREF" Type="int" />
+    <Property Name="TYPEID" Type="char" MaxLength="2" />
+    <Property Name="Exec_Date" Type="datetime" />
+    <Property Name="Exec_Time" Type="varchar" MaxLength="50" />
+    <Property Name="LogId" Type="int" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="IAC_AGRIDATAModelStoreContainer">
+    <EntitySet Name="ZTUAGRI_HK" EntityType="Self.ZTUAGRI_HK" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

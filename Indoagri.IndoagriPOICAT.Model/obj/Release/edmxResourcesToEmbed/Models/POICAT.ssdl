@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_ICAT3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MasterCompany">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+    </Key>
+    <Property Name="BUKRS" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="BUTXT" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="POMax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="POExpired" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="POReminder" Type="int" />
+  </EntityType>
+  <EntityType Name="MasterDeliveryAddress">
+    <Key>
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="ADDRNUMBER" />
+    </Key>
+    <Property Name="WERKS" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="ADDRNUMBER" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LGORT" Type="nvarchar" MaxLength="10" />
+    <Property Name="NAME1" Type="nvarchar" MaxLength="40" />
+    <Property Name="NAME2" Type="nvarchar" MaxLength="40" />
+    <Property Name="STREET" Type="nvarchar" MaxLength="60" />
+    <Property Name="POST_CODE1" Type="nvarchar" MaxLength="10" />
+    <Property Name="TEL_NUMBER" Type="nvarchar" MaxLength="30" />
+    <Property Name="CITY1" Type="nvarchar" MaxLength="40" />
+    <Property Name="REGION" Type="nvarchar" MaxLength="3" />
+    <Property Name="AREA1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterPlant">
+    <Key>
+      <PropertyRef Name="WERKS" />
+    </Key>
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="NAME1" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="KUNNR" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LIFNR" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="POMax" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MasterPlantArea">
+    <Key>
+      <PropertyRef Name="WERKS" />
+    </Key>
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BUKRS" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="AREA" Type="nvarchar" MaxLength="100" />
+    <Property Name="AREA1" Type="nvarchar" MaxLength="100" />
+    <Property Name="SHORT" Type="nvarchar" MaxLength="100" />
+    <Property Name="ZSEQ" Type="int" />
+    <Property Name="ZSEQ2" Type="nvarchar" MaxLength="100" />
+    <Property Name="CMGRP" Type="nvarchar" MaxLength="100" />
+    <Property Name="PLTTYP" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMOPR" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMTRK" Type="nvarchar" MaxLength="100" />
+    <Property Name="USKTU1" Type="nvarchar" MaxLength="100" />
+    <Property Name="USKTU2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EKGRP1" Type="nvarchar" MaxLength="100" />
+    <Property Name="EKGRP2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EKNAM1" Type="nvarchar" MaxLength="100" />
+    <Property Name="EKNAM2" Type="nvarchar" MaxLength="100" />
+    <Property Name="FRGCO1" Type="nvarchar" MaxLength="100" />
+    <Property Name="FRGCO2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMKTU" Type="nvarchar" MaxLength="100" />
+    <Property Name="USMGR" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELMGR" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELMGR2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMMGR" Type="nvarchar" MaxLength="100" />
+    <Property Name="USAMA" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELAMA" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELAMA2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAMA" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAMAS" Type="nvarchar" MaxLength="100" />
+    <Property Name="USVPA" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELVPA" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELVPA2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMVPA" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMVPAS" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCOO" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCOO2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCOO" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCOOS" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCFO" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCFO2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCFO" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCFOS" Type="nvarchar" MaxLength="100" />
+    <Property Name="SUPPORT_TEAM" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCEO" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELCEO2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCEO" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMCEOS" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMSITE" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMRO" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMHO" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="POHeader_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PO_Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="POItem" Type="nvarchar" MaxLength="20" />
+    <Property Name="ProductCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="PurchaseID" Type="int" Nullable="false" />
+    <Property Name="PurchaseDetailID" Type="int" />
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" />
+    <Property Name="CapexOpex" Type="bit" />
+    <Property Name="GoodsType" Type="nvarchar" MaxLength="20" />
+    <Property Name="PSPNR_WBS" Type="nvarchar" MaxLength="8" />
+    <Property Name="POSID_WBS" Type="nvarchar" MaxLength="25" />
+    <Property Name="BUKRS" Type="nvarchar" MaxLength="4" />
+    <Property Name="ANLN1_Asset" Type="nvarchar" MaxLength="12" />
+    <Property Name="KOKRS_CostCenter" Type="nvarchar" MaxLength="4" />
+    <Property Name="KOSTL_CostCenter" Type="nvarchar" MaxLength="10" />
+    <Property Name="KTOPL_GLAcc" Type="nvarchar" MaxLength="4" />
+    <Property Name="SAKNR_GLAcc" Type="nvarchar" MaxLength="10" />
+    <Property Name="Qty" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+    <Property Name="OutsQty" Type="decimal" Precision="15" Scale="3" />
+    <Property Name="DeliveryDate" Type="datetime" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CashflowCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+    <Property Name="Price" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="SalePrice" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="DiscountQty" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="deliveryAddrWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="deliveryAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="emailDeliveryAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="invoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="invoiceAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="invoiceAddrLGORT" Type="nvarchar" MaxLength="10" />
+    <Property Name="UOM" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOStatusId" Type="int" />
+    <Property Name="DOStatus" Type="nvarchar" MaxLength="100" />
+    <Property Name="isClose" Type="nvarchar" MaxLength="10" />
+    <Property Name="isReject" Type="nvarchar" MaxLength="10" />
+    <Property Name="isDO" Type="nvarchar" MaxLength="10" />
+    <Property Name="isGR" Type="nvarchar" MaxLength="10" />
+    <Property Name="isINV" Type="nvarchar" MaxLength="10" />
+    <Property Name="Reject_Comment" Type="nvarchar(max)" />
+    <Property Name="Closed_Comment" Type="nvarchar(max)" />
+    <Property Name="BANFN" Type="nvarchar" MaxLength="10" />
+    <Property Name="BNFPO" Type="nvarchar" MaxLength="5" />
+    <Property Name="PRNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="PRItem" Type="nvarchar" MaxLength="5" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="RejectDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderHeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PO_Number" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="PO_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="PurchaseID" Type="int" />
+    <Property Name="VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ActionWERKS" Type="nvarchar" MaxLength="20" />
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Area_ID" Type="nvarchar" MaxLength="4" />
+    <Property Name="DeliveryAddWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryAddrNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceAddrNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="UPDeliveryAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="IsPKP" Type="bit" />
+    <Property Name="UserOrderId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" Nullable="false" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="EKGRP" Type="varchar" MaxLength="3" />
+    <Property Name="Email" Type="varchar" MaxLength="1" />
+    <Property Name="EmailCounter" Type="int" />
+  </EntityType>
+  <EntityType Name="PurchaseRequest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" />
+    <Property Name="VendorCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="Approval" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stage" Type="int" Nullable="false" />
+    <Property Name="Token" Type="nvarchar" MaxLength="5" />
+    <Property Name="TokenCreatedOn" Type="datetime" />
+    <Property Name="ClosedComment" Type="nvarchar" MaxLength="2000" />
+    <Property Name="SiteManagerComment" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ClosedDate" Type="datetime" />
+    <Property Name="ClosedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" Nullable="false" />
+    <Property Name="DeletedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PurchaseRequestDetail">
+    <Key>
+      <PropertyRef Name="prd_ID" />
+    </Key>
+    <Property Name="prd_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prd_crID" Type="uniqueidentifier" />
+    <Property Name="prd_PO_Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="prd_Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="prd_ProductCode" Type="nvarchar" MaxLength="15" />
+    <Property Name="prd_ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="prd_VendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="prd_CityID" Type="int" Nullable="false" />
+    <Property Name="prd_PurchaseID" Type="int" Nullable="false" />
+    <Property Name="prd_WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="prd_CapexOpex" Type="bit" />
+    <Property Name="prd_GoodsType" Type="nvarchar" MaxLength="20" />
+    <Property Name="prd_PSPNR_WBS" Type="nvarchar" MaxLength="8" />
+    <Property Name="prd_POSID_WBS" Type="nvarchar" MaxLength="25" />
+    <Property Name="prd_BUKRS" Type="nvarchar" MaxLength="4" />
+    <Property Name="prd_ANLN1_Asset" Type="nvarchar" MaxLength="12" />
+    <Property Name="prd_KOKRS_CostCenter" Type="nvarchar" MaxLength="4" />
+    <Property Name="prd_KOSTL_CostCenter" Type="nvarchar" MaxLength="10" />
+    <Property Name="prd_KTOPL_GLAcc" Type="nvarchar" MaxLength="4" />
+    <Property Name="prd_SAKNR_GLAcc" Type="nvarchar" MaxLength="10" />
+    <Property Name="prd_UOM" Type="nvarchar" MaxLength="5" />
+    <Property Name="prd_Qty" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="prd_DeliveryDate" Type="datetime" />
+    <Property Name="prd_Remark" Type="nvarchar" MaxLength="4000" />
+    <Property Name="prd_CashflowCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="prd_Currency" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="prd_Price" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="prd_SalePrice" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="prd_DiscountQty" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="prd_UserId" Type="int" />
+    <Property Name="deliveryAddrWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="deliveryAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="prd_emailDeliveryAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="invoiceAddrWERKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="invoiceAddrADDRNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="invoiceAddrLGORT" Type="nvarchar" MaxLength="10" />
+    <Property Name="ThirdPartyTransporter" Type="bit" />
+    <Property Name="Transporter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Freight" Type="decimal" Precision="15" Scale="3" />
+    <Property Name="prd_BANFN" Type="nvarchar" MaxLength="10" />
+    <Property Name="prd_BNFPO" Type="nvarchar" MaxLength="5" />
+    <Property Name="prd_PRNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="prd_PRItem" Type="nvarchar" MaxLength="5" />
+    <Property Name="prd_OrderNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="RejectCommentAMAAME" Type="nvarchar" MaxLength="2000" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseRequisition">
+    <Key>
+      <PropertyRef Name="BANFN" />
+      <PropertyRef Name="BNFPO" />
+    </Key>
+    <Property Name="BANFN" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BNFPO" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="MATNR" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TXZ01" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKL" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="MEINS" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="MENGE" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="WERKS" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BADAT" Type="date" Nullable="false" />
+    <Property Name="LFDAT" Type="date" Nullable="false" />
+    <Property Name="FRGZU" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="PREIS" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="WAERS" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="DISPO" Type="nvarchar" MaxLength="3" />
+    <Property Name="ESTKZ" Type="nvarchar" MaxLength="2" />
+    <Property Name="FRGKZ" Type="nvarchar" MaxLength="3" />
+    <Property Name="EKGRP" Type="nvarchar" MaxLength="3" />
+    <Property Name="HDRTXT" Type="nvarchar" MaxLength="300" />
+    <Property Name="EXTWG" Type="nvarchar" MaxLength="50" />
+    <Property Name="NORMT" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsUsed" Type="bit" Nullable="false" />
+    <Property Name="SAKTO" Type="varchar" MaxLength="20" />
+    <Property Name="KOSTL" Type="varchar" MaxLength="20" />
+    <Property Name="ANLN1" Type="varchar" MaxLength="22" />
+    <Property Name="ANLN2" Type="varchar" MaxLength="10" />
+    <Property Name="AUFNR" Type="varchar" MaxLength="12" />
+    <Property Name="PS_PSP_PNR" Type="varchar" MaxLength="50" />
+    <Property Name="Pspnr" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RunningNumber">
+    <Key>
+      <PropertyRef Name="rn_ID" />
+    </Key>
+    <Property Name="rn_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rn_FormCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="rn_number" Type="int" />
+    <Property Name="rn_Year" Type="int" />
+    <Property Name="rn_Month" Type="int" />
+    <Property Name="rn_Date" Type="int" />
+  </EntityType>
+  <EntityType Name="TemplateNotifEmail">
+    <Key>
+      <PropertyRef Name="tpl_ID" />
+    </Key>
+    <Property Name="tpl_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tpl_Template" Type="nvarchar(max)" />
+    <Property Name="tpl_Subject" Type="nvarchar(max)" />
+    <Property Name="tpl_ProcessNameCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="tpl_ModuleCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="tpl_IsEnabled" Type="bigint" />
+    <Property Name="tpl_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="tpl_CreatedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="tpl_UpdatedOn" Type="datetime" />
+    <Property Name="tpl_UpdatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="tpl_DeletedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="ACCNT" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Function" Type="nvarchar" MaxLength="100" />
+    <Property Name="Location" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="FcmKey" Type="text" />
+    <Property Name="DeviceId" Type="varchar" MaxLength="40" />
+    <Property Name="AccessMobile" Type="bit" />
+    <Property Name="AccessWeb" Type="bit" />
+  </EntityType>
+  <EntityType Name="VendorData">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SAPVendorCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IDBasicData" Type="bigint" Nullable="false" />
+    <Property Name="VendorCode" Type="int" Nullable="false" />
+    <Property Name="VendorName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailCC" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailCC2" Type="nvarchar" MaxLength="100" />
+    <Property Name="TermOfPayment" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsPKP" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_ICAT3ModelStoreContainer">
+    <EntitySet Name="MasterCompany" EntityType="Self.MasterCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterDeliveryAddress" EntityType="Self.MasterDeliveryAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterPlant" EntityType="Self.MasterPlant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterPlantArea" EntityType="Self.MasterPlantArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrderDetail" EntityType="Self.PurchaseOrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrderHeader" EntityType="Self.PurchaseOrderHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequestDetail" EntityType="Self.PurchaseRequestDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequisition" EntityType="Self.PurchaseRequisition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RunningNumber" EntityType="Self.RunningNumber" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TemplateNotifEmail" EntityType="Self.TemplateNotifEmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VendorData" EntityType="Self.VendorData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

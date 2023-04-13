@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6987C50-CB14-4D8F-903E-28DFB7579E96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IndoAgri.IndoAgriData.Model</RootNamespace>
+    <AssemblyName>IndoAgri.IndoAgriData.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>ea2e04ba</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ERPConnect20">
+      <HintPath>..\dependencies\ERPConnect20.dll</HintPath>
+    </Reference>
+    <Reference Include="IndoAgri.Security">
+      <HintPath>..\dependencies\IndoAgri.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SoftwareKobo.Net.WebUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SoftwareKobo.Net.WebUtility.1.0.4\lib\SoftwareKobo.Net.WebUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebApiContrib.Formatting.JavaScriptSerializer, Version=0.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebApiContrib.Formatting.JavaScriptSerializer.0.9.4.0\lib\net40\WebApiContrib.Formatting.JavaScriptSerializer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\EntitiesExt.cs" />
+    <Compile Include="Models\EnumApplicationID.cs" />
+    <Compile Include="Models\IndoAgriData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoAgriData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndoAgriData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndoAgriData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndoAgriData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndoAgriDataPartial.cs" />
+    <Compile Include="Models\LogPostData.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogSAPToDB.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RUNACC_RASIO_TEMP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SALES_MOBILE_STOCK_TEMP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SAPConnection.cs" />
+    <Compile Include="Models\SAPService.cs" />
+    <Compile Include="Models\SP_Result.cs" />
+    <Compile Include="Models\UserProfileSAP.cs" />
+    <Compile Include="Models\ZC0032.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTF_CDV_LASTMAIL.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTMAGRI_STOCKPRD.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTM_MATPRC_MIP_TEMP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTM_ORDER_PO.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTM_PR_LIST.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTM_YTDTPURC_MIP_TEMP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTPAGRI_MILLDATA.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTPAGRI_MILLPROD.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_BP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_BP_RPT.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_BP_RPT_Temp.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_HK.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_HK_Temp.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_PBS2.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTUAGRI_PBS2_RPT_TEMP.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTU_PRCALCHV.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZTW_ASSETSTAT.cs">
+      <DependentUpon>IndoAgriData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\LogPostDataRepository.cs" />
+    <Compile Include="Repositories\LogSAPToDBRepository.cs" />
+    <Compile Include="Repositories\MIP_MATERIALRepository.cs" />
+    <Compile Include="Repositories\MIP_YTDRepository.cs" />
+    <Compile Include="Repositories\ZtfCDVLastMailRepository.cs" />
+    <Compile Include="Repositories\ZTMAGRI_STOCKPRDRepository.cs" />
+    <Compile Include="Repositories\ZTM_Order_PORepository.cs" />
+    <Compile Include="Repositories\ZTM_PR_LISTRepository.cs" />
+    <Compile Include="Repositories\ZTPAGRI_MILLDATARepository.cs" />
+    <Compile Include="Repositories\ZTPAGRI_MILLPRODRepository.cs" />
+    <Compile Include="Repositories\ZTUAGRI_BPRepo_Prod.cs" />
+    <Compile Include="Repositories\ZTUAGRI_HKRepo_Prod.cs" />
+    <Compile Include="Repositories\ZTUAGRI_PBS2Repo_Prod.cs" />
+    <Compile Include="Repositories\ZC0032_Prod.cs" />
+    <Compile Include="Repositories\ZTUAGRI_PRCALCHVRepo_Prod.cs" />
+    <Compile Include="Repositories\ZTWAssetStatRepository.cs" />
+    <Compile Include="Service References\ServiceAuthSAP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Models\IndoAgriData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IndoAgriData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\IndoAgriData.edmx.diagram">
+      <DependentUpon>IndoAgriData.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\ServiceAuthSAP\IndoAgri.IndoAgriData.Model.ServiceAuthSAP.ZuagriGsberDefaultEmptyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAuthSAP\IndoAgri.IndoAgriData.Model.ServiceAuthSAP.ZuagriGsberDefaultEmptyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAuthSAP\zbnuagri_gsber_default3.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAuthSAP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceAuthSAP\configuration.svcinfo" />
+    <None Include="Service References\ServiceAuthSAP\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAuthSAP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\IndoAgriData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IndoAgriData.edmx</DependentUpon>
+      <LastGenOutput>IndoAgriData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\IndoAgriData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IndoAgriData.edmx</DependentUpon>
+      <LastGenOutput>IndoAgriData.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

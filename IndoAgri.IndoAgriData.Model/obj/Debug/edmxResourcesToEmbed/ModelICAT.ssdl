@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_ICATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ZTM_CERA_LIST">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="POSNR" />
+      <PropertyRef Name="POSID" />
+      <PropertyRef Name="DOCNUM" />
+      <PropertyRef Name="BANFN_I" />
+      <PropertyRef Name="BNFPO" />
+    </Key>
+    <Property Name="BUKRS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="WERKS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="GJAHR" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="POSNR" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="POSID" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="DOCNUM" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="BANFN_I" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BNFPO" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CEK" Type="varchar" MaxLength="1" />
+    <Property Name="BUTXT" Type="varchar" MaxLength="25" />
+    <Property Name="WERKS_NAME" Type="varchar" MaxLength="40" />
+    <Property Name="WAERS_IDR" Type="varchar" MaxLength="5" />
+    <Property Name="WAERS" Type="varchar" MaxLength="5" />
+    <Property Name="KOSTL" Type="varchar" MaxLength="10" />
+    <Property Name="BUYER" Type="varchar" MaxLength="3" />
+    <Property Name="LOCATION" Type="varchar" MaxLength="20" />
+    <Property Name="PURPOSE" Type="varchar" MaxLength="60" />
+    <Property Name="BLART" Type="varchar" MaxLength="4" />
+    <Property Name="BUDGET_CAT" Type="varchar" MaxLength="10" />
+    <Property Name="KNTTP" Type="varchar" MaxLength="1" />
+    <Property Name="ZCONVERT" Type="varchar" MaxLength="1" />
+    <Property Name="APPROVAL_CODE" Type="varchar" MaxLength="20" />
+    <Property Name="ATTYP" Type="varchar" MaxLength="20" />
+    <Property Name="EKGRP" Type="varchar" MaxLength="3" />
+    <Property Name="BUDAT" Type="date" />
+    <Property Name="QUARTAL" Type="varchar" MaxLength="2" />
+    <Property Name="FRGGR" Type="varchar" MaxLength="2" />
+    <Property Name="FRGSX" Type="varchar" MaxLength="5" />
+    <Property Name="FRGKE" Type="varchar" MaxLength="1" />
+    <Property Name="WSTATU" Type="varchar" MaxLength="20" />
+    <Property Name="JUSTIFICATION" Type="varchar" MaxLength="1" />
+    <Property Name="TECH_REVIEW" Type="varchar" MaxLength="1" />
+    <Property Name="BANFN" Type="varchar" MaxLength="10" />
+    <Property Name="CP_REVIEW" Type="varchar" MaxLength="1" />
+    <Property Name="CTRL_REVIEW" Type="varchar" MaxLength="1" />
+    <Property Name="FRGZU" Type="varchar" MaxLength="20" />
+    <Property Name="LOEKZ" Type="varchar" MaxLength="1" />
+    <Property Name="REJECTION" Type="varchar" MaxLength="100" />
+    <Property Name="UNAME_RALL" Type="varchar" MaxLength="12" />
+    <Property Name="ANLN1" Type="varchar" MaxLength="12" />
+    <Property Name="ANLN2" Type="varchar" MaxLength="4" />
+    <Property Name="SAKTO" Type="varchar" MaxLength="10" />
+    <Property Name="KOSTL_I" Type="varchar" MaxLength="10" />
+    <Property Name="PS_PSP_PNR" Type="varchar" MaxLength="8" />
+    <Property Name="POST1" Type="varchar" MaxLength="40" />
+    <Property Name="ASSCL" Type="varchar" MaxLength="50" />
+    <Property Name="MATKL" Type="varchar" MaxLength="9" />
+    <Property Name="MEINS" Type="varchar" MaxLength="3" />
+    <Property Name="MENGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ORI_COST" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ACTUAL_COST" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TOTAL_ACTUAL" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="BUDGET_COST" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TOTAL_BUDGET" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VAR_AMOUNT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VAR_PERCENT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="POSNR_BNFPO" Type="varchar" MaxLength="5" />
+    <Property Name="LFDAT" Type="date" />
+    <Property Name="LOEKZ_I" Type="varchar" MaxLength="1" />
+    <Property Name="POSTP" Type="varchar" MaxLength="1" />
+    <Property Name="POSTPONE_WCODE" Type="varchar" MaxLength="2" />
+    <Property Name="POSTP_NAME" Type="varchar" MaxLength="40" />
+    <Property Name="POSTPDT" Type="date" />
+    <Property Name="L01_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L01_REL_DT" Type="date" />
+    <Property Name="L01_REL_TM" Type="time" Precision="7" />
+    <Property Name="L01_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L0L1" Type="int" />
+    <Property Name="L02_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L02_REL_DT" Type="date" />
+    <Property Name="L02_REL_TM" Type="time" Precision="7" />
+    <Property Name="L02_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L1L2" Type="int" />
+    <Property Name="L03_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L03_REL_DT" Type="date" />
+    <Property Name="L03_REL_TM" Type="time" Precision="7" />
+    <Property Name="L03_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L2L3" Type="int" />
+    <Property Name="L04_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L04_REL_DT" Type="date" />
+    <Property Name="L04_REL_TM" Type="time" Precision="7" />
+    <Property Name="L04_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L3L4" Type="int" />
+    <Property Name="L05_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L05_REL_DT" Type="date" />
+    <Property Name="L05_REL_TM" Type="time" Precision="7" />
+    <Property Name="L05_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L4L5" Type="int" />
+    <Property Name="L06_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L06_REL_DT" Type="date" />
+    <Property Name="L06_REL_TM" Type="time" Precision="7" />
+    <Property Name="L06_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L5L6" Type="int" />
+    <Property Name="L07_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L07_REL_DT" Type="date" />
+    <Property Name="L07_REL_TM" Type="time" Precision="7" />
+    <Property Name="L07_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L6L7" Type="int" />
+    <Property Name="L08_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L08_REL_DT" Type="date" />
+    <Property Name="L08_REL_TM" Type="time" Precision="7" />
+    <Property Name="L08_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L7L8" Type="int" />
+    <Property Name="L09_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L09_REL_DT" Type="date" />
+    <Property Name="L09_REL_TM" Type="time" Precision="7" />
+    <Property Name="L09_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L8L9" Type="int" />
+    <Property Name="L10_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L10_REL_DT" Type="date" />
+    <Property Name="L10_REL_TM" Type="time" Precision="7" />
+    <Property Name="L10_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L9L10" Type="int" />
+    <Property Name="L11_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L11_REL_DT" Type="date" />
+    <Property Name="L11_REL_TM" Type="time" Precision="7" />
+    <Property Name="L11_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L10L11" Type="int" />
+    <Property Name="L12_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L12_REL_DT" Type="date" />
+    <Property Name="L12_REL_TM" Type="time" Precision="7" />
+    <Property Name="L12_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L11L12" Type="int" />
+    <Property Name="L13_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L13_REL_DT" Type="date" />
+    <Property Name="L13_REL_TM" Type="time" Precision="7" />
+    <Property Name="L13_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L12L13" Type="int" />
+    <Property Name="L14_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L14_REL_DT" Type="date" />
+    <Property Name="L14_REL_TM" Type="time" Precision="7" />
+    <Property Name="L14_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L13L14" Type="int" />
+    <Property Name="L15_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L15_REL_DT" Type="date" />
+    <Property Name="L15_REL_TM" Type="time" Precision="7" />
+    <Property Name="L15_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L14L15" Type="int" />
+    <Property Name="L16_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L16_REL_DT" Type="date" />
+    <Property Name="L16_REL_TM" Type="time" Precision="7" />
+    <Property Name="L16_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L15L16" Type="int" />
+    <Property Name="L17_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L17_REL_DT" Type="date" />
+    <Property Name="L17_REL_TM" Type="time" Precision="7" />
+    <Property Name="L17_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L16L17" Type="int" />
+    <Property Name="L18_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L18_REL_DT" Type="date" />
+    <Property Name="L18_REL_TM" Type="time" Precision="7" />
+    <Property Name="L18_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L17L18" Type="int" />
+    <Property Name="L19_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L19_REL_DT" Type="date" />
+    <Property Name="L19_REL_TM" Type="time" Precision="7" />
+    <Property Name="L19_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L18L19" Type="int" />
+    <Property Name="L20_REL_ID" Type="varchar" MaxLength="20" />
+    <Property Name="L20_REL_DT" Type="date" />
+    <Property Name="L20_REL_TM" Type="time" Precision="7" />
+    <Property Name="L20_UNAME" Type="varchar" MaxLength="12" />
+    <Property Name="L19L20" Type="int" />
+    <Property Name="ZASSIGN" Type="date" />
+    <Property Name="ERNAM" Type="varchar" MaxLength="12" />
+    <Property Name="ERDAT" Type="date" />
+    <Property Name="ERZET" Type="time" Precision="7" />
+    <Property Name="AENAM" Type="varchar" MaxLength="12" />
+    <Property Name="AEDAT" Type="date" />
+    <Property Name="AEZET" Type="time" Precision="7" />
+    <Property Name="FLAG" Type="varchar" MaxLength="1" />
+    <Property Name="INSERTDATE" Type="datetime" />
+    <Property Name="CLIENT" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityContainer Name="DB_ICATModelStoreContainer">
+    <EntitySet Name="ZTM_CERA_LIST" EntityType="Self.ZTM_CERA_LIST" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

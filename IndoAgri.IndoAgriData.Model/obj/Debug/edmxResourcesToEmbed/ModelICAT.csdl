@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_ICATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ZTM_CERA_LIST">
+    <Key>
+      <PropertyRef Name="BUKRS" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="GJAHR" />
+      <PropertyRef Name="POSNR" />
+      <PropertyRef Name="POSID" />
+      <PropertyRef Name="DOCNUM" />
+      <PropertyRef Name="BANFN_I" />
+      <PropertyRef Name="BNFPO" />
+    </Key>
+    <Property Name="BUKRS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GJAHR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="POSNR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="POSID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCNUM" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BANFN_I" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CEK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BUTXT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WERKS_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS_IDR" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="WAERS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="KOSTL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="LOCATION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PURPOSE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="BLART" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BUDGET_CAT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KNTTP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ZCONVERT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="APPROVAL_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ATTYP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EKGRP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BUDAT" Type="DateTime" Precision="0" />
+    <Property Name="QUARTAL" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="FRGGR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="FRGSX" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FRGKE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="WSTATU" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JUSTIFICATION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TECH_REVIEW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BANFN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CP_REVIEW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CTRL_REVIEW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FRGZU" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LOEKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="REJECTION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UNAME_RALL" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ANLN1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ANLN2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SAKTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KOSTL_I" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PS_PSP_PNR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="POST1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ASSCL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MATKL" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MENGE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ORI_COST" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ACTUAL_COST" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TOTAL_ACTUAL" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BUDGET_COST" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TOTAL_BUDGET" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="VAR_AMOUNT" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="VAR_PERCENT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="POSNR_BNFPO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LFDAT" Type="DateTime" Precision="0" />
+    <Property Name="LOEKZ_I" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="POSTP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="POSTPONE_WCODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="POSTP_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="POSTPDT" Type="DateTime" Precision="0" />
+    <Property Name="L01_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L01_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L01_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L01_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L0L1" Type="Int32" />
+    <Property Name="L02_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L02_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L02_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L02_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L1L2" Type="Int32" />
+    <Property Name="L03_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L03_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L03_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L03_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L2L3" Type="Int32" />
+    <Property Name="L04_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L04_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L04_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L04_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L3L4" Type="Int32" />
+    <Property Name="L05_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L05_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L05_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L05_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L4L5" Type="Int32" />
+    <Property Name="L06_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L06_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L06_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L06_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L5L6" Type="Int32" />
+    <Property Name="L07_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L07_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L07_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L07_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L6L7" Type="Int32" />
+    <Property Name="L08_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L08_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L08_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L08_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L7L8" Type="Int32" />
+    <Property Name="L09_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L09_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L09_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L09_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L8L9" Type="Int32" />
+    <Property Name="L10_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L10_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L10_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L10_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L9L10" Type="Int32" />
+    <Property Name="L11_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L11_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L11_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L11_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L10L11" Type="Int32" />
+    <Property Name="L12_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L12_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L12_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L12_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L11L12" Type="Int32" />
+    <Property Name="L13_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L13_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L13_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L13_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L12L13" Type="Int32" />
+    <Property Name="L14_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L14_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L14_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L14_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L13L14" Type="Int32" />
+    <Property Name="L15_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L15_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L15_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L15_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L14L15" Type="Int32" />
+    <Property Name="L16_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L16_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L16_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L16_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L15L16" Type="Int32" />
+    <Property Name="L17_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L17_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L17_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L17_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L16L17" Type="Int32" />
+    <Property Name="L18_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L18_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L18_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L18_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L17L18" Type="Int32" />
+    <Property Name="L19_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L19_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L19_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L19_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L18L19" Type="Int32" />
+    <Property Name="L20_REL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="L20_REL_DT" Type="DateTime" Precision="0" />
+    <Property Name="L20_REL_TM" Type="Time" Precision="7" />
+    <Property Name="L20_UNAME" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="L19L20" Type="Int32" />
+    <Property Name="ZASSIGN" Type="DateTime" Precision="0" />
+    <Property Name="ERNAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ERDAT" Type="DateTime" Precision="0" />
+    <Property Name="ERZET" Type="Time" Precision="7" />
+    <Property Name="AENAM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AEDAT" Type="DateTime" Precision="0" />
+    <Property Name="AEZET" Type="Time" Precision="7" />
+    <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="INSERTDATE" Type="DateTime" Precision="3" />
+    <Property Name="CLIENT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DB_ICATEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ZTM_CERA_LIST" EntityType="Self.ZTM_CERA_LIST" />
+  </EntityContainer>
+</Schema>

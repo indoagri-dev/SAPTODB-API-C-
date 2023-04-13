@@ -1,0 +1,13 @@
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\Indoagri.IndoagriPOICAT.Model.dll.config
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\Indoagri.IndoagriPOICAT.Model.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\Indoagri.IndoagriPOICAT.Model.pdb
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\EntityFramework.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\SoftwareKobo.Net.WebUtility.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\EntityFramework.xml
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\obj\Debug\Indoagri.IndoagriPOICAT.Model.dll
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\obj\Debug\Indoagri.IndoagriPOICAT.Model.pdb
+C:\Workspace\ASPNET\Dev\IndoAgri.SAPtoDB\Indoagri.IndoagriPOICAT.Model\obj\Debug\Indoagri.IndoagriPOICAT.Model.csprojResolveAssemblyReference.cache

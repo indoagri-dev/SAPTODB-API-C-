@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INDOAGRI_DATAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LogApproval">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Json" Type="varchar(max)" />
+    <Property Name="ApplicationId" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ControllerAction" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorMessage" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTF_CDV_LASTMAIL">
+    <Key>
+      <PropertyRef Name="CDVId" />
+    </Key>
+    <Property Name="CDVId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Cdcomp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Cdgsber" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Approver" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Nrcdv" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nrbelnr" Type="varchar" MaxLength="50" />
+    <Property Name="Amtotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cutotal" Type="varchar" MaxLength="50" />
+    <Property Name="Txberita" Type="varchar" MaxLength="200" />
+    <Property Name="Txberita1" Type="varchar" MaxLength="200" />
+    <Property Name="Txberita2" Type="varchar" MaxLength="200" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZTW_ASSETSTAT">
+    <Key>
+      <PropertyRef Name="AssetStatId" />
+    </Key>
+    <Property Name="AssetStatId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Werks" Type="varchar" MaxLength="10" />
+    <Property Name="Erdat" Type="datetime" />
+    <Property Name="Eqart" Type="varchar" MaxLength="50" />
+    <Property Name="Good" Type="varchar" MaxLength="50" />
+    <Property Name="Broken" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Ernam" Type="varchar" MaxLength="100" />
+    <Property Name="Endat" Type="datetime" />
+    <Property Name="Rzet" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="INDOAGRI_DATAModelStoreContainer">
+    <EntitySet Name="LogApproval" EntityType="Self.LogApproval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTF_CDV_LASTMAIL" EntityType="Self.ZTF_CDV_LASTMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZTW_ASSETSTAT" EntityType="Self.ZTW_ASSETSTAT" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
